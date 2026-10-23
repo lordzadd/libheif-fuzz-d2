@@ -1,0 +1,2 @@
+# No Python third-party dependencies; uses the standard library only.
+# System dependencies: clang, cmake, make, and libheif's codec libraries.
