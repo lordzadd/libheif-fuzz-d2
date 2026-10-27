@@ -1,2 +1,4 @@
 # No Python third-party dependencies; uses the standard library only.
-# System dependencies: clang, cmake, make, and libheif's codec libraries.
+# System dependencies are pinned in the Dockerfile (Ubuntu 24.04 by digest + dated apt snapshot):
+#   clang-18, libclang-rt-18-dev, llvm-18, cmake, make, pkg-config, python3,
+#   libde265-dev, libx265-dev, libaom-dev, zlib1g-dev, libbrotli-dev

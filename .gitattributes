@@ -1,0 +1,4 @@
+# Keep LF endings so scripts run under bash even when cloned on Windows.
+*.sh text eol=lf
+*.py text eol=lf
+Dockerfile text eol=lf

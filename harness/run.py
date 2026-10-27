@@ -3,8 +3,11 @@
 
 Builds libheif (if needed), runs every fuzzer for a short time, and writes
 one row per fuzzer with crashes found and execution counts.
+
+Usage: python3 harness/run.py [seconds_per_fuzzer]   (default 5)
 """
 
+import argparse
 import csv
 import json
 import os
@@ -56,10 +59,20 @@ def parse_stat(text, key):
     return int(m.group(1)) if m else 0
 
 
-def run_one(fuzzer):
+def as_text(s):
+    if isinstance(s, bytes):
+        return s.decode("utf-8", "replace")
+    return s or ""
+
+
+def run_one(fuzzer, seconds):
     name = fuzzer.name
     corpus = ROOT / "corpora" / name
     crash_dir = RESULTS / "crashes" / name
+    # Start every run from the same seed corpus and an empty crash dir,
+    # so numbers from one run do not leak into the next.
+    shutil.rmtree(corpus, ignore_errors=True)
+    shutil.rmtree(crash_dir, ignore_errors=True)
     corpus.mkdir(parents=True, exist_ok=True)
     crash_dir.mkdir(parents=True, exist_ok=True)
     seed_corpus(corpus)
@@ -67,24 +80,33 @@ def run_one(fuzzer):
     cmd = [
         str(fuzzer),
         str(corpus),
-        "-max_total_time=5",
+        f"-max_total_time={seconds}",
         "-print_final_stats=1",
         "-artifact_prefix=" + str(crash_dir) + "/",
     ]
-    print(f"Running {name} for 5s...", flush=True)
+    env = dict(os.environ)
+    # Upstream ships an LSan suppression for a known x265 leak in the encoder fuzzer.
+    supp = fuzzer.parent / f"{name}_lsan_suppressions.txt"
+    if supp.exists():
+        env["LSAN_OPTIONS"] = f"suppressions={supp}"
+    print(f"Running {name} for {seconds}s...", flush=True)
     start = time.time()
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=seconds + 60, env=env)
         rc = proc.returncode
-        out = (proc.stdout or "") + "\n" + (proc.stderr or "")
+        out = as_text(proc.stdout) + "\n" + as_text(proc.stderr)
     except subprocess.TimeoutExpired as e:
         rc = -1
-        out = (e.stdout or "") + "\n" + (e.stderr or "")
+        out = as_text(e.stdout) + "\n" + as_text(e.stderr)
     elapsed = round(time.time() - start, 2)
+    (crash_dir / "log.txt").write_text(out)
 
-    crashes = len(list(crash_dir.glob("crash-*"))) + len(list(crash_dir.glob("oom-*"))) + len(list(crash_dir.glob("timeout-*")))
+    crashes = len(list(crash_dir.glob("crash-*"))) + len(list(crash_dir.glob("leak-*")))
+    timeouts = len(list(crash_dir.glob("timeout-*"))) + len(list(crash_dir.glob("oom-*")))
     execs = parse_stat(out, "number_of_executed_units")
-    edges = parse_stat(out, "number_of_new_units_added") or parse_stat(out, "edges_found")
+    # libFuzzer reports edge coverage as "cov: N" on each status line; keep the last one.
+    cov = [int(c) for c in re.findall(r"\bcov: (\d+)", out)]
+    coverage = cov[-1] if cov else 0
     # fallback for execs
     if execs == 0:
         m = re.search(r"(\d+)\s+execs", out)
@@ -96,12 +118,18 @@ def run_one(fuzzer):
         "exit_code": rc,
         "elapsed_s": elapsed,
         "crashes_found": crashes,
+        "timeouts_ooms": timeouts,
         "execs": execs,
-        "edges": edges,
+        "coverage_edges": coverage,
     }
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("seconds", nargs="?", type=int, default=5,
+                    help="fuzzing time per fuzzer in seconds (default 5)")
+    args = ap.parse_args()
+
     RESULTS.mkdir(parents=True, exist_ok=True)
     try:
         fuzzers = ensure_build()
@@ -111,7 +139,7 @@ def main():
 
     rows = []
     for f in fuzzers:
-        rows.append(run_one(f))
+        rows.append(run_one(f, args.seconds))
 
     out_csv = RESULTS / "fuzz_results.csv"
     with open(out_csv, "w", newline="") as fh:
