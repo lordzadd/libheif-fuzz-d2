@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build and run the pinned libheif fuzz targets with fixed input counts."""
 
+import argparse
 import csv
 import datetime as dt
 import json
