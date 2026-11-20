@@ -1,0 +1,99 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 179691397
+INFO: Loaded 1 modules   (91191 inline 8-bit counters): 91191 [0x5bb69d045b80, 0x5bb69d05bfb7), 
+INFO: Loaded 1 PC tables (91191 PCs): 91191 [0x5bb69d05bfb8,0x5bb69d1c0328), 
+INFO: -fork=2: fuzzing in separate process(s)
+INFO: -fork=2: 622 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork507304.dir
+#1032: cov: 7190 ft: 16006 corp: 622 exec/s: 516 oom/timeout/crash: 0/0/0 time: 102s job: 1 dft_time: 0
+  NEW_FUNC: 0x5bb69c7b8e78 in heif_unload_all_plugins() crtstuff.c
+  NEW_FUNC: 0x5bb69c8c9698 in ColorConversionPipeline::release_ops() crtstuff.c
+  NEW_FUNC: 0x5bb69c8d33f8 in void std::_Destroy_aux<false>::__destroy<std::shared_ptr<ColorConversionOperation>*>(std::shared_ptr<ColorConversionOperation>*, std::shared_ptr<ColorConversionOperation>*) crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4820 in std::_Sp_counted_ptr_inplace<Op_RGB_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4890 in std::_Sp_counted_ptr_inplace<Op_RGB_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4a40 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_RGB, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4ab0 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_RGB, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4c60 in std::_Sp_counted_ptr_inplace<Op_YCbCr_to_RGB<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4cd0 in std::_Sp_counted_ptr_inplace<Op_YCbCr_to_RGB<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4ec0 in std::_Sp_counted_ptr_inplace<Op_YCbCr_to_RGB<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e4f30 in std::_Sp_counted_ptr_inplace<Op_YCbCr_to_RGB<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5120 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RGB24, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5190 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RGB24, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5340 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RGB32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e53b0 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RGB32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5560 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RRGGBBaa, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e55d0 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_to_RRGGBBaa, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5780 in std::_Sp_counted_ptr_inplace<Op_RGB_HDR_to_RRGGBBaa_BE, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e57f0 in std::_Sp_counted_ptr_inplace<Op_RGB_HDR_to_RRGGBBaa_BE, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e59a0 in std::_Sp_counted_ptr_inplace<Op_RGB_to_RRGGBBaa_BE, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5a10 in std::_Sp_counted_ptr_inplace<Op_RGB_to_RRGGBBaa_BE, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5bc0 in std::_Sp_counted_ptr_inplace<Op_mono_to_YCbCr420, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5c30 in std::_Sp_counted_ptr_inplace<Op_mono_to_YCbCr420, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5de0 in std::_Sp_counted_ptr_inplace<Op_mono_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e5e50 in std::_Sp_counted_ptr_inplace<Op_mono_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6000 in std::_Sp_counted_ptr_inplace<Op_bayer_bilinear_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6070 in std::_Sp_counted_ptr_inplace<Op_bayer_bilinear_to_RGB24_32, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6220 in std::_Sp_counted_ptr_inplace<Op_RRGGBBaa_swap_endianness, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6290 in std::_Sp_counted_ptr_inplace<Op_RRGGBBaa_swap_endianness, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6440 in std::_Sp_counted_ptr_inplace<Op_RRGGBBaa_BE_to_RGB_HDR, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e64b0 in std::_Sp_counted_ptr_inplace<Op_RRGGBBaa_BE_to_RGB_HDR, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6660 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_YCbCr, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e66d0 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_YCbCr, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6880 in std::_Sp_counted_ptr_inplace<Op_RGB_to_YCbCr<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e68f0 in std::_Sp_counted_ptr_inplace<Op_RGB_to_YCbCr<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6ae0 in std::_Sp_counted_ptr_inplace<Op_RGB_to_YCbCr<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6b50 in std::_Sp_counted_ptr_inplace<Op_RGB_to_YCbCr<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6d40 in std::_Sp_counted_ptr_inplace<Op_RRGGBBxx_HDR_to_YCbCr420, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6db0 in std::_Sp_counted_ptr_inplace<Op_RRGGBBxx_HDR_to_YCbCr420, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6f60 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_YCbCr444_GBR, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e6fd0 in std::_Sp_counted_ptr_inplace<Op_RGB24_32_to_YCbCr444_GBR, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7180 in std::_Sp_counted_ptr_inplace<Op_drop_alpha_plane, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e71f0 in std::_Sp_counted_ptr_inplace<Op_drop_alpha_plane, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e73a0 in std::_Sp_counted_ptr_inplace<Op_flatten_alpha_plane<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7410 in std::_Sp_counted_ptr_inplace<Op_flatten_alpha_plane<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7600 in std::_Sp_counted_ptr_inplace<Op_flatten_alpha_plane<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7670 in std::_Sp_counted_ptr_inplace<Op_flatten_alpha_plane<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7860 in std::_Sp_counted_ptr_inplace<Op_adjust_alpha_bit_depth, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e78d0 in std::_Sp_counted_ptr_inplace<Op_adjust_alpha_bit_depth, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7a80 in std::_Sp_counted_ptr_inplace<Op_to_hdr_planes, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7af0 in std::_Sp_counted_ptr_inplace<Op_to_hdr_planes, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7ca0 in std::_Sp_counted_ptr_inplace<Op_to_sdr_planes, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7d10 in std::_Sp_counted_ptr_inplace<Op_to_sdr_planes, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7ec0 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_bilinear_to_YCbCr444<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e7f30 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_bilinear_to_YCbCr444<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8120 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_bilinear_to_YCbCr444<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8190 in std::_Sp_counted_ptr_inplace<Op_YCbCr420_bilinear_to_YCbCr444<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8380 in std::_Sp_counted_ptr_inplace<Op_YCbCr422_bilinear_to_YCbCr444<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e83f0 in std::_Sp_counted_ptr_inplace<Op_YCbCr422_bilinear_to_YCbCr444<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e85e0 in std::_Sp_counted_ptr_inplace<Op_YCbCr422_bilinear_to_YCbCr444<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8650 in std::_Sp_counted_ptr_inplace<Op_YCbCr422_bilinear_to_YCbCr444<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8840 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr420_average<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e88b0 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr420_average<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8aa0 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr420_average<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8b10 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr420_average<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8d00 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr422_average<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8d70 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr422_average<unsigned char>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8f60 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr422_average<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e8fd0 in std::_Sp_counted_ptr_inplace<Op_YCbCr444_to_YCbCr422_average<unsigned short>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e9140 in ColorConversionOperation::~ColorConversionOperation() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e91d0 in std::_Sp_counted_ptr_inplace<Op_Any_RGB_to_YCbCr_420_Sharp, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() crtstuff.c
+  NEW_FUNC: 0x5bb69c8e9240 in std::_Sp_counted_ptr_inplace<Op_Any_RGB_to_YCbCr_420_Sharp, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() crtstuff.c
+  NEW_FUNC: 0x5bb69cc08148 in register_default_plugins() crtstuff.c
+  NEW_FUNC: 0x5bb69cc08198 in register_encoder(heif_encoder_plugin const*) crtstuff.c
+  NEW_FUNC: 0x5bb69cc083a8 in register_decoder(heif_decoder_plugin const*) crtstuff.c
+  NEW_FUNC: 0x5bb69cc09d18 in heif_unregister_decoder_plugins() crtstuff.c
+  NEW_FUNC: 0x5bb69cc0a088 in heif_unregister_encoder_plugins() crtstuff.c
+  NEW_FUNC: 0x5bb69cc0a6b0 in std::_Rb_tree<heif_decoder_plugin const*, heif_decoder_plugin const*, std::_Identity<heif_decoder_plugin const*>, std::less<heif_decoder_plugin const*>, std::allocator<heif_decoder_plugin const*>>::_M_erase(std::_Rb_tree_node<heif_decoder_plugin const*>*) crtstuff.c
+  NEW_FUNC: 0x5bb69cc0a830 in std::_Rb_tree<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::_Identity<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>, encoder_descriptor_priority_order, std::allocator<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>>::_M_erase(std::_Rb_tree_node<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>*) crtstuff.c
+  NEW_FUNC: 0x5bb69cc0b200 in std::_Rb_tree<heif_decoder_plugin const*, heif_decoder_plugin const*, std::_Identity<heif_decoder_plugin const*>, std::less<heif_decoder_plugin const*>, std::allocator<heif_decoder_plugin const*>>::_M_get_insert_unique_pos(heif_decoder_plugin const* const&) crtstuff.c
+  NEW_FUNC: 0x5bb69cc0b4f0 in std::_Rb_tree<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::_Identity<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>, encoder_descriptor_priority_order, std::allocator<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>>::_M_get_insert_equal_pos(std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>> const&) crtstuff.c
+  NEW_FUNC: 0x5bb69cc0b710 in std::_Rb_tree_iterator<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>> std::_Rb_tree<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::_Identity<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>, encoder_descriptor_priority_order, std::allocator<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>>::_M_insert_<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::_Rb_tree<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>, std::_Identity<std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>>>, encoder_descriptor_priority_order, std::allocator<std::  NEW_FUNC: 0x5bb69cc0b900 in encoder_descriptor_priority_order::operator()(std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>> const&, std::unique_ptr<heif_encoder_descriptor, std::default_delete<heif_encoder_descriptor>> const&) const crtstuff.c
+  NEW_FUNC: 0x5bb69cdc0388 in get_encoder_plugin_mask() crtstuff.c
+  NEW_FUNC: 0x5bb69cdc03c8 in mask_init_plugin() encoder_mask.cc
+  NEW_FUNC: 0x5bb69cdc04d8 in mask_cleanup_plugin() encoder_mask.cc
+  NEW_FUNC: 0x5bb69cdc1198 in get_encoder_plugin_uncompressed() crtstuff.c
+  NEW_FUNC: 0x5bb69cdc11d8 in uncompressed_init_plugin() encoder_uncompressed.cc
+  NEW_FUNC: 0x5bb69cdc12e8 in uncompressed_cleanup_plugin() encoder_uncompressed.cc
+  NEW_FUNC: 0x5bb69cdc12f8 in get_decoder_plugin_uncompressed() crtstuff.c
+INFO: fuzzed for 1032 iterations, wrapping up soon
+INFO: exiting: 0 time: 104s
