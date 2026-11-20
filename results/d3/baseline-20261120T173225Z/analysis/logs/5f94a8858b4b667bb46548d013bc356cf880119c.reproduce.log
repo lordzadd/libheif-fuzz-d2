@@ -1,0 +1,34 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3008919271
+INFO: Loaded 1 modules   (109272 inline 8-bit counters): 109272 [0x64cd29ca0e48, 0x64cd29cbb920), 
+INFO: Loaded 1 PC tables (109272 PCs): 109272 [0x64cd29cbb920,0x64cd29e666a0), 
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/sequence_fuzzer/crash-5f94a8858b4b667bb46548d013bc356cf880119c
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x64cd2960ebe3 in StreamReader_memory::read(void*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9c7be3) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #1 0x64cd29613494 in BitstreamRange::read(unsigned char*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9cc494) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #2 0x64cd29639377 in Box_other::parse(BitstreamRange&, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9f2377) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #3 0x64cd2962ade2 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9e3de2) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #4 0x64cd29634b9d in Box::read_children(BitstreamRange&, unsigned int, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9edb9d) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #5 0x64cd29660f36 in Box_iinf::parse(BitstreamRange&, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0xa19f36) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #6 0x64cd2962ade2 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9e3de2) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #7 0x64cd29634b9d in Box::read_children(BitstreamRange&, unsigned int, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9edb9d) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #8 0x64cd29640e18 in Box_meta::parse(BitstreamRange&, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9f9e18) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #9 0x64cd2962ade2 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x9e3de2) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #10 0x64cd297b24c8 in FileLayout::read(std::shared_ptr<StreamReader> const&, heif_security_limits const*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0xb6b4c8) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #11 0x64cd2977bb30 in HeifFile::read(std::shared_ptr<StreamReader> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0xb34b30) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #12 0x64cd2977c5fa in HeifFile::read_from_memory(void const*, unsigned long, bool) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0xb355fa) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #13 0x64cd29723925 in HeifContext::read_from_memory(void const*, unsigned long, bool) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0xadc925) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #14 0x64cd292cdebb in heif_context_read_from_memory (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x686ebb) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #15 0x64cd2929dd1f in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x656d1f) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #16 0x64cd291a90a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x5620a4) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #17 0x64cd291921d6 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x54b1d6) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #18 0x64cd29197c8a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x550c8a) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #19 0x64cd291c2446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x57b446) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+    #20 0x749a44c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #21 0x749a44c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #22 0x64cd2918cda4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/sequence_fuzzer+0x545da4) (BuildId: 889c37df3e4c10dd7da0ea1f9879aa83f9a0e260)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10 

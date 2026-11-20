@@ -1,0 +1,10 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3476321871
+INFO: Loaded 1 modules   (109834 inline 8-bit counters): 109834 [0x5bdc92751180, 0x5bdc9276be8a), 
+INFO: Loaded 1 PC tables (109834 PCs): 109834 [0x5bdc9276be90,0x5bdc92918f30), 
+INFO: -fork=2: fuzzing in separate process(s)
+INFO: -fork=2: 21 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork442572.dir
+#2406: cov: 3256 ft: 3256 corp: 21 exec/s: 1203 oom/timeout/crash: 0/0/0 time: 2s job: 1 dft_time: 0
+INFO: fuzzed for 2406 iterations, wrapping up soon
+INFO: exiting: 0 time: 2s

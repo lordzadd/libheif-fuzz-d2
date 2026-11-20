@@ -1,0 +1,15 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3976267021
+INFO: Loaded 1 modules   (67492 inline 8-bit counters): 67492 [0x631b96f341c8, 0x631b96f4496c), 
+INFO: Loaded 1 PC tables (67492 PCs): 67492 [0x631b96f44970,0x631b9704c3b0), 
+INFO: -fork=2: fuzzing in separate process(s)
+INFO: -fork=2: 557 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork459824.dir
+#34834: cov: 3907 ft: 8825 corp: 557 exec/s: 17417 oom/timeout/crash: 0/0/0 time: 3s job: 1 dft_time: 0
+  NEW_FUNC: 0x631b96c3cef0 in std::shared_ptr<Box_moov> std::make_shared<Box_moov>() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:1004
+  NEW_FUNC: 0x631b96c3cfc0 in std::enable_if<is_assignable<std::__shared_ptr<Box, (__gnu_cxx::_Lock_policy)2>&, std::shared_ptr<Box_moov>>::value, std::shared_ptr<Box>&>::type std::shared_ptr<Box>::operator=<Box_moov>(std::shared_ptr<Box_moov>&&) /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:446
+  NEW_FUNC: 0x631b96c3d0e0 in std::__shared_ptr<Box_moov, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:1525
+  NEW_FUNC: 0x631b96c7c230 in std::_Sp_counted_ptr_inplace<Box_moov, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:615
+  NEW_FUNC: 0x631b96c7c280 in std::_Sp_counted_ptr_inplace<Box_moov, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:622
+INFO: fuzzed for 34834 iterations, wrapping up soon
+INFO: exiting: 0 time: 3s

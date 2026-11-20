@@ -1,0 +1,265 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1397795284
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x61fe440284c8, 0x61fe440447e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x61fe440447f0,0x61fe44207a00), 
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/api_fuzzer/crash-bd0c452dae2b4971047a90c797f4e1998d42bf9b' (813 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/api_fuzzer/crash-bd0c452dae2b4971047a90c797f4e1998d42bf9b 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/api_fuzzer/crash-bd0c452dae2b4971047a90c797f4e1998d42bf9b' (813 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/api_fuzzer/crash-bd0c452dae2b4971047a90c797f4e1998d42bf9b -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2282372942
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x5c2db602a4c8, 0x5c2db60467e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x5c2db60467f0,0x5c2db6209a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 813
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 813 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x5c2db56011a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x5c2db559c6cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x5c2db54a70a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x5c2db54a8cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x5c2db5491f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x5c2db5495bfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x5c2db54c0446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x7bb98982a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x7bb98982a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5c2db548ada4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (797 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (797 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3877349232
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x5d8c42eb94c8, 0x5d8c42ed57e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x5d8c42ed57f0,0x5d8c43098a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 797
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 797 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x5d8c424901a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x5d8c4242b6cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x5d8c423360a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x5d8c42337cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x5d8c42320f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x5d8c42324bfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x5d8c4234f446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x7c3eaa22a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x7c3eaa22a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5d8c42319da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes- DE: "\001\000\000\000"-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (688 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (688 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1225476722
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x640d405e44c8, 0x640d406007e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x640d406007f0,0x640d407c3a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 688
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 688 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x640d3fbbb1a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x640d3fb566cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x640d3fa610a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x640d3fa62cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x640d3fa4bf5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x640d3fa4fbfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x640d3fa7a446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x74747522a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x74747522a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x640d3fa44da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (687 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (687 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2783661970
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x5fa1552ac4c8, 0x5fa1552c87e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x5fa1552c87f0,0x5fa15548ba00), 
+INFO: Starting MinimizeCrashInputInternalStep: 687
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 687 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x5fa1548831a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x5fa15481e6cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x5fa1547290a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x5fa15472acfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x5fa154713f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x5fa154717bfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x5fa154742446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x72553782a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x72553782a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5fa15470cda4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (486 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (486 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 525095085
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x626b7d5d34c8, 0x626b7d5ef7e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x626b7d5ef7f0,0x626b7d7b2a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 486
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 486 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x626b7cbaa1a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x626b7cb456cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x626b7ca500a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x626b7ca51cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x626b7ca3af5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x626b7ca3ebfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x626b7ca69446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x73319462a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x73319462a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x626b7ca33da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (389 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (389 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1996757357
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x613915ac74c8, 0x613915ae37e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x613915ae37f0,0x613915ca6a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 389
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 389 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x61391509e1a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x6139150396cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x613914f440a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x613914f45cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x613914f2ef5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x613914f32bfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x613914f5d446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x7c665502a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x7c665502a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x613914f27da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes- DE: "\003\000\000\000\000\000\000\000"-"0\001\000\000\000\000\000\000"-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (377 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (377 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3474537577
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x5a1fe15814c8, 0x5a1fe159d7e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x5a1fe159d7f0,0x5a1fe1760a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 377
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 377 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x5a1fe0b581a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x5a1fe0af36cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x5a1fe09fe0a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x5a1fe09ffcfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x5a1fe09e8f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x5a1fe09ecbfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x5a1fe0a17446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x78f1c1e2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x78f1c1e2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5a1fe09e1da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (314 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (314 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 675949507
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x63fc3ce294c8, 0x63fc3ce457e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x63fc3ce457f0,0x63fc3d008a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 314
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 314 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x63fc3c4001a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x63fc3c39b6cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x63fc3c2a60a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x63fc3c2a7cfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x63fc3c290f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x63fc3c294bfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x63fc3c2bf446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x756400e2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x756400e2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x63fc3c289da4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (310 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (310 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2437592790
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x5dc60337f4c8, 0x5dc60339b7e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x5dc60339b7f0,0x5dc60355ea00), 
+INFO: Starting MinimizeCrashInputInternalStep: 310
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 310 bytes
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+    #0 0x5dc6029561a1 in heif_item_get_item_data (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x7051a1) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #1 0x5dc6028f16cd in LLVMFuzzerTestOneInput (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x6a06cd) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #2 0x5dc6027fc0a4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5ab0a4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #3 0x5dc6027fdcfe in fuzzer::Fuzzer::MinimizeCrashLoop(std::vector<unsigned char, std::allocator<unsigned char>> const&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5accfe) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #4 0x5dc6027e6f5e in fuzzer::MinimizeCrashInputInternalStep(fuzzer::Fuzzer*, fuzzer::InputCorpus*) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x595f5e) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #5 0x5dc6027eabfa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x599bfa) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #6 0x5dc602815446 in main (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x5c4446) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+    #7 0x795747c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x795747c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5dc6027dfda4 in _start (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer+0x58eda4) (BuildId: e413854ead8763a4d02aa7b657f472c7414e1bff)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_items.cc:170:23 
+MS: 1 EraseBytes-; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='./'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin
+*********************************
+CRASH_MIN: minimizing crash input: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (308 bytes)
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+CRASH_MIN: '/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin' (308 bytes) caused a crash. Will try to minimize it further
+CRASH_MIN: executing: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer -max_total_time=30 /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin -minimize_crash_internal_step=1 -exact_artifact_path=/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin 2>&1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 626536350
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x60c64fff34c8, 0x60c65000f7e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x60c65000f7f0,0x60c6501d2a00), 
+INFO: Starting MinimizeCrashInputInternalStep: 308
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 308 bytes
+#65536	pulse  exec/s: 32768 rss: 438Mb
+#131072	pulse  exec/s: 43690 rss: 446Mb
+#262144	pulse  exec/s: 37449 rss: 447Mb
+#524288	pulse  exec/s: 34952 rss: 448Mb
+#1048576	pulse  exec/s: 36157 rss: 449Mb
+INFO: Done MinimizeCrashInputInternalStep, no crashes found
+CRASH_MIN: failed to minimize beyond /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/analysis/inputs/bd0c452dae2b4971047a90c797f4e1998d42bf9b/minimized.bin (308 bytes), exiting

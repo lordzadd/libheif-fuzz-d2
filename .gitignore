@@ -1,4 +1,6 @@
 build/
+build-release/
+build-fixed/
 corpora/
 results/
 *.o

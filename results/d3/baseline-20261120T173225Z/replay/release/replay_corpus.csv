@@ -1,0 +1,8 @@
+fuzzer,corpus_files,exit_code,execs,max_cov_edges,new_crash_artifacts,elapsed_s,log
+api_fuzzer,1561,0,,6947,0,4.32,results/d3/baseline-20261120T173225Z/replay/release/logs/api_fuzzer.corpus.log
+box_fuzzer,1381,0,,3907,0,3.75,results/d3/baseline-20261120T173225Z/replay/release/logs/box_fuzzer.corpus.log
+color_conversion_fuzzer,455,0,,1576,0,2.3,results/d3/baseline-20261120T173225Z/replay/release/logs/color_conversion_fuzzer.corpus.log
+encoder_fuzzer,182,0,,1642,0,2.2,results/d3/baseline-20261120T173225Z/replay/release/logs/encoder_fuzzer.corpus.log
+file_fuzzer,1378,0,,6827,0,5.25,results/d3/baseline-20261120T173225Z/replay/release/logs/file_fuzzer.corpus.log
+sequence_fuzzer,1507,0,,5033,0,3.66,results/d3/baseline-20261120T173225Z/replay/release/logs/sequence_fuzzer.corpus.log
+tile_fuzzer,1398,0,,6804,0,4.24,results/d3/baseline-20261120T173225Z/replay/release/logs/tile_fuzzer.corpus.log

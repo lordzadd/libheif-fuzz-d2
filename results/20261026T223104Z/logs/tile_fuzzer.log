@@ -1,0 +1,21 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3752508731
+INFO: Loaded 1 modules   (113650 inline 8-bit counters): 113650 [0x652b515c3e40, 0x652b515dfa32), 
+INFO: Loaded 1 PC tables (113650 PCs): 113650 [0x652b515dfa38,0x652b5179b958), 
+INFO:      133 files found in /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/corpora/tile_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24871 bytes
+INFO: seed corpus: files: 133 min: 16b max: 24871b total: 372064b rss: 45Mb
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10 
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+0x0,0x0,0x0,0x10,0x66,0x74,0x79,0x70,0x6d,0x69,0x66,0x33,0x61,0x76,0x69,0x66,0x0,0x0,0x0,0x59,0x6d,0x69,0x6e,0x69,0x8,0x8,0x1f,0x3e,0x8,0x1,0x14,0x81,0x0,0xc,0x0,0x12,0x0,0xa,0x9,0x18,0x11,0x3f,0xf6,0x8,0x8,0x68,0x34,0x20,0x32,0x37,0x18,0x0,0xa,0x28,0xa2,0x84,0x0,0x33,0x3a,0xe3,0xe3,0x65,0x98,0x6f,0x41,0x2b,0xb2,0x1c,0x5a,0x3d,0x4c,0x76,0xcb,0x1e,0x16,0x1d,0xab,0x3d,0x85,0xbf,0xf4,0x79,0xe0,0x79,0x5,0x67,0xac,0xed,0x44,0xf2,0x3f,0xad,0x45,0x44,0x18,0xd3,0x7b,0x86,0x13,0x84,0x5e,0xe8,0xa3,0x1a,0x80,
+\000\000\000\020ftypmif3avif\000\000\000Ymini\010\010\037>\010\001\024\201\000\014\000\022\000\012\011\030\021?\366\010\010h4 27\030\000\012(\242\204\0003:\343\343e\230oA+\262\034Z=Lv\313\036\026\035\253=\205\277\364y\340y\005g\254\355D\362?\255ED\030\323{\206\023\204^\350\243\032\200
+artifact_prefix='/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/artifacts/tile_fuzzer/'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/artifacts/tile_fuzzer/crash-791bf53f8dcef4026ccbd01a5337a81831a2c2f0
+Base64: AAAAEGZ0eXBtaWYzYXZpZgAAAFltaW5pCAgfPggBFIEADAASAAoJGBE/9ggIaDQgMjcYAAooooQAMzrj42WYb0ErshxaPUx2yx4WHas9hb/0eeB5BWes7UTyP61FRBjTe4YThF7ooxqA
+stat::number_of_executed_units: 6
+stat::average_exec_per_sec:     0
+stat::new_units_added:          0
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              47

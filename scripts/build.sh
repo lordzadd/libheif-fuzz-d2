@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/libheif"
-BUILD="$ROOT/build"
+BUILD="${BUILD_DIR:-$ROOT/build}"
 
 supports_fuzzer() {
   local cxx="$1"

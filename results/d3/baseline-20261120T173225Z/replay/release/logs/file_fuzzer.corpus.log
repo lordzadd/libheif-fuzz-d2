@@ -1,0 +1,19 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 761262765
+INFO: Loaded 1 modules   (68942 inline 8-bit counters): 68942 [0x562e77efb210, 0x562e77f0bf5e), 
+INFO: Loaded 1 PC tables (68942 PCs): 68942 [0x562e77f0bf60,0x562e78019440), 
+INFO: -fork=2: fuzzing in separate process(s)
+INFO: -fork=2: 626 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork460092.dir
+#9856: cov: 6827 ft: 14636 corp: 626 exec/s: 4928 oom/timeout/crash: 0/0/0 time: 4s job: 1 dft_time: 0
+  NEW_FUNC: 0x562e77cdc050 in std::shared_ptr<Box_itai> std::make_shared<Box_itai>() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:1004
+  NEW_FUNC: 0x562e77cdc180 in std::enable_if<is_assignable<std::__shared_ptr<Box, (__gnu_cxx::_Lock_policy)2>&, std::shared_ptr<Box_itai>>::value, std::shared_ptr<Box>&>::type std::shared_ptr<Box>::operator=<Box_itai>(std::shared_ptr<Box_itai>&&) /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:446
+  NEW_FUNC: 0x562e77ce3b90 in std::shared_ptr<Box_prfr> std::make_shared<Box_prfr>() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:1004
+  NEW_FUNC: 0x562e77ce3c70 in std::enable_if<is_assignable<std::__shared_ptr<Box, (__gnu_cxx::_Lock_policy)2>&, std::shared_ptr<Box_prfr>>::value, std::shared_ptr<Box>&>::type std::shared_ptr<Box>::operator=<Box_prfr>(std::shared_ptr<Box_prfr>&&) /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr.h:446
+  NEW_FUNC: 0x562e77d1a0b0 in std::_Sp_counted_ptr_inplace<Box_itai, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:615
+  NEW_FUNC: 0x562e77d1a100 in std::_Sp_counted_ptr_inplace<Box_itai, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:622
+  NEW_FUNC: 0x562e77d1d850 in std::_Sp_counted_ptr_inplace<Box_prfr, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:615
+  NEW_FUNC: 0x562e77d1d8a0 in std::_Sp_counted_ptr_inplace<Box_prfr, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/shared_ptr_base.h:622
+  NEW_FUNC: 0x562e77dae4d0 in initialize_heif_tai_timestamp_packet(heif_tai_timestamp_packet*) /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/api/libheif/heif_tai_timestamps.cc:47
+INFO: fuzzed for 9856 iterations, wrapping up soon
+INFO: exiting: 0 time: 5s

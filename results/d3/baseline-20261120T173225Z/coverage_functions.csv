@@ -1,0 +1,8 @@
+fuzzer,covered_funcs,uncovered_funcs,exit_code,report,corpus_files_replayed,crash_units_filtered
+api_fuzzer,12,68,0,results/d3/baseline-20261120T173225Z/coverage/api_fuzzer.txt,1559,2
+box_fuzzer,0,62,0,results/d3/baseline-20261120T173225Z/coverage/box_fuzzer.txt,1379,2
+color_conversion_fuzzer,3,61,0,results/d3/baseline-20261120T173225Z/coverage/color_conversion_fuzzer.txt,453,2
+encoder_fuzzer,5,65,0,results/d3/baseline-20261120T173225Z/coverage/encoder_fuzzer.txt,180,2
+file_fuzzer,16,51,0,results/d3/baseline-20261120T173225Z/coverage/file_fuzzer.txt,1376,2
+sequence_fuzzer,2,61,0,results/d3/baseline-20261120T173225Z/coverage/sequence_fuzzer.txt,1505,2
+tile_fuzzer,11,62,0,results/d3/baseline-20261120T173225Z/coverage/tile_fuzzer.txt,1396,2
