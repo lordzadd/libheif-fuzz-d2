@@ -1,0 +1,4 @@
+t_s,fuzzer,cov,ft,corpus_units,corpus_bytes,skipped
+147.23,decode_matrix_fuzzer,10677,31528,3557,7246147,0
+1499.78,decode_matrix_fuzzer,11117,34189,7374,16833888,0
+3162.76,decode_matrix_fuzzer,11261,34959,9033,20729642,0

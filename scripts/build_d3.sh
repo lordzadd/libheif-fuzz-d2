@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SRC="$ROOT/libheif"
+SRC="${LIBHEIF_SRC:-$ROOT/libheif}"
 # BUILD_DIR lets the D3 before/after comparison build the patched tree next to
 # the baseline tree (build/ and build-patched/).
 BUILD="${BUILD_DIR:-$ROOT/build}"

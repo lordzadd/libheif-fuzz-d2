@@ -5,6 +5,7 @@ build-arm64/
 build-cov/
 build-patched/
 build-baseline/
+build-master/
 corpora/
 results/
 *.o
@@ -12,3 +13,6 @@ results/
 .DS_Store
 __pycache__/
 .vscode/
+build-*-i386/
+build-*.asm-include/
+build-m3/

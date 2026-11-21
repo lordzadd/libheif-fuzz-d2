@@ -1,0 +1,568 @@
+input,exit,kind,frame,seconds
+clap-mono-128x96-t1x1-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.11
+clap-mono-128x96-t1x1-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.12
+clap-mono-128x96-t1x1-c128x48-o0_0,0,,,0.11
+clap-mono-128x96-t1x1-c128x48-o0_3,0,,,0.05
+clap-mono-128x96-t1x1-c128x48-o1000_0,0,,,0.05
+clap-mono-128x96-t1x1-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.14
+clap-mono-128x96-t1x1-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.16
+clap-mono-128x96-t1x1-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.12
+clap-mono-128x96-t1x1-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.16
+clap-mono-128x96-t1x1-c128x96-o0_0,0,,,0.03
+clap-mono-128x96-t1x1-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.11
+clap-mono-128x96-t1x1-c128x96-o1000_0,0,,,0.05
+clap-mono-128x96-t1x1-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.17
+clap-mono-128x96-t1x1-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.17
+clap-mono-128x96-t1x1-c64x48-o-3_0,0,,,0.04
+clap-mono-128x96-t1x1-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.11
+clap-mono-128x96-t1x1-c64x48-o0_0,0,,,0.03
+clap-mono-128x96-t1x1-c64x48-o0_3,0,,,0.04
+clap-mono-128x96-t1x1-c64x48-o1000_0,0,,,0.03
+clap-mono-128x96-t1x1-c64x48-o3_0,0,,,0.03
+clap-mono-128x96-t1x1-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.18
+clap-mono-128x96-t2x2-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.11
+clap-mono-128x96-t2x2-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.11
+clap-mono-128x96-t2x2-c128x48-o0_0,0,,,0.03
+clap-mono-128x96-t2x2-c128x48-o0_3,0,,,0.02
+clap-mono-128x96-t2x2-c128x48-o1000_0,0,,,0.05
+clap-mono-128x96-t2x2-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.16
+clap-mono-128x96-t2x2-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.2
+clap-mono-128x96-t2x2-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.12
+clap-mono-128x96-t2x2-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.11
+clap-mono-128x96-t2x2-c128x96-o0_0,0,,,0.05
+clap-mono-128x96-t2x2-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.12
+clap-mono-128x96-t2x2-c128x96-o1000_0,0,,,0.03
+clap-mono-128x96-t2x2-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.18
+clap-mono-128x96-t2x2-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.19
+clap-mono-128x96-t2x2-c64x48-o-3_0,0,,,0.02
+clap-mono-128x96-t2x2-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.1
+clap-mono-128x96-t2x2-c64x48-o0_0,0,,,0.04
+clap-mono-128x96-t2x2-c64x48-o0_3,0,,,0.04
+clap-mono-128x96-t2x2-c64x48-o1000_0,0,,,0.02
+clap-mono-128x96-t2x2-c64x48-o3_0,0,,,0.05
+clap-mono-128x96-t2x2-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.2
+clap-mono-128x96-t4x2-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.1
+clap-mono-128x96-t4x2-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.19
+clap-mono-128x96-t4x2-c128x48-o0_0,0,,,0.02
+clap-mono-128x96-t4x2-c128x48-o0_3,0,,,0.02
+clap-mono-128x96-t4x2-c128x48-o1000_0,0,,,0.02
+clap-mono-128x96-t4x2-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.15
+clap-mono-128x96-t4x2-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.17
+clap-mono-128x96-t4x2-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.17
+clap-mono-128x96-t4x2-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.11
+clap-mono-128x96-t4x2-c128x96-o0_0,0,,,0.03
+clap-mono-128x96-t4x2-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.16
+clap-mono-128x96-t4x2-c128x96-o1000_0,0,,,0.05
+clap-mono-128x96-t4x2-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.18
+clap-mono-128x96-t4x2-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.12
+clap-mono-128x96-t4x2-c64x48-o-3_0,0,,,0.05
+clap-mono-128x96-t4x2-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.13
+clap-mono-128x96-t4x2-c64x48-o0_0,0,,,0.04
+clap-mono-128x96-t4x2-c64x48-o0_3,0,,,0.03
+clap-mono-128x96-t4x2-c64x48-o1000_0,0,,,0.03
+clap-mono-128x96-t4x2-c64x48-o3_0,0,,,0.03
+clap-mono-128x96-t4x2-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.13
+clap-mono-130x70-t1x1-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.15
+clap-mono-130x70-t1x1-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.17
+clap-mono-130x70-t1x1-c130x35-o0_0,0,,,0.02
+clap-mono-130x70-t1x1-c130x35-o0_3,0,,,0.04
+clap-mono-130x70-t1x1-c130x35-o1000_0,0,,,0.04
+clap-mono-130x70-t1x1-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.13
+clap-mono-130x70-t1x1-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.12
+clap-mono-130x70-t1x1-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.15
+clap-mono-130x70-t1x1-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.14
+clap-mono-130x70-t1x1-c130x70-o0_0,0,,,0.04
+clap-mono-130x70-t1x1-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.12
+clap-mono-130x70-t1x1-c130x70-o1000_0,0,,,0.03
+clap-mono-130x70-t1x1-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.13
+clap-mono-130x70-t1x1-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.15
+clap-mono-130x70-t1x1-c65x35-o-3_0,0,,,0.03
+clap-mono-130x70-t1x1-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.13
+clap-mono-130x70-t1x1-c65x35-o0_0,0,,,0.03
+clap-mono-130x70-t1x1-c65x35-o0_3,0,,,0.04
+clap-mono-130x70-t1x1-c65x35-o1000_0,0,,,0.03
+clap-mono-130x70-t1x1-c65x35-o3_0,0,,,0.03
+clap-mono-130x70-t1x1-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.13
+clap-mono-130x70-t2x2-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.11
+clap-mono-130x70-t2x2-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.12
+clap-mono-130x70-t2x2-c130x35-o0_0,0,,,0.05
+clap-mono-130x70-t2x2-c130x35-o0_3,0,,,0.02
+clap-mono-130x70-t2x2-c130x35-o1000_0,0,,,0.02
+clap-mono-130x70-t2x2-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.11
+clap-mono-130x70-t2x2-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.11
+clap-mono-130x70-t2x2-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.11
+clap-mono-130x70-t2x2-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.16
+clap-mono-130x70-t2x2-c130x70-o0_0,0,,,0.02
+clap-mono-130x70-t2x2-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.15
+clap-mono-130x70-t2x2-c130x70-o1000_0,0,,,0.05
+clap-mono-130x70-t2x2-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.22
+clap-mono-130x70-t2x2-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.11
+clap-mono-130x70-t2x2-c65x35-o-3_0,0,,,0.03
+clap-mono-130x70-t2x2-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.1
+clap-mono-130x70-t2x2-c65x35-o0_0,0,,,0.02
+clap-mono-130x70-t2x2-c65x35-o0_3,0,,,0.04
+clap-mono-130x70-t2x2-c65x35-o1000_0,0,,,0.02
+clap-mono-130x70-t2x2-c65x35-o3_0,0,,,0.04
+clap-mono-130x70-t2x2-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.18
+clap-mono-130x70-t4x2-c130x35-o-3_0,0,,,0.03
+clap-mono-130x70-t4x2-c130x35-o-40_-20,0,,,0.03
+clap-mono-130x70-t4x2-c130x35-o0_0,0,,,0.04
+clap-mono-130x70-t4x2-c130x35-o0_3,0,,,0.02
+clap-mono-130x70-t4x2-c130x35-o1000_0,0,,,0.02
+clap-mono-130x70-t4x2-c130x35-o3_0,0,,,0.04
+clap-mono-130x70-t4x2-c130x35-o40_40,0,,,0.02
+clap-mono-130x70-t4x2-c130x70-o-3_0,0,,,0.04
+clap-mono-130x70-t4x2-c130x70-o-40_-20,0,,,0.02
+clap-mono-130x70-t4x2-c130x70-o0_0,0,,,0.03
+clap-mono-130x70-t4x2-c130x70-o0_3,0,,,0.03
+clap-mono-130x70-t4x2-c130x70-o1000_0,0,,,0.02
+clap-mono-130x70-t4x2-c130x70-o3_0,0,,,0.03
+clap-mono-130x70-t4x2-c130x70-o40_40,0,,,0.03
+clap-mono-130x70-t4x2-c65x35-o-3_0,0,,,0.02
+clap-mono-130x70-t4x2-c65x35-o-40_-20,0,,,0.05
+clap-mono-130x70-t4x2-c65x35-o0_0,0,,,0.02
+clap-mono-130x70-t4x2-c65x35-o0_3,0,,,0.02
+clap-mono-130x70-t4x2-c65x35-o1000_0,0,,,0.02
+clap-mono-130x70-t4x2-c65x35-o3_0,0,,,0.04
+clap-mono-130x70-t4x2-c65x35-o40_40,0,,,0.04
+clap-mono-8x8-t1x1-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.1
+clap-mono-8x8-t1x1-c4x4-o-40_-20,0,,,0.04
+clap-mono-8x8-t1x1-c4x4-o0_0,0,,,0.04
+clap-mono-8x8-t1x1-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.16
+clap-mono-8x8-t1x1-c4x4-o1000_0,0,,,0.04
+clap-mono-8x8-t1x1-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.1
+clap-mono-8x8-t1x1-c4x4-o40_40,0,,,0.05
+clap-mono-8x8-t1x1-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.14
+clap-mono-8x8-t1x1-c8x4-o-40_-20,0,,,0.02
+clap-mono-8x8-t1x1-c8x4-o0_0,0,,,0.03
+clap-mono-8x8-t1x1-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.11
+clap-mono-8x8-t1x1-c8x4-o1000_0,0,,,0.04
+clap-mono-8x8-t1x1-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.12
+clap-mono-8x8-t1x1-c8x4-o40_40,0,,,0.03
+clap-mono-8x8-t1x1-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.11
+clap-mono-8x8-t1x1-c8x8-o-40_-20,0,,,0.07
+clap-mono-8x8-t1x1-c8x8-o0_0,0,,,0.04
+clap-mono-8x8-t1x1-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.14
+clap-mono-8x8-t1x1-c8x8-o1000_0,0,,,0.03
+clap-mono-8x8-t1x1-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.15
+clap-mono-8x8-t1x1-c8x8-o40_40,0,,,0.04
+clap-mono-8x8-t2x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.16
+clap-mono-8x8-t2x2-c4x4-o-40_-20,0,,,0.04
+clap-mono-8x8-t2x2-c4x4-o0_0,0,,,0.04
+clap-mono-8x8-t2x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.2
+clap-mono-8x8-t2x2-c4x4-o1000_0,0,,,0.02
+clap-mono-8x8-t2x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.12
+clap-mono-8x8-t2x2-c4x4-o40_40,0,,,0.02
+clap-mono-8x8-t2x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.11
+clap-mono-8x8-t2x2-c8x4-o-40_-20,0,,,0.03
+clap-mono-8x8-t2x2-c8x4-o0_0,0,,,0.03
+clap-mono-8x8-t2x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.12
+clap-mono-8x8-t2x2-c8x4-o1000_0,0,,,0.08
+clap-mono-8x8-t2x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.11
+clap-mono-8x8-t2x2-c8x4-o40_40,0,,,0.04
+clap-mono-8x8-t2x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.14
+clap-mono-8x8-t2x2-c8x8-o-40_-20,0,,,0.02
+clap-mono-8x8-t2x2-c8x8-o0_0,0,,,0.04
+clap-mono-8x8-t2x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.12
+clap-mono-8x8-t2x2-c8x8-o1000_0,0,,,0.02
+clap-mono-8x8-t2x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.11
+clap-mono-8x8-t2x2-c8x8-o40_40,0,,,0.04
+clap-mono-8x8-t4x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.15
+clap-mono-8x8-t4x2-c4x4-o-40_-20,0,,,0.03
+clap-mono-8x8-t4x2-c4x4-o0_0,0,,,0.04
+clap-mono-8x8-t4x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.24
+clap-mono-8x8-t4x2-c4x4-o1000_0,0,,,0.03
+clap-mono-8x8-t4x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.1
+clap-mono-8x8-t4x2-c4x4-o40_40,0,,,0.02
+clap-mono-8x8-t4x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.1
+clap-mono-8x8-t4x2-c8x4-o-40_-20,0,,,0.02
+clap-mono-8x8-t4x2-c8x4-o0_0,0,,,0.02
+clap-mono-8x8-t4x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.11
+clap-mono-8x8-t4x2-c8x4-o1000_0,0,,,0.03
+clap-mono-8x8-t4x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.15
+clap-mono-8x8-t4x2-c8x4-o40_40,0,,,0.04
+clap-mono-8x8-t4x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.13
+clap-mono-8x8-t4x2-c8x8-o-40_-20,0,,,0.03
+clap-mono-8x8-t4x2-c8x8-o0_0,0,,,0.03
+clap-mono-8x8-t4x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.11
+clap-mono-8x8-t4x2-c8x8-o1000_0,0,,,0.03
+clap-mono-8x8-t4x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.12
+clap-mono-8x8-t4x2-c8x8-o40_40,0,,,0.03
+clap-rgb-128x96-t1x1-c128x48-o-3_0,0,,,0.06
+clap-rgb-128x96-t1x1-c128x48-o-40_-20,0,,,0.02
+clap-rgb-128x96-t1x1-c128x48-o0_0,0,,,0.03
+clap-rgb-128x96-t1x1-c128x48-o0_3,0,,,0.04
+clap-rgb-128x96-t1x1-c128x48-o1000_0,0,,,0.03
+clap-rgb-128x96-t1x1-c128x48-o3_0,0,,,0.04
+clap-rgb-128x96-t1x1-c128x48-o40_40,0,,,0.02
+clap-rgb-128x96-t1x1-c128x96-o-3_0,0,,,0.04
+clap-rgb-128x96-t1x1-c128x96-o-40_-20,0,,,0.04
+clap-rgb-128x96-t1x1-c128x96-o0_0,0,,,0.03
+clap-rgb-128x96-t1x1-c128x96-o0_3,0,,,0.03
+clap-rgb-128x96-t1x1-c128x96-o1000_0,0,,,0.04
+clap-rgb-128x96-t1x1-c128x96-o3_0,0,,,0.02
+clap-rgb-128x96-t1x1-c128x96-o40_40,0,,,0.05
+clap-rgb-128x96-t1x1-c64x48-o-3_0,0,,,0.02
+clap-rgb-128x96-t1x1-c64x48-o-40_-20,0,,,0.04
+clap-rgb-128x96-t1x1-c64x48-o0_0,0,,,0.03
+clap-rgb-128x96-t1x1-c64x48-o0_3,0,,,0.04
+clap-rgb-128x96-t1x1-c64x48-o1000_0,0,,,0.04
+clap-rgb-128x96-t1x1-c64x48-o3_0,0,,,0.03
+clap-rgb-128x96-t1x1-c64x48-o40_40,0,,,0.03
+clap-rgb-128x96-t2x2-c128x48-o-3_0,0,,,0.03
+clap-rgb-128x96-t2x2-c128x48-o-40_-20,0,,,0.03
+clap-rgb-128x96-t2x2-c128x48-o0_0,0,,,0.02
+clap-rgb-128x96-t2x2-c128x48-o0_3,0,,,0.04
+clap-rgb-128x96-t2x2-c128x48-o1000_0,0,,,0.03
+clap-rgb-128x96-t2x2-c128x48-o3_0,0,,,0.03
+clap-rgb-128x96-t2x2-c128x48-o40_40,0,,,0.03
+clap-rgb-128x96-t2x2-c128x96-o-3_0,0,,,0.03
+clap-rgb-128x96-t2x2-c128x96-o-40_-20,0,,,0.03
+clap-rgb-128x96-t2x2-c128x96-o0_0,0,,,0.02
+clap-rgb-128x96-t2x2-c128x96-o0_3,0,,,0.02
+clap-rgb-128x96-t2x2-c128x96-o1000_0,0,,,0.02
+clap-rgb-128x96-t2x2-c128x96-o3_0,0,,,0.02
+clap-rgb-128x96-t2x2-c128x96-o40_40,0,,,0.02
+clap-rgb-128x96-t2x2-c64x48-o-3_0,0,,,0.04
+clap-rgb-128x96-t2x2-c64x48-o-40_-20,0,,,0.02
+clap-rgb-128x96-t2x2-c64x48-o0_0,0,,,0.02
+clap-rgb-128x96-t2x2-c64x48-o0_3,0,,,0.02
+clap-rgb-128x96-t2x2-c64x48-o1000_0,0,,,0.03
+clap-rgb-128x96-t2x2-c64x48-o3_0,0,,,0.02
+clap-rgb-128x96-t2x2-c64x48-o40_40,0,,,0.02
+clap-rgb-128x96-t4x2-c128x48-o-3_0,0,,,0.02
+clap-rgb-128x96-t4x2-c128x48-o-40_-20,0,,,0.03
+clap-rgb-128x96-t4x2-c128x48-o0_0,0,,,0.02
+clap-rgb-128x96-t4x2-c128x48-o0_3,0,,,0.02
+clap-rgb-128x96-t4x2-c128x48-o1000_0,0,,,0.05
+clap-rgb-128x96-t4x2-c128x48-o3_0,0,,,0.05
+clap-rgb-128x96-t4x2-c128x48-o40_40,0,,,0.02
+clap-rgb-128x96-t4x2-c128x96-o-3_0,0,,,0.03
+clap-rgb-128x96-t4x2-c128x96-o-40_-20,0,,,0.05
+clap-rgb-128x96-t4x2-c128x96-o0_0,0,,,0.05
+clap-rgb-128x96-t4x2-c128x96-o0_3,0,,,0.02
+clap-rgb-128x96-t4x2-c128x96-o1000_0,0,,,0.03
+clap-rgb-128x96-t4x2-c128x96-o3_0,0,,,0.05
+clap-rgb-128x96-t4x2-c128x96-o40_40,0,,,0.05
+clap-rgb-128x96-t4x2-c64x48-o-3_0,0,,,0.02
+clap-rgb-128x96-t4x2-c64x48-o-40_-20,0,,,0.03
+clap-rgb-128x96-t4x2-c64x48-o0_0,0,,,0.05
+clap-rgb-128x96-t4x2-c64x48-o0_3,0,,,0.04
+clap-rgb-128x96-t4x2-c64x48-o1000_0,0,,,0.03
+clap-rgb-128x96-t4x2-c64x48-o3_0,0,,,0.02
+clap-rgb-128x96-t4x2-c64x48-o40_40,0,,,0.04
+clap-rgb-130x70-t1x1-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.19
+clap-rgb-130x70-t1x1-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.11
+clap-rgb-130x70-t1x1-c130x35-o0_0,0,,,0.03
+clap-rgb-130x70-t1x1-c130x35-o0_3,0,,,0.02
+clap-rgb-130x70-t1x1-c130x35-o1000_0,0,,,0.02
+clap-rgb-130x70-t1x1-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.17
+clap-rgb-130x70-t1x1-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.14
+clap-rgb-130x70-t1x1-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.13
+clap-rgb-130x70-t1x1-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.18
+clap-rgb-130x70-t1x1-c130x70-o0_0,0,,,0.05
+clap-rgb-130x70-t1x1-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.11
+clap-rgb-130x70-t1x1-c130x70-o1000_0,0,,,0.04
+clap-rgb-130x70-t1x1-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.16
+clap-rgb-130x70-t1x1-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.15
+clap-rgb-130x70-t1x1-c65x35-o-3_0,0,,,0.04
+clap-rgb-130x70-t1x1-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.13
+clap-rgb-130x70-t1x1-c65x35-o0_0,0,,,0.03
+clap-rgb-130x70-t1x1-c65x35-o0_3,0,,,0.03
+clap-rgb-130x70-t1x1-c65x35-o1000_0,0,,,0.04
+clap-rgb-130x70-t1x1-c65x35-o3_0,0,,,0.03
+clap-rgb-130x70-t1x1-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.17
+clap-rgb-130x70-t2x2-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.18
+clap-rgb-130x70-t2x2-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.13
+clap-rgb-130x70-t2x2-c130x35-o0_0,0,,,0.03
+clap-rgb-130x70-t2x2-c130x35-o0_3,0,,,0.05
+clap-rgb-130x70-t2x2-c130x35-o1000_0,0,,,0.05
+clap-rgb-130x70-t2x2-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.14
+clap-rgb-130x70-t2x2-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.14
+clap-rgb-130x70-t2x2-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.19
+clap-rgb-130x70-t2x2-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.2
+clap-rgb-130x70-t2x2-c130x70-o0_0,0,,,0.03
+clap-rgb-130x70-t2x2-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.2
+clap-rgb-130x70-t2x2-c130x70-o1000_0,0,,,0.03
+clap-rgb-130x70-t2x2-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.11
+clap-rgb-130x70-t2x2-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.14
+clap-rgb-130x70-t2x2-c65x35-o-3_0,0,,,0.03
+clap-rgb-130x70-t2x2-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.19
+clap-rgb-130x70-t2x2-c65x35-o0_0,0,,,0.03
+clap-rgb-130x70-t2x2-c65x35-o0_3,0,,,0.05
+clap-rgb-130x70-t2x2-c65x35-o1000_0,0,,,0.04
+clap-rgb-130x70-t2x2-c65x35-o3_0,0,,,0.03
+clap-rgb-130x70-t2x2-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.12
+clap-rgb-130x70-t4x2-c130x35-o-3_0,0,,,0.05
+clap-rgb-130x70-t4x2-c130x35-o-40_-20,0,,,0.04
+clap-rgb-130x70-t4x2-c130x35-o0_0,0,,,0.05
+clap-rgb-130x70-t4x2-c130x35-o0_3,0,,,0.04
+clap-rgb-130x70-t4x2-c130x35-o1000_0,0,,,0.04
+clap-rgb-130x70-t4x2-c130x35-o3_0,0,,,0.03
+clap-rgb-130x70-t4x2-c130x35-o40_40,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o-3_0,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o-40_-20,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o0_0,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o0_3,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o1000_0,0,,,0.02
+clap-rgb-130x70-t4x2-c130x70-o3_0,0,,,0.03
+clap-rgb-130x70-t4x2-c130x70-o40_40,0,,,0.03
+clap-rgb-130x70-t4x2-c65x35-o-3_0,0,,,0.03
+clap-rgb-130x70-t4x2-c65x35-o-40_-20,0,,,0.03
+clap-rgb-130x70-t4x2-c65x35-o0_0,0,,,0.03
+clap-rgb-130x70-t4x2-c65x35-o0_3,0,,,0.02
+clap-rgb-130x70-t4x2-c65x35-o1000_0,0,,,0.05
+clap-rgb-130x70-t4x2-c65x35-o3_0,0,,,0.02
+clap-rgb-130x70-t4x2-c65x35-o40_40,0,,,0.04
+clap-rgb-8x8-t1x1-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.11
+clap-rgb-8x8-t1x1-c4x4-o-40_-20,0,,,0.06
+clap-rgb-8x8-t1x1-c4x4-o0_0,0,,,0.04
+clap-rgb-8x8-t1x1-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.19
+clap-rgb-8x8-t1x1-c4x4-o1000_0,0,,,0.04
+clap-rgb-8x8-t1x1-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.1
+clap-rgb-8x8-t1x1-c4x4-o40_40,0,,,0.04
+clap-rgb-8x8-t1x1-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.2
+clap-rgb-8x8-t1x1-c8x4-o-40_-20,0,,,0.02
+clap-rgb-8x8-t1x1-c8x4-o0_0,0,,,0.05
+clap-rgb-8x8-t1x1-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.11
+clap-rgb-8x8-t1x1-c8x4-o1000_0,0,,,0.05
+clap-rgb-8x8-t1x1-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.12
+clap-rgb-8x8-t1x1-c8x4-o40_40,0,,,0.04
+clap-rgb-8x8-t1x1-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.14
+clap-rgb-8x8-t1x1-c8x8-o-40_-20,0,,,0.03
+clap-rgb-8x8-t1x1-c8x8-o0_0,0,,,0.05
+clap-rgb-8x8-t1x1-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.18
+clap-rgb-8x8-t1x1-c8x8-o1000_0,0,,,0.04
+clap-rgb-8x8-t1x1-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.11
+clap-rgb-8x8-t1x1-c8x8-o40_40,0,,,0.03
+clap-rgb-8x8-t2x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.11
+clap-rgb-8x8-t2x2-c4x4-o-40_-20,0,,,0.05
+clap-rgb-8x8-t2x2-c4x4-o0_0,0,,,0.03
+clap-rgb-8x8-t2x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.13
+clap-rgb-8x8-t2x2-c4x4-o1000_0,0,,,0.03
+clap-rgb-8x8-t2x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.13
+clap-rgb-8x8-t2x2-c4x4-o40_40,0,,,0.07
+clap-rgb-8x8-t2x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.13
+clap-rgb-8x8-t2x2-c8x4-o-40_-20,0,,,0.03
+clap-rgb-8x8-t2x2-c8x4-o0_0,0,,,0.04
+clap-rgb-8x8-t2x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.13
+clap-rgb-8x8-t2x2-c8x4-o1000_0,0,,,0.03
+clap-rgb-8x8-t2x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.14
+clap-rgb-8x8-t2x2-c8x4-o40_40,0,,,0.02
+clap-rgb-8x8-t2x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.17
+clap-rgb-8x8-t2x2-c8x8-o-40_-20,0,,,0.05
+clap-rgb-8x8-t2x2-c8x8-o0_0,0,,,0.04
+clap-rgb-8x8-t2x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.13
+clap-rgb-8x8-t2x2-c8x8-o1000_0,0,,,0.04
+clap-rgb-8x8-t2x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.11
+clap-rgb-8x8-t2x2-c8x8-o40_40,0,,,0.05
+clap-rgb-8x8-t4x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.12
+clap-rgb-8x8-t4x2-c4x4-o-40_-20,0,,,0.03
+clap-rgb-8x8-t4x2-c4x4-o0_0,0,,,0.09
+clap-rgb-8x8-t4x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.11
+clap-rgb-8x8-t4x2-c4x4-o1000_0,0,,,0.02
+clap-rgb-8x8-t4x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.18
+clap-rgb-8x8-t4x2-c4x4-o40_40,0,,,0.02
+clap-rgb-8x8-t4x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.12
+clap-rgb-8x8-t4x2-c8x4-o-40_-20,0,,,0.03
+clap-rgb-8x8-t4x2-c8x4-o0_0,0,,,0.05
+clap-rgb-8x8-t4x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.14
+clap-rgb-8x8-t4x2-c8x4-o1000_0,0,,,0.05
+clap-rgb-8x8-t4x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.13
+clap-rgb-8x8-t4x2-c8x4-o40_40,0,,,0.04
+clap-rgb-8x8-t4x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.14
+clap-rgb-8x8-t4x2-c8x8-o-40_-20,0,,,0.03
+clap-rgb-8x8-t4x2-c8x8-o0_0,0,,,0.03
+clap-rgb-8x8-t4x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.12
+clap-rgb-8x8-t4x2-c8x8-o1000_0,0,,,0.04
+clap-rgb-8x8-t4x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.23
+clap-rgb-8x8-t4x2-c8x8-o40_40,0,,,0.03
+clap-ycc420-128x96-t1x1-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.11
+clap-ycc420-128x96-t1x1-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.1
+clap-ycc420-128x96-t1x1-c128x48-o0_0,0,,,0.03
+clap-ycc420-128x96-t1x1-c128x48-o0_3,0,,,0.04
+clap-ycc420-128x96-t1x1-c128x48-o1000_0,0,,,0.03
+clap-ycc420-128x96-t1x1-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.16
+clap-ycc420-128x96-t1x1-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.11
+clap-ycc420-128x96-t1x1-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.2
+clap-ycc420-128x96-t1x1-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.12
+clap-ycc420-128x96-t1x1-c128x96-o0_0,0,,,0.05
+clap-ycc420-128x96-t1x1-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.14
+clap-ycc420-128x96-t1x1-c128x96-o1000_0,0,,,0.04
+clap-ycc420-128x96-t1x1-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.13
+clap-ycc420-128x96-t1x1-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.2
+clap-ycc420-128x96-t1x1-c64x48-o-3_0,0,,,0.03
+clap-ycc420-128x96-t1x1-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.12
+clap-ycc420-128x96-t1x1-c64x48-o0_0,0,,,0.03
+clap-ycc420-128x96-t1x1-c64x48-o0_3,0,,,0.03
+clap-ycc420-128x96-t1x1-c64x48-o1000_0,0,,,0.03
+clap-ycc420-128x96-t1x1-c64x48-o3_0,0,,,0.05
+clap-ycc420-128x96-t1x1-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.18
+clap-ycc420-128x96-t2x2-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.11
+clap-ycc420-128x96-t2x2-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.16
+clap-ycc420-128x96-t2x2-c128x48-o0_0,0,,,0.05
+clap-ycc420-128x96-t2x2-c128x48-o0_3,0,,,0.04
+clap-ycc420-128x96-t2x2-c128x48-o1000_0,0,,,0.03
+clap-ycc420-128x96-t2x2-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.17
+clap-ycc420-128x96-t2x2-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.2
+clap-ycc420-128x96-t2x2-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.12
+clap-ycc420-128x96-t2x2-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.11
+clap-ycc420-128x96-t2x2-c128x96-o0_0,0,,,0.03
+clap-ycc420-128x96-t2x2-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.14
+clap-ycc420-128x96-t2x2-c128x96-o1000_0,0,,,0.04
+clap-ycc420-128x96-t2x2-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.16
+clap-ycc420-128x96-t2x2-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.16
+clap-ycc420-128x96-t2x2-c64x48-o-3_0,0,,,0.03
+clap-ycc420-128x96-t2x2-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.11
+clap-ycc420-128x96-t2x2-c64x48-o0_0,0,,,0.06
+clap-ycc420-128x96-t2x2-c64x48-o0_3,0,,,0.03
+clap-ycc420-128x96-t2x2-c64x48-o1000_0,0,,,0.02
+clap-ycc420-128x96-t2x2-c64x48-o3_0,0,,,0.05
+clap-ycc420-128x96-t2x2-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.15
+clap-ycc420-128x96-t4x2-c128x48-o-3_0,77,contract:width,image handle=128 image=125,0.13
+clap-ycc420-128x96-t4x2-c128x48-o-40_-20,77,contract:width,image handle=128 image=88,0.18
+clap-ycc420-128x96-t4x2-c128x48-o0_0,0,,,0.03
+clap-ycc420-128x96-t4x2-c128x48-o0_3,0,,,0.04
+clap-ycc420-128x96-t4x2-c128x48-o1000_0,0,,,0.03
+clap-ycc420-128x96-t4x2-c128x48-o3_0,77,contract:width,image handle=128 image=125,0.16
+clap-ycc420-128x96-t4x2-c128x48-o40_40,77,contract:width,image handle=128 image=88,0.23
+clap-ycc420-128x96-t4x2-c128x96-o-3_0,77,contract:width,image handle=128 image=125,0.12
+clap-ycc420-128x96-t4x2-c128x96-o-40_-20,77,contract:width,image handle=128 image=88,0.12
+clap-ycc420-128x96-t4x2-c128x96-o0_0,0,,,0.03
+clap-ycc420-128x96-t4x2-c128x96-o0_3,77,contract:height,image handle=96 image=93,0.22
+clap-ycc420-128x96-t4x2-c128x96-o1000_0,0,,,0.05
+clap-ycc420-128x96-t4x2-c128x96-o3_0,77,contract:width,image handle=128 image=125,0.2
+clap-ycc420-128x96-t4x2-c128x96-o40_40,77,contract:width,image handle=128 image=88,0.11
+clap-ycc420-128x96-t4x2-c64x48-o-3_0,0,,,0.03
+clap-ycc420-128x96-t4x2-c64x48-o-40_-20,77,contract:width,image handle=64 image=56,0.14
+clap-ycc420-128x96-t4x2-c64x48-o0_0,0,,,0.02
+clap-ycc420-128x96-t4x2-c64x48-o0_3,0,,,0.05
+clap-ycc420-128x96-t4x2-c64x48-o1000_0,0,,,0.05
+clap-ycc420-128x96-t4x2-c64x48-o3_0,0,,,0.03
+clap-ycc420-128x96-t4x2-c64x48-o40_40,77,contract:width,image handle=64 image=56,0.14
+clap-ycc420-130x70-t1x1-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.13
+clap-ycc420-130x70-t1x1-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.11
+clap-ycc420-130x70-t1x1-c130x35-o0_0,0,,,0.05
+clap-ycc420-130x70-t1x1-c130x35-o0_3,0,,,0.03
+clap-ycc420-130x70-t1x1-c130x35-o1000_0,0,,,0.06
+clap-ycc420-130x70-t1x1-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.11
+clap-ycc420-130x70-t1x1-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.15
+clap-ycc420-130x70-t1x1-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.16
+clap-ycc420-130x70-t1x1-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.13
+clap-ycc420-130x70-t1x1-c130x70-o0_0,0,,,0.03
+clap-ycc420-130x70-t1x1-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.13
+clap-ycc420-130x70-t1x1-c130x70-o1000_0,0,,,0.03
+clap-ycc420-130x70-t1x1-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.16
+clap-ycc420-130x70-t1x1-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.11
+clap-ycc420-130x70-t1x1-c65x35-o-3_0,0,,,0.06
+clap-ycc420-130x70-t1x1-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.11
+clap-ycc420-130x70-t1x1-c65x35-o0_0,0,,,0.04
+clap-ycc420-130x70-t1x1-c65x35-o0_3,0,,,0.05
+clap-ycc420-130x70-t1x1-c65x35-o1000_0,0,,,0.06
+clap-ycc420-130x70-t1x1-c65x35-o3_0,0,,,0.04
+clap-ycc420-130x70-t1x1-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.2
+clap-ycc420-130x70-t2x2-c130x35-o-3_0,77,contract:width,image handle=130 image=127,0.2
+clap-ycc420-130x70-t2x2-c130x35-o-40_-20,77,contract:width,image handle=130 image=90,0.12
+clap-ycc420-130x70-t2x2-c130x35-o0_0,0,,,0.04
+clap-ycc420-130x70-t2x2-c130x35-o0_3,0,,,0.04
+clap-ycc420-130x70-t2x2-c130x35-o1000_0,0,,,0.03
+clap-ycc420-130x70-t2x2-c130x35-o3_0,77,contract:width,image handle=130 image=127,0.2
+clap-ycc420-130x70-t2x2-c130x35-o40_40,77,contract:width,image handle=130 image=90,0.19
+clap-ycc420-130x70-t2x2-c130x70-o-3_0,77,contract:width,image handle=130 image=127,0.11
+clap-ycc420-130x70-t2x2-c130x70-o-40_-20,77,contract:width,image handle=130 image=90,0.11
+clap-ycc420-130x70-t2x2-c130x70-o0_0,0,,,0.03
+clap-ycc420-130x70-t2x2-c130x70-o0_3,77,contract:height,image handle=70 image=67,0.21
+clap-ycc420-130x70-t2x2-c130x70-o1000_0,0,,,0.03
+clap-ycc420-130x70-t2x2-c130x70-o3_0,77,contract:width,image handle=130 image=127,0.13
+clap-ycc420-130x70-t2x2-c130x70-o40_40,77,contract:width,image handle=130 image=90,0.1
+clap-ycc420-130x70-t2x2-c65x35-o-3_0,0,,,0.03
+clap-ycc420-130x70-t2x2-c65x35-o-40_-20,77,contract:width,image handle=65 image=58,0.12
+clap-ycc420-130x70-t2x2-c65x35-o0_0,0,,,0.04
+clap-ycc420-130x70-t2x2-c65x35-o0_3,0,,,0.05
+clap-ycc420-130x70-t2x2-c65x35-o1000_0,0,,,0.05
+clap-ycc420-130x70-t2x2-c65x35-o3_0,0,,,0.04
+clap-ycc420-130x70-t2x2-c65x35-o40_40,77,contract:width,image handle=65 image=58,0.13
+clap-ycc420-130x70-t4x2-c130x35-o-3_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o-40_-20,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o0_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o0_3,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o1000_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o3_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x35-o40_40,0,,,0.04
+clap-ycc420-130x70-t4x2-c130x70-o-3_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x70-o-40_-20,0,,,0.05
+clap-ycc420-130x70-t4x2-c130x70-o0_0,0,,,0.04
+clap-ycc420-130x70-t4x2-c130x70-o0_3,0,,,0.02
+clap-ycc420-130x70-t4x2-c130x70-o1000_0,0,,,0.05
+clap-ycc420-130x70-t4x2-c130x70-o3_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c130x70-o40_40,0,,,0.04
+clap-ycc420-130x70-t4x2-c65x35-o-3_0,0,,,0.03
+clap-ycc420-130x70-t4x2-c65x35-o-40_-20,0,,,0.04
+clap-ycc420-130x70-t4x2-c65x35-o0_0,0,,,0.04
+clap-ycc420-130x70-t4x2-c65x35-o0_3,0,,,0.02
+clap-ycc420-130x70-t4x2-c65x35-o1000_0,0,,,0.02
+clap-ycc420-130x70-t4x2-c65x35-o3_0,0,,,0.05
+clap-ycc420-130x70-t4x2-c65x35-o40_40,0,,,0.05
+clap-ycc420-8x8-t1x1-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.13
+clap-ycc420-8x8-t1x1-c4x4-o-40_-20,0,,,0.04
+clap-ycc420-8x8-t1x1-c4x4-o0_0,0,,,0.04
+clap-ycc420-8x8-t1x1-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.14
+clap-ycc420-8x8-t1x1-c4x4-o1000_0,0,,,0.02
+clap-ycc420-8x8-t1x1-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.15
+clap-ycc420-8x8-t1x1-c4x4-o40_40,0,,,0.05
+clap-ycc420-8x8-t1x1-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.12
+clap-ycc420-8x8-t1x1-c8x4-o-40_-20,0,,,0.05
+clap-ycc420-8x8-t1x1-c8x4-o0_0,0,,,0.04
+clap-ycc420-8x8-t1x1-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.12
+clap-ycc420-8x8-t1x1-c8x4-o1000_0,0,,,0.04
+clap-ycc420-8x8-t1x1-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.15
+clap-ycc420-8x8-t1x1-c8x4-o40_40,0,,,0.02
+clap-ycc420-8x8-t1x1-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.11
+clap-ycc420-8x8-t1x1-c8x8-o-40_-20,0,,,0.06
+clap-ycc420-8x8-t1x1-c8x8-o0_0,0,,,0.04
+clap-ycc420-8x8-t1x1-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.11
+clap-ycc420-8x8-t1x1-c8x8-o1000_0,0,,,0.03
+clap-ycc420-8x8-t1x1-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.12
+clap-ycc420-8x8-t1x1-c8x8-o40_40,0,,,0.03
+clap-ycc420-8x8-t2x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.17
+clap-ycc420-8x8-t2x2-c4x4-o-40_-20,0,,,0.03
+clap-ycc420-8x8-t2x2-c4x4-o0_0,0,,,0.02
+clap-ycc420-8x8-t2x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.18
+clap-ycc420-8x8-t2x2-c4x4-o1000_0,0,,,0.02
+clap-ycc420-8x8-t2x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.15
+clap-ycc420-8x8-t2x2-c4x4-o40_40,0,,,0.05
+clap-ycc420-8x8-t2x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.11
+clap-ycc420-8x8-t2x2-c8x4-o-40_-20,0,,,0.04
+clap-ycc420-8x8-t2x2-c8x4-o0_0,0,,,0.04
+clap-ycc420-8x8-t2x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.13
+clap-ycc420-8x8-t2x2-c8x4-o1000_0,0,,,0.04
+clap-ycc420-8x8-t2x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.17
+clap-ycc420-8x8-t2x2-c8x4-o40_40,0,,,0.04
+clap-ycc420-8x8-t2x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.15
+clap-ycc420-8x8-t2x2-c8x8-o-40_-20,0,,,0.02
+clap-ycc420-8x8-t2x2-c8x8-o0_0,0,,,0.02
+clap-ycc420-8x8-t2x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.11
+clap-ycc420-8x8-t2x2-c8x8-o1000_0,0,,,0.04
+clap-ycc420-8x8-t2x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.13
+clap-ycc420-8x8-t2x2-c8x8-o40_40,0,,,0.07
+clap-ycc420-8x8-t4x2-c4x4-o-3_0,77,contract:width,image handle=4 image=3,0.11
+clap-ycc420-8x8-t4x2-c4x4-o-40_-20,0,,,0.04
+clap-ycc420-8x8-t4x2-c4x4-o0_0,0,,,0.05
+clap-ycc420-8x8-t4x2-c4x4-o0_3,77,contract:height,image handle=4 image=3,0.13
+clap-ycc420-8x8-t4x2-c4x4-o1000_0,0,,,0.04
+clap-ycc420-8x8-t4x2-c4x4-o3_0,77,contract:width,image handle=4 image=3,0.16
+clap-ycc420-8x8-t4x2-c4x4-o40_40,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x4-o-3_0,77,contract:width,image handle=8 image=5,0.14
+clap-ycc420-8x8-t4x2-c8x4-o-40_-20,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x4-o0_0,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x4-o0_3,77,contract:height,image handle=4 image=3,0.12
+clap-ycc420-8x8-t4x2-c8x4-o1000_0,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x4-o3_0,77,contract:width,image handle=8 image=5,0.13
+clap-ycc420-8x8-t4x2-c8x4-o40_40,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x8-o-3_0,77,contract:width,image handle=8 image=5,0.13
+clap-ycc420-8x8-t4x2-c8x8-o-40_-20,0,,,0.05
+clap-ycc420-8x8-t4x2-c8x8-o0_0,0,,,0.03
+clap-ycc420-8x8-t4x2-c8x8-o0_3,77,contract:height,image handle=8 image=5,0.13
+clap-ycc420-8x8-t4x2-c8x8-o1000_0,0,,,0.02
+clap-ycc420-8x8-t4x2-c8x8-o3_0,77,contract:width,image handle=8 image=5,0.11
+clap-ycc420-8x8-t4x2-c8x8-o40_40,0,,,0.02

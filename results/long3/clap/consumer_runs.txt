@@ -1,0 +1,197 @@
+### baseline clap_centered_control
+handle 130x130, decoded 130x130
+consistent (checksum 0)
+exit=0
+### master clap_centered_control
+handle 130x130, decoded 130x130
+consistent (checksum 0)
+exit=0
+### m3 clap_centered_control
+handle 130x130, decoded 130x130
+consistent (checksum 0)
+exit=0
+### release(master) clap_centered_control
+handle 130x130, decoded 130x130
+consistent (checksum 0)
+### baseline clap_offset_poc
+=================================================================
+==17171==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x525000004e2f at pc 0x55cbc525e6c6 bp 0x7fff5b9e3b50 sp 0x7fff5b9e3310
+READ of size 130 at 0x525000004e2f thread T0
+    #0 0x55cbc525e6c5 in __asan_memcpy (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c16c5) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+    #1 0x55cbc529f05d in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:33:5
+    #2 0x7f4527c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #3 0x7f4527c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #4 0x55cbc51c59c4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2289c4) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+
+0x525000004e2f is located 0 bytes after 9519-byte region [0x525000002900,0x525000004e2f)
+allocated by thread T0 here:
+    #0 0x55cbc52609fd in calloc (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c39fd) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+    #1 0x55cbc5603ba3 in HeifPixelImage::ComponentStorage::alloc(unsigned int, unsigned int, heif_component_datatype, int, int, heif_security_limits const*, MemoryHandle&) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image/pixelimage.cc:508:41
+    #2 0x55cbc5620805 in HeifPixelImage::crop(unsigned int, unsigned int, unsigned int, unsigned int, heif_security_limits const*) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image/pixelimage.cc:1606:31
+    #3 0x55cbc52ec5e5 in ImageItem::decode_image(heif_decoding_options const&, bool, unsigned int, unsigned int, DecodeTraversalState) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image-items/image_item.cc:1270:34
+    #4 0x55cbc5584b62 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1522:34
+    #5 0x55cbc52a849b in heif_decode_image::$_0::operator()() const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api/libheif/heif_decoding.cc:260:83
+    #6 0x55cbc52a849b in heif_error exception_guard<heif_decode_image::$_0>(heif_decode_image::$_0&&) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api_structs.h:46:12
+    #7 0x55cbc52a849b in heif_decode_image /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api/libheif/heif_decoding.cc:253:10
+    #8 0x55cbc529ef87 in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:27:7
+    #9 0x7f4527c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #10 0x7f4527c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #11 0x55cbc51c59c4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2289c4) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c16c5) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x525000004b80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004c00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004c80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004d00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x525000004e00: 00 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa
+  0x525000004e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000004f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000004f80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000005000: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000005080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+exit=0
+### master clap_offset_poc
+=================================================================
+==17174==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x525000004e2f at pc 0x556df9de26f6 bp 0x7ffea1a0e350 sp 0x7ffea1a0db10
+READ of size 130 at 0x525000004e2f thread T0
+    #0 0x556df9de26f5 in __asan_memcpy (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2c96f5) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+    #1 0x556df9e2308d in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:33:5
+    #2 0x7f8b3aa2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #3 0x7f8b3aa2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #4 0x556df9d499f4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2309f4) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+
+0x525000004e2f is located 0 bytes after 9519-byte region [0x525000002900,0x525000004e2f)
+allocated by thread T0 here:
+    #0 0x556df9de4a2d in calloc (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2cba2d) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+    #1 0x556dfa1912bf in HeifPixelImage::ComponentStorage::alloc(unsigned int, unsigned int, heif_component_datatype, int, int, heif_security_limits const*, MemoryHandle&) /home/user/strukturag/libheif/libheif/image/pixelimage.cc:582:41
+    #2 0x556dfa1b6f25 in HeifPixelImage::crop(unsigned int, unsigned int, unsigned int, unsigned int, heif_security_limits const*) const /home/user/strukturag/libheif/libheif/image/pixelimage.cc:2055:31
+    #3 0x556df9e75900 in ImageItem::decode_image(heif_decoding_options const&, bool, unsigned int, unsigned int, DecodeTraversalState, bool) const /home/user/strukturag/libheif/libheif/image-items/image_item.cc:1462:34
+    #4 0x556dfa10fd2e in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /home/user/strukturag/libheif/libheif/context.cc:1529:34
+    #5 0x556df9e2c7eb in heif_decode_image::$_0::operator()() const /home/user/strukturag/libheif/libheif/api/libheif/heif_decoding.cc:260:83
+    #6 0x556df9e2c7eb in heif_error exception_guard<heif_decode_image::$_0>(heif_decode_image::$_0&&) /home/user/strukturag/libheif/libheif/api_structs.h:46:12
+    #7 0x556df9e2c7eb in heif_decode_image /home/user/strukturag/libheif/libheif/api/libheif/heif_decoding.cc:253:10
+    #8 0x556df9e22fb7 in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:27:7
+    #9 0x7f8b3aa2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #10 0x7f8b3aa2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #11 0x556df9d499f4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2309f4) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2c96f5) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x525000004b80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004c00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004c80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004d00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x525000004d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x525000004e00: 00 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa
+  0x525000004e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000004f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000004f80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000005000: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x525000005080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+exit=0
+### m3 clap_offset_poc
+handle 130x65, decoded 130x65
+consistent (checksum 0)
+exit=0
+### release(master) clap_offset_poc
+handle 130x130, decoded 130x65
+consistent (checksum 442)
+### baseline clap_offset_min
+=================================================================
+==17180==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x5210000011c0 at pc 0x559ff01416c6 bp 0x7fff8440f110 sp 0x7fff8440e8d0
+READ of size 1 at 0x5210000011c0 thread T0
+    #0 0x559ff01416c5 in __asan_memcpy (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c16c5) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+    #1 0x559ff018205d in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:33:5
+    #2 0x7f29fde2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #3 0x7f29fde2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #4 0x559ff00a89c4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2289c4) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+
+0x5210000011c0 is located 49 bytes after 4239-byte region [0x521000000100,0x52100000118f)
+allocated by thread T0 here:
+    #0 0x559ff01439fd in calloc (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c39fd) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+    #1 0x559ff04e6ba3 in HeifPixelImage::ComponentStorage::alloc(unsigned int, unsigned int, heif_component_datatype, int, int, heif_security_limits const*, MemoryHandle&) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image/pixelimage.cc:508:41
+    #2 0x559ff0503805 in HeifPixelImage::crop(unsigned int, unsigned int, unsigned int, unsigned int, heif_security_limits const*) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image/pixelimage.cc:1606:31
+    #3 0x559ff01cf5e5 in ImageItem::decode_image(heif_decoding_options const&, bool, unsigned int, unsigned int, DecodeTraversalState) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/image-items/image_item.cc:1270:34
+    #4 0x559ff0467b62 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1522:34
+    #5 0x559ff018b49b in heif_decode_image::$_0::operator()() const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api/libheif/heif_decoding.cc:260:83
+    #6 0x559ff018b49b in heif_error exception_guard<heif_decode_image::$_0>(heif_decode_image::$_0&&) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api_structs.h:46:12
+    #7 0x559ff018b49b in heif_decode_image /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/api/libheif/heif_decoding.cc:253:10
+    #8 0x559ff0181f87 in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:27:7
+    #9 0x7f29fde2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #10 0x7f29fde2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #11 0x559ff00a89c4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2289c4) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-baseline+0x2c16c5) (BuildId: c46400f2c2571d6a65c438885b36c503e0b06660) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x521000000f00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000000f80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x521000001180: 00 07 fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
+  0x521000001200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+exit=0
+### master clap_offset_min
+=================================================================
+==17183==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x5210000011c0 at pc 0x55cc7f2d36f6 bp 0x7ffdae2bcd30 sp 0x7ffdae2bc4f0
+READ of size 1 at 0x5210000011c0 thread T0
+    #0 0x55cc7f2d36f5 in __asan_memcpy (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2c96f5) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+    #1 0x55cc7f31408d in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:33:5
+    #2 0x7f4b7502a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #3 0x7f4b7502a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #4 0x55cc7f23a9f4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2309f4) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+
+0x5210000011c0 is located 49 bytes after 4239-byte region [0x521000000100,0x52100000118f)
+allocated by thread T0 here:
+    #0 0x55cc7f2d5a2d in calloc (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2cba2d) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+    #1 0x55cc7f6822bf in HeifPixelImage::ComponentStorage::alloc(unsigned int, unsigned int, heif_component_datatype, int, int, heif_security_limits const*, MemoryHandle&) /home/user/strukturag/libheif/libheif/image/pixelimage.cc:582:41
+    #2 0x55cc7f6a7f25 in HeifPixelImage::crop(unsigned int, unsigned int, unsigned int, unsigned int, heif_security_limits const*) const /home/user/strukturag/libheif/libheif/image/pixelimage.cc:2055:31
+    #3 0x55cc7f366900 in ImageItem::decode_image(heif_decoding_options const&, bool, unsigned int, unsigned int, DecodeTraversalState, bool) const /home/user/strukturag/libheif/libheif/image-items/image_item.cc:1462:34
+    #4 0x55cc7f600d2e in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /home/user/strukturag/libheif/libheif/context.cc:1529:34
+    #5 0x55cc7f31d7eb in heif_decode_image::$_0::operator()() const /home/user/strukturag/libheif/libheif/api/libheif/heif_decoding.cc:260:83
+    #6 0x55cc7f31d7eb in heif_error exception_guard<heif_decode_image::$_0>(heif_decode_image::$_0&&) /home/user/strukturag/libheif/libheif/api_structs.h:46:12
+    #7 0x55cc7f31d7eb in heif_decode_image /home/user/strukturag/libheif/libheif/api/libheif/heif_decoding.cc:253:10
+    #8 0x55cc7f313fb7 in main /home/user/libheif-fuzz-d2/harness/d3/tools/handle_size_consumer.c:27:7
+    #9 0x7f4b7502a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #10 0x7f4b7502a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #11 0x55cc7f23a9f4 in _start (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2309f4) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/consumer-master+0x2c96f5) (BuildId: ec9431cc1fdadf7c777a26c896ec9a5feaa5884f) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x521000000f00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000000f80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x521000001100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x521000001180: 00 07 fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
+  0x521000001200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x521000001400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+exit=0
+### m3 clap_offset_min
+handle 1x65, decoded 1x65
+consistent (checksum 0)
+exit=0
+### release(master) clap_offset_min
+handle 1x130, decoded 1x65
+consistent (checksum 0)

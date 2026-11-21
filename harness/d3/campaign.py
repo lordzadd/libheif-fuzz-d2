@@ -417,7 +417,13 @@ def main():
     ap.add_argument("--chunk-seconds", type=int, default=600,
                     help="chunk length before a worker restart (default 600)")
     ap.add_argument("--dict", default=str(ROOT / "libheif" / "fuzzing" / "data" / "dictionary.txt"))
+    ap.add_argument("--build", default=None,
+                    help="fuzzing binary directory (default build/fuzzing); e.g. the pinned "
+                         "d3-baseline build or an upstream-master build")
     args = ap.parse_args()
+    global BUILD
+    if args.build:
+        BUILD = Path(args.build).resolve()
     run_dir = ROOT / "results" / args.run
     run_dir.mkdir(parents=True, exist_ok=True)
     alloc = None

@@ -1,0 +1,4 @@
+label,kind,fuzzer,input,units,exit,cov,ft,signature,seconds,artifacts
+long2-genseeds-m3,corpus,api_fuzzer,api_fuzzer,700,0,6727,22162,,0.77,
+long2-genseeds-m3,corpus,file_fuzzer,file_fuzzer,700,0,6697,17105,,0.69,
+long2-genseeds-m3,corpus,tile_fuzzer,tile_fuzzer,700,0,6509,21706,,0.81,

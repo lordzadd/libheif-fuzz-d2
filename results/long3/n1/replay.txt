@@ -1,0 +1,44 @@
+### build-baseline rgbA-10_10_8_10-64x64-o08
+==17193==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x52100000110f at pc 0x563dac90600f bp 0x7ffdf55e5610 sp 0x7ffdf55e5608
+READ of size 16 at 0x52100000110f thread T0
+    #0 0x563dac90600e in Op_flatten_alpha_plane<unsigned short>::convert_colorspace(std::shared_ptr<HeifPixelImage const> const&, ColorState const&, ColorState const&, heif_color_conversion_options const&, heif_color_conversion_options_ext const&, heif_security_limits const*) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/alpha.cc:286:60
+    #1 0x563dac8bab08 in ColorConversionPipeline::convert_image(std::shared_ptr<HeifPixelImage> const&, heif_security_limits const*) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/colorconversion.cc:463:38
+    #2 0x563dac8be042 in convert_colorspace(std::shared_ptr<HeifPixelImage> const&, heif_colorspace, heif_chroma, nclx_profile const&, int, heif_color_conversion_options const&, heif_color_conversion_options_ext const*, heif_security_limits const*) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/colorconversion.cc:669:21
+    #3 0x563dacad1473 in HeifContext::convert_to_output_colorspace(std::shared_ptr<HeifPixelImage>, heif_colorspace, heif_chroma, heif_decoding_options const&) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1639:12
+    #4 0x563dacaceef5 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1543:21
+0x52100000110f is located 0 bytes after 4111-byte region [0x521000000100,0x52100000110f)
+allocated by thread T0 here:
+### build rgbA-10_10_8_10-64x64-o08
+==17199==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x52100000110f at pc 0x55ddc4e9002f bp 0x7ffeed83d850 sp 0x7ffeed83d848
+READ of size 16 at 0x52100000110f thread T0
+    #0 0x55ddc4e9002e in Op_flatten_alpha_plane<unsigned short>::convert_colorspace(std::shared_ptr<HeifPixelImage const> const&, ColorState const&, ColorState const&, heif_color_conversion_options const&, heif_color_conversion_options_ext const&, heif_security_limits const*) const /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/alpha.cc:286:60
+    #1 0x55ddc4e44b28 in ColorConversionPipeline::convert_image(std::shared_ptr<HeifPixelImage> const&, heif_security_limits const*) /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/colorconversion.cc:463:38
+    #2 0x55ddc4e48062 in convert_colorspace(std::shared_ptr<HeifPixelImage> const&, heif_colorspace, heif_chroma, nclx_profile const&, int, heif_color_conversion_options const&, heif_color_conversion_options_ext const*, heif_security_limits const*) /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/colorconversion.cc:669:21
+    #3 0x55ddc505b7d3 in HeifContext::convert_to_output_colorspace(std::shared_ptr<HeifPixelImage>, heif_colorspace, heif_chroma, heif_decoding_options const&) const /home/user/libheif-fuzz-d2/libheif/libheif/context.cc:1639:12
+    #4 0x55ddc5059255 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /home/user/libheif-fuzz-d2/libheif/libheif/context.cc:1543:21
+0x52100000110f is located 0 bytes after 4111-byte region [0x521000000100,0x52100000110f)
+allocated by thread T0 here:
+### build-m3 rgbA-10_10_8_10-64x64-o08
+Executed results/long3/n1/rgbA-10_10_8_10-64x64-o08 in 13 ms
+### build-baseline rgbA-10_10_8_10-64x64-o10
+==17210==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x52100000110e at pc 0x556d025d2f76 bp 0x7ffd8392f070 sp 0x7ffd8392f068
+READ of size 2 at 0x52100000110e thread T0
+    #0 0x556d025d2f75 in Op_flatten_alpha_plane<unsigned short>::convert_colorspace(std::shared_ptr<HeifPixelImage const> const&, ColorState const&, ColorState const&, heif_color_conversion_options const&, heif_color_conversion_options_ext const&, heif_security_limits const*) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/alpha.cc:321:60
+    #1 0x556d02587b08 in ColorConversionPipeline::convert_image(std::shared_ptr<HeifPixelImage> const&, heif_security_limits const*) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/colorconversion.cc:463:38
+    #2 0x556d0258b042 in convert_colorspace(std::shared_ptr<HeifPixelImage> const&, heif_colorspace, heif_chroma, nclx_profile const&, int, heif_color_conversion_options const&, heif_color_conversion_options_ext const*, heif_security_limits const*) /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/color-conversion/colorconversion.cc:669:21
+    #3 0x556d0279e473 in HeifContext::convert_to_output_colorspace(std::shared_ptr<HeifPixelImage>, heif_colorspace, heif_chroma, heif_decoding_options const&) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1639:12
+    #4 0x556d0279bef5 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/wt-baseline/libheif/libheif/context.cc:1543:21
+0x52100000110f is located 0 bytes after 4111-byte region [0x521000000100,0x52100000110f)
+allocated by thread T0 here:
+### build rgbA-10_10_8_10-64x64-o10
+==17216==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x52100000110e at pc 0x558ffdf79f96 bp 0x7ffc737f7550 sp 0x7ffc737f7548
+READ of size 2 at 0x52100000110e thread T0
+    #0 0x558ffdf79f95 in Op_flatten_alpha_plane<unsigned short>::convert_colorspace(std::shared_ptr<HeifPixelImage const> const&, ColorState const&, ColorState const&, heif_color_conversion_options const&, heif_color_conversion_options_ext const&, heif_security_limits const*) const /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/alpha.cc:321:60
+    #1 0x558ffdf2eb28 in ColorConversionPipeline::convert_image(std::shared_ptr<HeifPixelImage> const&, heif_security_limits const*) /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/colorconversion.cc:463:38
+    #2 0x558ffdf32062 in convert_colorspace(std::shared_ptr<HeifPixelImage> const&, heif_colorspace, heif_chroma, nclx_profile const&, int, heif_color_conversion_options const&, heif_color_conversion_options_ext const*, heif_security_limits const*) /home/user/libheif-fuzz-d2/libheif/libheif/color-conversion/colorconversion.cc:669:21
+    #3 0x558ffe1457d3 in HeifContext::convert_to_output_colorspace(std::shared_ptr<HeifPixelImage>, heif_colorspace, heif_chroma, heif_decoding_options const&) const /home/user/libheif-fuzz-d2/libheif/libheif/context.cc:1639:12
+    #4 0x558ffe143255 in HeifContext::decode_image(unsigned int, heif_colorspace, heif_chroma, heif_decoding_options const&, bool, unsigned int, unsigned int, std::set<unsigned int, std::less<unsigned int>, std::allocator<unsigned int>>) const /home/user/libheif-fuzz-d2/libheif/libheif/context.cc:1543:21
+0x52100000110f is located 0 bytes after 4111-byte region [0x521000000100,0x52100000110f)
+allocated by thread T0 here:
+### build-m3 rgbA-10_10_8_10-64x64-o10
+Executed results/long3/n1/rgbA-10_10_8_10-64x64-o10 in 18 ms

@@ -1,0 +1,8 @@
+fuzzer,t_s,max_worker_cov,max_worker_ft
+decode_matrix_fuzzer,0,11120,50361
+decode_matrix_fuzzer,600,11147,50945
+decode_matrix_fuzzer,1200,11237,51705
+decode_matrix_fuzzer,1800,11258,51838
+decode_matrix_fuzzer,2400,11276,52269
+decode_matrix_fuzzer,3000,11305,52836
+decode_matrix_fuzzer,3600,11305,52836

@@ -1,0 +1,2 @@
+fuzzer,workers,max_worker_cov,max_worker_ft,execs,final_corpus_units,final_corpus_bytes,crashes,last_event_s
+decode_matrix_fuzzer,2,11771,51943,345158,8974,24575224,0,3600.57
