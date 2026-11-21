@@ -76,6 +76,7 @@ class Campaign:
         self.dict_path = dict_path
         self.t0 = now()
         self.crash_rows = []
+        self.interrupted = False
         self.stop = threading.Event()
         self.alloc = []
         self.worker_stats = []
@@ -89,6 +90,14 @@ class Campaign:
         # the pinned amd64 build and a native build) can run side by side.
         suffix = "" if run_dir.name == "baseline" else "-" + run_dir.name
         self.corpus_root = ROOT / "corpora" / ("run" + suffix)
+
+    def _on_signal(self, signum, _frame):
+        # Cloud runners often stop a job with SIGTERM at a wall-clock limit.
+        # Treat it as "budget reached": stop the workers and still write the
+        # summary and the final corpus snapshot, so the run is not lost.
+        print("signal %d received: stopping and writing results" % signum, flush=True)
+        self.interrupted = True
+        self.deadline = now()
 
     # ---------------------------------------------------------------- workers
     def run_chunk(self, fuzzer, worker, corpus, adir, chunk, chunk_index):
@@ -136,6 +145,9 @@ class Campaign:
                     except ValueError:
                         pass
                 if self.stop.is_set():
+                    # Do not wait for the fuzzer's own time budget: a cloud
+                    # runner that sent SIGTERM has a short grace period.
+                    proc.kill()
                     break
         try:
             rc = proc.wait(timeout=60)
@@ -223,6 +235,9 @@ class Campaign:
         while not self.stop.is_set():
             for fuzzer in fuzzers:
                 if self.stop.is_set():
+                    # Do not wait for the fuzzer's own time budget: a cloud
+                    # runner that sent SIGTERM has a short grace period.
+                    proc.kill()
                     break
                 corpus = self.corpus_root / fuzzer
                 files = sorted(p for p in corpus.iterdir() if p.is_file()) if corpus.exists() else []
@@ -303,12 +318,15 @@ class Campaign:
                               daemon=True)
         ck.start()
 
+        signal.signal(signal.SIGTERM, self._on_signal)
+        signal.signal(signal.SIGINT, self._on_signal)
+
         start_ru = resource.getrusage(resource.RUSAGE_CHILDREN)
         while now() < self.deadline:
             time.sleep(5)
         self.stop.set()
         for t in threads:
-            t.join(timeout=180)
+            t.join(timeout=45)
         ck.join(timeout=180)
         end_ru = resource.getrusage(resource.RUSAGE_CHILDREN)
 
@@ -342,6 +360,7 @@ class Campaign:
             "run": self.run_dir.name,
             "started_unix": int(self.t0),
             "requested_seconds": self.seconds,
+            "interrupted": self.interrupted,
             "wall_seconds": round(now() - self.t0, 1),
             "workers": len(self.alloc),
             "worker_allocation": {},
