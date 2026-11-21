@@ -3,7 +3,9 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/libheif"
-BUILD="$ROOT/build"
+# BUILD_DIR lets the D3 before/after comparison build the patched tree next to
+# the baseline tree (build/ and build-patched/).
+BUILD="${BUILD_DIR:-$ROOT/build}"
 
 # Pick an SDK that links on this host. Linux ignores this block.
 if [ "$(uname -s)" = "Darwin" ] && [ -z "${SDKROOT:-}" ]; then
@@ -77,17 +79,23 @@ if [ -z "${CC:-}" ]; then
   fi
 fi
 
-FUZZING_COMPILE_OPTIONS="${FUZZING_COMPILE_OPTIONS:--fsanitize=fuzzer,address,shift,integer -fno-sanitize-recover=shift,integer}"
+# ASan is the halt condition for the campaign. It detects the memory-safety
+# property D1 declares: out-of-bounds read/write, use-after-free, heap overflow.
+# UBSan recover mode was evaluated in D2 (shift,integer) but fires on defined
+# unsigned arithmetic and on a null-memcpy with length 0 in bitstream.cc, which
+# is not memory corruption. Fuzzers therefore abort only on ASan reports.
+FUZZING_COMPILE_OPTIONS="${FUZZING_COMPILE_OPTIONS:--fsanitize=fuzzer,address -g -fno-omit-frame-pointer}"
 FUZZING_LINKER_OPTIONS="${FUZZING_LINKER_OPTIONS:-}"
 
 cmake -S "$SRC" -B "$BUILD" \
   ${SDKROOT:+-DCMAKE_OSX_SYSROOT="$SDKROOT"} \
   -DWITH_FUZZERS=ON \
+  -DWITH_UNCOMPRESSED_CODEC=ON \
   -DBUILD_TESTING=OFF \
   -DWITH_EXAMPLES=OFF \
   -DWITH_GDK_PIXBUF=OFF \
   -DBUILD_SHARED_LIBS=OFF \
-  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DFUZZING_C_COMPILER="$CC" \
   -DFUZZING_CXX_COMPILER="$CXX" \
   -DFUZZING_COMPILE_OPTIONS="$FUZZING_COMPILE_OPTIONS" \

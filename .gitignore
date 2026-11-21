@@ -5,4 +5,6 @@ results/
 *.a
 .DS_Store
 __pycache__/
-EOF
+EOFbuild-arm64/
+build-cov/
+build-patched/

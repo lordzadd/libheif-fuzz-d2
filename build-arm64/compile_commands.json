@@ -1,0 +1,776 @@
+[
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/box_fuzzer.dir/box_fuzzer.cc.o -c /repo/libheif/fuzzing/box_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/box_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/box_fuzzer.dir/box_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/color_conversion_fuzzer.dir/color_conversion_fuzzer.cc.o -c /repo/libheif/fuzzing/color_conversion_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/color_conversion_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/color_conversion_fuzzer.dir/color_conversion_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/encoder_fuzzer.dir/encoder_fuzzer.cc.o -c /repo/libheif/fuzzing/encoder_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/encoder_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/encoder_fuzzer.dir/encoder_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/file_fuzzer.dir/file_fuzzer.cc.o -c /repo/libheif/fuzzing/file_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/file_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/file_fuzzer.dir/file_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/tile_fuzzer.dir/tile_fuzzer.cc.o -c /repo/libheif/fuzzing/tile_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/tile_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/tile_fuzzer.dir/tile_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/api_fuzzer.dir/api_fuzzer.cc.o -c /repo/libheif/fuzzing/api_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/api_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/api_fuzzer.dir/api_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/fuzzing",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DHAVE_BIT -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIE -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/sequence_fuzzer.dir/sequence_fuzzer.cc.o -c /repo/libheif/fuzzing/sequence_fuzzer.cc",
+  "file": "/repo/libheif/fuzzing/sequence_fuzzer.cc",
+  "output": "fuzzing/CMakeFiles/sequence_fuzzer.dir/sequence_fuzzer.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/bitstream.cc.o -c /repo/libheif/libheif/bitstream.cc",
+  "file": "/repo/libheif/libheif/bitstream.cc",
+  "output": "libheif/CMakeFiles/heif.dir/bitstream.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/box.cc.o -c /repo/libheif/libheif/box.cc",
+  "file": "/repo/libheif/libheif/box.cc",
+  "output": "libheif/CMakeFiles/heif.dir/box.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/error.cc.o -c /repo/libheif/libheif/error.cc",
+  "file": "/repo/libheif/libheif/error.cc",
+  "output": "libheif/CMakeFiles/heif.dir/error.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/context.cc.o -c /repo/libheif/libheif/context.cc",
+  "file": "/repo/libheif/libheif/context.cc",
+  "output": "libheif/CMakeFiles/heif.dir/context.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/file.cc.o -c /repo/libheif/libheif/file.cc",
+  "file": "/repo/libheif/libheif/file.cc",
+  "output": "libheif/CMakeFiles/heif.dir/file.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/file_layout.cc.o -c /repo/libheif/libheif/file_layout.cc",
+  "file": "/repo/libheif/libheif/file_layout.cc",
+  "output": "libheif/CMakeFiles/heif.dir/file_layout.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image/pixelimage.cc.o -c /repo/libheif/libheif/image/pixelimage.cc",
+  "file": "/repo/libheif/libheif/image/pixelimage.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image/pixelimage.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image/image_description.cc.o -c /repo/libheif/libheif/image/image_description.cc",
+  "file": "/repo/libheif/libheif/image/image_description.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image/image_description.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugin_registry.cc.o -c /repo/libheif/libheif/plugin_registry.cc",
+  "file": "/repo/libheif/libheif/plugin_registry.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugin_registry.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/nclx.cc.o -c /repo/libheif/libheif/nclx.cc",
+  "file": "/repo/libheif/libheif/nclx.cc",
+  "output": "libheif/CMakeFiles/heif.dir/nclx.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/security_limits.cc.o -c /repo/libheif/libheif/security_limits.cc",
+  "file": "/repo/libheif/libheif/security_limits.cc",
+  "output": "libheif/CMakeFiles/heif.dir/security_limits.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/init.cc.o -c /repo/libheif/libheif/init.cc",
+  "file": "/repo/libheif/libheif/init.cc",
+  "output": "libheif/CMakeFiles/heif.dir/init.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/logging.cc.o -c /repo/libheif/libheif/logging.cc",
+  "file": "/repo/libheif/libheif/logging.cc",
+  "output": "libheif/CMakeFiles/heif.dir/logging.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/compression.cc.o -c /repo/libheif/libheif/compression.cc",
+  "file": "/repo/libheif/libheif/compression.cc",
+  "output": "libheif/CMakeFiles/heif.dir/compression.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/compression_brotli.cc.o -c /repo/libheif/libheif/compression_brotli.cc",
+  "file": "/repo/libheif/libheif/compression_brotli.cc",
+  "output": "libheif/CMakeFiles/heif.dir/compression_brotli.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/compression_zlib.cc.o -c /repo/libheif/libheif/compression_zlib.cc",
+  "file": "/repo/libheif/libheif/compression_zlib.cc",
+  "output": "libheif/CMakeFiles/heif.dir/compression_zlib.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/common_utils.cc.o -c /repo/libheif/libheif/common_utils.cc",
+  "file": "/repo/libheif/libheif/common_utils.cc",
+  "output": "libheif/CMakeFiles/heif.dir/common_utils.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/region.cc.o -c /repo/libheif/libheif/region.cc",
+  "file": "/repo/libheif/libheif/region.cc",
+  "output": "libheif/CMakeFiles/heif.dir/region.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/brands.cc.o -c /repo/libheif/libheif/brands.cc",
+  "file": "/repo/libheif/libheif/brands.cc",
+  "output": "libheif/CMakeFiles/heif.dir/brands.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/id_creator.cc.o -c /repo/libheif/libheif/id_creator.cc",
+  "file": "/repo/libheif/libheif/id_creator.cc",
+  "output": "libheif/CMakeFiles/heif.dir/id_creator.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/text.cc.o -c /repo/libheif/libheif/text.cc",
+  "file": "/repo/libheif/libheif/text.cc",
+  "output": "libheif/CMakeFiles/heif.dir/text.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif.cc.o -c /repo/libheif/libheif/api/libheif/heif.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_library.cc.o -c /repo/libheif/libheif/api/libheif/heif_library.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_library.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_library.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_image.cc.o -c /repo/libheif/libheif/api/libheif/heif_image.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_image.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_image.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_color.cc.o -c /repo/libheif/libheif/api/libheif/heif_color.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_color.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_color.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_regions.cc.o -c /repo/libheif/libheif/api/libheif/heif_regions.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_regions.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_regions.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_plugin.cc.o -c /repo/libheif/libheif/api/libheif/heif_plugin.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_plugin.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_plugin.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_properties.cc.o -c /repo/libheif/libheif/api/libheif/heif_properties.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_properties.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_properties.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_items.cc.o -c /repo/libheif/libheif/api/libheif/heif_items.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_items.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_items.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_sequences.cc.o -c /repo/libheif/libheif/api/libheif/heif_sequences.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_sequences.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_sequences.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_tai_timestamps.cc.o -c /repo/libheif/libheif/api/libheif/heif_tai_timestamps.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_tai_timestamps.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_tai_timestamps.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_brands.cc.o -c /repo/libheif/libheif/api/libheif/heif_brands.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_brands.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_brands.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_metadata.cc.o -c /repo/libheif/libheif/api/libheif/heif_metadata.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_metadata.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_metadata.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_aux_images.cc.o -c /repo/libheif/libheif/api/libheif/heif_aux_images.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_aux_images.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_aux_images.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_entity_groups.cc.o -c /repo/libheif/libheif/api/libheif/heif_entity_groups.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_entity_groups.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_entity_groups.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_security.cc.o -c /repo/libheif/libheif/api/libheif/heif_security.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_security.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_security.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_encoding.cc.o -c /repo/libheif/libheif/api/libheif/heif_encoding.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_encoding.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_encoding.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_decoding.cc.o -c /repo/libheif/libheif/api/libheif/heif_decoding.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_decoding.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_decoding.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_image_handle.cc.o -c /repo/libheif/libheif/api/libheif/heif_image_handle.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_image_handle.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_image_handle.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_context.cc.o -c /repo/libheif/libheif/api/libheif/heif_context.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_context.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_context.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_tiling.cc.o -c /repo/libheif/libheif/api/libheif/heif_tiling.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_tiling.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_tiling.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_components.cc.o -c /repo/libheif/libheif/api/libheif/heif_components.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_components.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_components.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_uncompressed.cc.o -c /repo/libheif/libheif/api/libheif/heif_uncompressed.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_uncompressed.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_uncompressed.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_text.cc.o -c /repo/libheif/libheif/api/libheif/heif_text.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_text.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_text.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/api/libheif/heif_omaf.cc.o -c /repo/libheif/libheif/api/libheif/heif_omaf.cc",
+  "file": "/repo/libheif/libheif/api/libheif/heif_omaf.cc",
+  "output": "libheif/CMakeFiles/heif.dir/api/libheif/heif_omaf.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/decoder.cc.o -c /repo/libheif/libheif/codecs/decoder.cc",
+  "file": "/repo/libheif/libheif/codecs/decoder.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/decoder.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/encoder.cc.o -c /repo/libheif/libheif/codecs/encoder.cc",
+  "file": "/repo/libheif/libheif/codecs/encoder.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/encoder.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/hevc.cc.o -c /repo/libheif/libheif/image-items/hevc.cc",
+  "file": "/repo/libheif/libheif/image-items/hevc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/hevc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/hevc_boxes.cc.o -c /repo/libheif/libheif/codecs/hevc_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/hevc_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/hevc_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/hevc_dec.cc.o -c /repo/libheif/libheif/codecs/hevc_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/hevc_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/hevc_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/hevc_enc.cc.o -c /repo/libheif/libheif/codecs/hevc_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/hevc_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/hevc_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/avif.cc.o -c /repo/libheif/libheif/image-items/avif.cc",
+  "file": "/repo/libheif/libheif/image-items/avif.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/avif.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avif_enc.cc.o -c /repo/libheif/libheif/codecs/avif_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/avif_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avif_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avif_dec.cc.o -c /repo/libheif/libheif/codecs/avif_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/avif_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avif_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avif_boxes.cc.o -c /repo/libheif/libheif/codecs/avif_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/avif_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avif_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/jpeg.cc.o -c /repo/libheif/libheif/image-items/jpeg.cc",
+  "file": "/repo/libheif/libheif/image-items/jpeg.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/jpeg.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg_boxes.cc.o -c /repo/libheif/libheif/codecs/jpeg_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg_dec.cc.o -c /repo/libheif/libheif/codecs/jpeg_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg_enc.cc.o -c /repo/libheif/libheif/codecs/jpeg_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/jpeg2000.cc.o -c /repo/libheif/libheif/image-items/jpeg2000.cc",
+  "file": "/repo/libheif/libheif/image-items/jpeg2000.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/jpeg2000.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg2000_dec.cc.o -c /repo/libheif/libheif/codecs/jpeg2000_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg2000_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg2000_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg2000_enc.cc.o -c /repo/libheif/libheif/codecs/jpeg2000_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg2000_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg2000_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/jpeg2000_boxes.cc.o -c /repo/libheif/libheif/codecs/jpeg2000_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/jpeg2000_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/jpeg2000_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/vvc.cc.o -c /repo/libheif/libheif/image-items/vvc.cc",
+  "file": "/repo/libheif/libheif/image-items/vvc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/vvc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/vvc_dec.cc.o -c /repo/libheif/libheif/codecs/vvc_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/vvc_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/vvc_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/vvc_enc.cc.o -c /repo/libheif/libheif/codecs/vvc_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/vvc_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/vvc_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/vvc_boxes.cc.o -c /repo/libheif/libheif/codecs/vvc_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/vvc_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/vvc_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/avc.cc.o -c /repo/libheif/libheif/image-items/avc.cc",
+  "file": "/repo/libheif/libheif/image-items/avc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/avc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avc_boxes.cc.o -c /repo/libheif/libheif/codecs/avc_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/avc_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avc_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avc_dec.cc.o -c /repo/libheif/libheif/codecs/avc_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/avc_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avc_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/avc_enc.cc.o -c /repo/libheif/libheif/codecs/avc_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/avc_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/avc_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/mask_image.cc.o -c /repo/libheif/libheif/image-items/mask_image.cc",
+  "file": "/repo/libheif/libheif/image-items/mask_image.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/mask_image.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/image_item.cc.o -c /repo/libheif/libheif/image-items/image_item.cc",
+  "file": "/repo/libheif/libheif/image-items/image_item.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/image_item.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/grid.cc.o -c /repo/libheif/libheif/image-items/grid.cc",
+  "file": "/repo/libheif/libheif/image-items/grid.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/grid.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/overlay.cc.o -c /repo/libheif/libheif/image-items/overlay.cc",
+  "file": "/repo/libheif/libheif/image-items/overlay.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/overlay.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/iden.cc.o -c /repo/libheif/libheif/image-items/iden.cc",
+  "file": "/repo/libheif/libheif/image-items/iden.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/iden.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/tiled.cc.o -c /repo/libheif/libheif/image-items/tiled.cc",
+  "file": "/repo/libheif/libheif/image-items/tiled.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/tiled.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/colorconversion.cc.o -c /repo/libheif/libheif/color-conversion/colorconversion.cc",
+  "file": "/repo/libheif/libheif/color-conversion/colorconversion.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/colorconversion.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/rgb2yuv.cc.o -c /repo/libheif/libheif/color-conversion/rgb2yuv.cc",
+  "file": "/repo/libheif/libheif/color-conversion/rgb2yuv.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/rgb2yuv.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/rgb2yuv_sharp.cc.o -c /repo/libheif/libheif/color-conversion/rgb2yuv_sharp.cc",
+  "file": "/repo/libheif/libheif/color-conversion/rgb2yuv_sharp.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/rgb2yuv_sharp.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/yuv2rgb.cc.o -c /repo/libheif/libheif/color-conversion/yuv2rgb.cc",
+  "file": "/repo/libheif/libheif/color-conversion/yuv2rgb.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/yuv2rgb.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/rgb2rgb.cc.o -c /repo/libheif/libheif/color-conversion/rgb2rgb.cc",
+  "file": "/repo/libheif/libheif/color-conversion/rgb2rgb.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/rgb2rgb.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/monochrome.cc.o -c /repo/libheif/libheif/color-conversion/monochrome.cc",
+  "file": "/repo/libheif/libheif/color-conversion/monochrome.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/monochrome.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/hdr_sdr.cc.o -c /repo/libheif/libheif/color-conversion/hdr_sdr.cc",
+  "file": "/repo/libheif/libheif/color-conversion/hdr_sdr.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/hdr_sdr.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/alpha.cc.o -c /repo/libheif/libheif/color-conversion/alpha.cc",
+  "file": "/repo/libheif/libheif/color-conversion/alpha.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/alpha.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/chroma_sampling.cc.o -c /repo/libheif/libheif/color-conversion/chroma_sampling.cc",
+  "file": "/repo/libheif/libheif/color-conversion/chroma_sampling.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/chroma_sampling.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/color-conversion/bayer_bilinear.cc.o -c /repo/libheif/libheif/color-conversion/bayer_bilinear.cc",
+  "file": "/repo/libheif/libheif/color-conversion/bayer_bilinear.cc",
+  "output": "libheif/CMakeFiles/heif.dir/color-conversion/bayer_bilinear.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/sequences/seq_boxes.cc.o -c /repo/libheif/libheif/sequences/seq_boxes.cc",
+  "file": "/repo/libheif/libheif/sequences/seq_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/sequences/seq_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/sequences/chunk.cc.o -c /repo/libheif/libheif/sequences/chunk.cc",
+  "file": "/repo/libheif/libheif/sequences/chunk.cc",
+  "output": "libheif/CMakeFiles/heif.dir/sequences/chunk.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/sequences/track.cc.o -c /repo/libheif/libheif/sequences/track.cc",
+  "file": "/repo/libheif/libheif/sequences/track.cc",
+  "output": "libheif/CMakeFiles/heif.dir/sequences/track.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/sequences/track_visual.cc.o -c /repo/libheif/libheif/sequences/track_visual.cc",
+  "file": "/repo/libheif/libheif/sequences/track_visual.cc",
+  "output": "libheif/CMakeFiles/heif.dir/sequences/track_visual.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/sequences/track_metadata.cc.o -c /repo/libheif/libheif/sequences/track_metadata.cc",
+  "file": "/repo/libheif/libheif/sequences/track_metadata.cc",
+  "output": "libheif/CMakeFiles/heif.dir/sequences/track_metadata.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins_unix.cc.o -c /repo/libheif/libheif/plugins_unix.cc",
+  "file": "/repo/libheif/libheif/plugins_unix.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins_unix.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/encoder_x265.cc.o -c /repo/libheif/libheif/plugins/encoder_x265.cc",
+  "file": "/repo/libheif/libheif/plugins/encoder_x265.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/encoder_x265.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/decoder_libde265.cc.o -c /repo/libheif/libheif/plugins/decoder_libde265.cc",
+  "file": "/repo/libheif/libheif/plugins/decoder_libde265.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/decoder_libde265.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/decoder_aom.cc.o -c /repo/libheif/libheif/plugins/decoder_aom.cc",
+  "file": "/repo/libheif/libheif/plugins/decoder_aom.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/decoder_aom.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/encoder_aom.cc.o -c /repo/libheif/libheif/plugins/encoder_aom.cc",
+  "file": "/repo/libheif/libheif/plugins/encoder_aom.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/encoder_aom.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/encoder_mask.cc.o -c /repo/libheif/libheif/plugins/encoder_mask.cc",
+  "file": "/repo/libheif/libheif/plugins/encoder_mask.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/encoder_mask.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/nalu_utils.cc.o -c /repo/libheif/libheif/plugins/nalu_utils.cc",
+  "file": "/repo/libheif/libheif/plugins/nalu_utils.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/nalu_utils.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/encoder_uncompressed.cc.o -c /repo/libheif/libheif/plugins/encoder_uncompressed.cc",
+  "file": "/repo/libheif/libheif/plugins/encoder_uncompressed.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/encoder_uncompressed.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/plugins/decoder_uncompressed.cc.o -c /repo/libheif/libheif/plugins/decoder_uncompressed.cc",
+  "file": "/repo/libheif/libheif/plugins/decoder_uncompressed.cc",
+  "output": "libheif/CMakeFiles/heif.dir/plugins/decoder_uncompressed.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_boxes.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_boxes.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_boxes.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/image-items/unc_image.cc.o -c /repo/libheif/libheif/image-items/unc_image.cc",
+  "file": "/repo/libheif/libheif/image-items/unc_image.cc",
+  "output": "libheif/CMakeFiles/heif.dir/image-items/unc_image.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_codec.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_codec.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_codec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_codec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_dec.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_dec.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_dec.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_dec.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_enc.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_enc.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_enc.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_enc.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_legacybase.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_legacybase.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_legacybase.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_legacybase.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_component_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_component_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_component_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_component_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_pixel_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_pixel_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_pixel_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_pixel_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_block_pixel_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_block_pixel_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_block_pixel_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_block_pixel_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_bytealign_component_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_bytealign_component_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_bytealign_component_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_bytealign_component_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_block_component_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_block_component_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_block_component_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_block_component_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_mixed_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_mixed_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_mixed_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_mixed_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_row_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_decoder_row_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_decoder_row_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_decoder_row_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_encoder.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_encoder.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_pixel_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_pixel_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_pixel_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_pixel_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_bytealign_pixel_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_bytealign_pixel_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_bytealign_pixel_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_bytealign_pixel_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_component_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_encoder_component_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_encoder_component_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_component_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_block_pixel_interleave.cc.o -c /repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_block_pixel_interleave.cc",
+  "file": "/repo/libheif/libheif/codecs/uncompressed/unc_encoder_rgb_block_pixel_interleave.cc",
+  "output": "libheif/CMakeFiles/heif.dir/codecs/uncompressed/unc_encoder_rgb_block_pixel_interleave.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/mini.cc.o -c /repo/libheif/libheif/mini.cc",
+  "file": "/repo/libheif/libheif/mini.cc",
+  "output": "libheif/CMakeFiles/heif.dir/mini.cc.o"
+},
+{
+  "directory": "/repo/build-arm64/libheif",
+  "command": "clang++-18 -DAVOID_FUZZER_FALSE_POSITIVE=1 -DENABLE_MULTITHREADING_SUPPORT=1 -DENABLE_PARALLEL_TILE_DECODING=1 -DENABLE_PLUGIN_LOADING=1 -DHAVE_AOM_DECODER=1 -DHAVE_AOM_ENCODER=1 -DHAVE_BIT -DHAVE_BROTLI=1 -DHAVE_LIBDE265=1 -DHAVE_UNISTD_H -DHAVE_VISIBILITY -DHAVE_X265=1 -DHAVE_ZLIB=1 -DIS_BIG_ENDIAN=0 -DLIBHEIF_EXPORTS -DWITH_UNCOMPRESSED_CODEC=1 -I/repo/build-arm64 -I/repo/libheif/libheif -I/repo/libheif/libheif/api -I/repo/libheif/include/libheif -I/repo/libheif/include -O2 -g -DNDEBUG -std=c++20 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wsign-compare -Wconversion -Wno-sign-conversion -Wno-error=conversion -Wno-error=unused-parameter -Wno-error=deprecated-declarations -Wno-error=tautological-compare -Wno-error=tautological-constant-out-of-range-compare -Wno-error=potentially-evaluated-expression -fsanitize=fuzzer,address -g -fno-omit-frame-pointer -o CMakeFiles/heif.dir/omaf_boxes.cc.o -c /repo/libheif/libheif/omaf_boxes.cc",
+  "file": "/repo/libheif/libheif/omaf_boxes.cc",
+  "output": "libheif/CMakeFiles/heif.dir/omaf_boxes.cc.o"
+}
+]

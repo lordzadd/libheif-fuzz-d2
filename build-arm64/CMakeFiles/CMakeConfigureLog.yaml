@@ -1,0 +1,639 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 7.0.14-linuxkit - aarch64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-18 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /repo/build-arm64/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++-18 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /repo/build-arm64/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_25fc6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_25fc6.dir/build.make CMakeFiles/cmTC_25fc6.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5'
+        Building C object CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-18   -v -MD -MT CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Ubuntu clang version 18.1.3 (1ubuntu1)
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +v8a -target-feature +fp-armv8 -target-feature +neon -target-abi aapcs -debugger-tuning=gdb -fdebug-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5 -v -fcoverage-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5 -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -target-feature +outline-atomics -target-feature -fmv -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/llvm-18/lib/clang/18/include
+         /usr/local/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking C executable cmTC_25fc6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25fc6.dir/link.txt --verbose=1
+        /usr/bin/clang-18  -v CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -o cmTC_25fc6 
+        Ubuntu clang version 18.1.3 (1ubuntu1)
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -EL -z relro --hash-style=gnu --build-id --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_25fc6 /lib/aarch64-linux-gnu/Scrt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/13 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o /lib/aarch64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/llvm-18/lib/clang/18/include]
+          add: [/usr/local/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/llvm-18/lib/clang/18/include] ==> [/usr/lib/llvm-18/lib/clang/18/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/llvm-18/lib/clang/18/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld-18|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_25fc6/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_25fc6.dir/build.make CMakeFiles/cmTC_25fc6.dir/build]
+        ignore line: [gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5']
+        ignore line: [Building C object CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang-18   -v -MD -MT CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +v8a -target-feature +fp-armv8 -target-feature +neon -target-abi aapcs -debugger-tuning=gdb -fdebug-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5 -v -fcoverage-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-7TpWX5 -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -target-feature +outline-atomics -target-feature -fmv -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/llvm-18/lib/clang/18/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_25fc6]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25fc6.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang-18  -v CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -o cmTC_25fc6 ]
+        ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -EL -z relro --hash-style=gnu --build-id --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_25fc6 /lib/aarch64-linux-gnu/Scrt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/13 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o /lib/aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_25fc6] ==> ignore
+          arg [/lib/aarch64-linux-gnu/Scrt1.o] ==> obj [/lib/aarch64-linux-gnu/Scrt1.o]
+          arg [/lib/aarch64-linux-gnu/crti.o] ==> obj [/lib/aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/13] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_25fc6.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o]
+          arg [/lib/aarch64-linux-gnu/crtn.o] ==> obj [/lib/aarch64-linux-gnu/crtn.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/13/crtbeginS.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/13/crtendS.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13] ==> [/usr/lib/gcc/aarch64-linux-gnu/13]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib/aarch64-linux-gnu/Scrt1.o;/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/13/crtendS.o;/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/13;/lib/aarch64-linux-gnu;/usr/lib/aarch64-linux-gnu;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e23e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4e23e.dir/build.make CMakeFiles/cmTC_4e23e.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO'
+        Building CXX object CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++-18   -v -MD -MT CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Ubuntu clang version 18.1.3 (1ubuntu1)
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +v8a -target-feature +fp-armv8 -target-feature +neon -target-abi aapcs -debugger-tuning=gdb -fdebug-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO -v -fcoverage-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -target-feature +outline-atomics -target-feature -fmv -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward
+         /usr/lib/llvm-18/lib/clang/18/include
+         /usr/local/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_4e23e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e23e.dir/link.txt --verbose=1
+        /usr/bin/clang++-18  -v CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4e23e 
+        Ubuntu clang version 18.1.3 (1ubuntu1)
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -EL -z relro --hash-style=gnu --build-id --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_4e23e /lib/aarch64-linux-gnu/Scrt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/13 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o /lib/aarch64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward]
+          add: [/usr/lib/llvm-18/lib/clang/18/include]
+          add: [/usr/local/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13] ==> [/usr/include/aarch64-linux-gnu/c++/13]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/llvm-18/lib/clang/18/include] ==> [/usr/lib/llvm-18/lib/clang/18/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/aarch64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/llvm-18/lib/clang/18/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld-18|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e23e/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4e23e.dir/build.make CMakeFiles/cmTC_4e23e.dir/build]
+        ignore line: [gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO']
+        ignore line: [Building CXX object CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++-18   -v -MD -MT CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +v8a -target-feature +fp-armv8 -target-feature +neon -target-abi aapcs -debugger-tuning=gdb -fdebug-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO -v -fcoverage-compilation-dir=/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-xDwwFO -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -target-feature +outline-atomics -target-feature -fmv -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/aarch64-linux-gnu/c++/13]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/13/../../../../include/c++/13/backward]
+        ignore line: [ /usr/lib/llvm-18/lib/clang/18/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_4e23e]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e23e.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang++-18  -v CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4e23e ]
+        ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -EL -z relro --hash-style=gnu --build-id --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_4e23e /lib/aarch64-linux-gnu/Scrt1.o /lib/aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/13 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o /lib/aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_4e23e] ==> ignore
+          arg [/lib/aarch64-linux-gnu/Scrt1.o] ==> obj [/lib/aarch64-linux-gnu/Scrt1.o]
+          arg [/lib/aarch64-linux-gnu/crti.o] ==> obj [/lib/aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/13] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_4e23e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o]
+          arg [/lib/aarch64-linux-gnu/crtn.o] ==> obj [/lib/aarch64-linux-gnu/crtn.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtbeginS.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/13/crtbeginS.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/13/crtendS.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/13/crtendS.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/13] ==> [/usr/lib/gcc/aarch64-linux-gnu/13]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib/aarch64-linux-gnu/Scrt1.o;/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/13/crtendS.o;/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/13;/lib/aarch64-linux-gnu;/usr/lib/aarch64-linux-gnu;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "CMakeLists.txt:21 (CHECK_INCLUDE_FILE_CXX)"
+    checks:
+      - "Looking for C++ include bit"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_BIT"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bc15a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bc15a.dir/build.make CMakeFiles/cmTC_bc15a.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG'
+        Building CXX object CMakeFiles/cmTC_bc15a.dir/CheckIncludeFile.cxx.o
+        /usr/bin/clang++-18    -MD -MT CMakeFiles/cmTC_bc15a.dir/CheckIncludeFile.cxx.o -MF CMakeFiles/cmTC_bc15a.dir/CheckIncludeFile.cxx.o.d -o CMakeFiles/cmTC_bc15a.dir/CheckIncludeFile.cxx.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG/CheckIncludeFile.cxx
+        Linking CXX executable cmTC_bc15a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc15a.dir/link.txt --verbose=1
+        /usr/bin/clang++-18 CMakeFiles/cmTC_bc15a.dir/CheckIncludeFile.cxx.o -o cmTC_bc15a 
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-aOO8KG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "CMakeLists.txt:26 (CHECK_INCLUDE_FILE_CXX)"
+    checks:
+      - "Looking for C++ include unistd.h"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e0f31/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e0f31.dir/build.make CMakeFiles/cmTC_e0f31.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR'
+        Building CXX object CMakeFiles/cmTC_e0f31.dir/CheckIncludeFile.cxx.o
+        /usr/bin/clang++-18    -MD -MT CMakeFiles/cmTC_e0f31.dir/CheckIncludeFile.cxx.o -MF CMakeFiles/cmTC_e0f31.dir/CheckIncludeFile.cxx.o.d -o CMakeFiles/cmTC_e0f31.dir/CheckIncludeFile.cxx.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR/CheckIncludeFile.cxx
+        Linking CXX executable cmTC_e0f31
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0f31.dir/link.txt --verbose=1
+        /usr/bin/clang++-18 CMakeFiles/cmTC_e0f31.dir/CheckIncludeFile.cxx.o -o cmTC_e0f31 
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-PGyMZR'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:78 (CHECK_CXX_COMPILER_FLAG)"
+    checks:
+      - "Performing Test has_potentially_evaluated_expression"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "has_potentially_evaluated_expression"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_be42a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_be42a.dir/build.make CMakeFiles/cmTC_be42a.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe'
+        Building CXX object CMakeFiles/cmTC_be42a.dir/src.cxx.o
+        /usr/bin/clang++-18 -Dhas_potentially_evaluated_expression  -std=c++20 -fPIE   -Wno-error=potentially-evaluated-expression -MD -MT CMakeFiles/cmTC_be42a.dir/src.cxx.o -MF CMakeFiles/cmTC_be42a.dir/src.cxx.o.d -o CMakeFiles/cmTC_be42a.dir/src.cxx.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe/src.cxx
+        Linking CXX executable cmTC_be42a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be42a.dir/link.txt --verbose=1
+        /usr/bin/clang++-18 CMakeFiles/cmTC_be42a.dir/src.cxx.o -o cmTC_be42a 
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-TCWELe'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/modules/FindAOM.cmake:39 (check_symbol_exists)"
+      - "CMakeLists.txt:239 (find_package)"
+    checks:
+      - "Looking for AOM_USAGE_GOOD_QUALITY"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/repo/libheif/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "aom_usage_flag_exists"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c0bb3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c0bb3.dir/build.make CMakeFiles/cmTC_c0bb3.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP'
+        Building C object CMakeFiles/cmTC_c0bb3.dir/CheckSymbolExists.c.o
+        /usr/bin/clang-18   -fPIE -MD -MT CMakeFiles/cmTC_c0bb3.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_c0bb3.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_c0bb3.dir/CheckSymbolExists.c.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP/CheckSymbolExists.c
+        Linking C executable cmTC_c0bb3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0bb3.dir/link.txt --verbose=1
+        /usr/bin/clang-18 CMakeFiles/cmTC_c0bb3.dir/CheckSymbolExists.c.o -o cmTC_c0bb3 
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-0efToP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:574 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for _LIBCPP_VERSION"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/repo/libheif/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_LIBCPP"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4459f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4459f.dir/build.make CMakeFiles/cmTC_4459f.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj'
+        Building CXX object CMakeFiles/cmTC_4459f.dir/CheckSymbolExists.cxx.o
+        /usr/bin/clang++-18   -std=c++20 -fPIE -MD -MT CMakeFiles/cmTC_4459f.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_4459f.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_4459f.dir/CheckSymbolExists.cxx.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj/CheckSymbolExists.cxx
+        /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier '_LIBCPP_VERSION'
+            8 |   return ((int*)(&_LIBCPP_VERSION))[argc];
+              |                   ^
+        1 error generated.
+        gmake[1]: *** [CMakeFiles/cmTC_4459f.dir/build.make:79: CMakeFiles/cmTC_4459f.dir/CheckSymbolExists.cxx.o] Error 1
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-H7bvkj'
+        gmake: *** [Makefile:127: cmTC_4459f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "libheif/CMakeLists.txt:286 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5"
+      binary: "/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/repo/libheif/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1759d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1759d.dir/build.make CMakeFiles/cmTC_1759d.dir/build
+        gmake[1]: Entering directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5'
+        Building C object CMakeFiles/cmTC_1759d.dir/src.c.o
+        /usr/bin/clang-18 -DCMAKE_HAVE_LIBC_PTHREAD  -fPIE -MD -MT CMakeFiles/cmTC_1759d.dir/src.c.o -MF CMakeFiles/cmTC_1759d.dir/src.c.o.d -o CMakeFiles/cmTC_1759d.dir/src.c.o -c /repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5/src.c
+        Linking C executable cmTC_1759d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1759d.dir/link.txt --verbose=1
+        /usr/bin/clang-18 CMakeFiles/cmTC_1759d.dir/src.c.o -o cmTC_1759d 
+        gmake[1]: Leaving directory '/repo/build-arm64/CMakeFiles/CMakeScratch/TryCompile-SlRul5'
+        
+      exitCode: 0
+...
