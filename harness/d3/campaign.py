@@ -66,7 +66,9 @@ def scan_artifacts(adir):
 
 
 class Campaign:
-    def __init__(self, run_dir, seconds, checkpoint, dict_path, alloc=None):
+    def __init__(self, run_dir, seconds, checkpoint, dict_path, alloc=None,
+                 rss_limit=800, timeout=30, max_len=None, extra_flags="",
+                 chunk_seconds=600):
         self.run_dir = run_dir
         self.deadline = now() + seconds
         self.seconds = seconds
@@ -78,6 +80,11 @@ class Campaign:
         self.alloc = []
         self.worker_stats = []
         self.allocation = alloc or DEFAULT_ALLOC
+        self.rss_limit = rss_limit
+        self.unit_timeout = timeout
+        self.max_len = max_len
+        self.extra_flags = extra_flags
+        self.chunk_seconds = chunk_seconds
         # Each run keeps its own live corpus so that two campaigns (for example
         # the pinned amd64 build and a native build) can run side by side.
         suffix = "" if run_dir.name == "baseline" else "-" + run_dir.name
@@ -92,16 +99,20 @@ class Campaign:
         cmd = [
             str(BUILD / fuzzer), str(corpus),
             "-max_total_time=%d" % chunk,
-            "-timeout=30",
-            "-rss_limit_mb=800",
+            "-timeout=%d" % self.unit_timeout,
+            "-rss_limit_mb=%d" % self.rss_limit,
             "-reload=1",
             "-print_final_stats=1",
             "-use_value_profile=1",
             "-artifact_prefix=%s/" % adir,
             "-seed=%d" % seed,
         ]
+        if self.max_len:
+            cmd.append("-max_len=%d" % self.max_len)
         if self.dict_path and Path(self.dict_path).exists():
             cmd.append("-dict=%s" % self.dict_path)
+        if self.extra_flags:
+            cmd.extend(self.extra_flags.split())
         log_path = self.run_dir / "logs" / ("%s.w%d.log" % (fuzzer, worker))
         chunk_lines = []
         execs = 0
@@ -173,7 +184,7 @@ class Campaign:
             remaining = self.deadline - now()
             if remaining < 20:
                 break
-            chunk = int(min(600, remaining))
+            chunk = int(min(self.chunk_seconds, remaining))
             try:
                 rc, execs = self.run_chunk(fuzzer, worker, corpus, adir, chunk, chunks)
             except Exception as e:  # keep the campaign alive
@@ -340,6 +351,11 @@ class Campaign:
             "crashes": len(self.crash_rows),
             "build": str(BUILD),
             "asan_options": ENV["ASAN_OPTIONS"],
+            "rss_limit_mb": self.rss_limit,
+            "unit_timeout_s": self.unit_timeout,
+            "max_len": self.max_len,
+            "extra_flags": self.extra_flags,
+            "chunk_seconds": self.chunk_seconds,
             "dict": self.dict_path,
             "fuzzers": {},
         }
@@ -370,6 +386,16 @@ def main():
     ap.add_argument("--checkpoint", type=int, default=900)
     ap.add_argument("--alloc", default=None,
                     help="worker allocation, e.g. file_fuzzer=2,api_fuzzer=1")
+    ap.add_argument("--rss-limit", type=int, default=800,
+                    help="libFuzzer -rss_limit_mb per worker (default 800)")
+    ap.add_argument("--unit-timeout", type=int, default=30,
+                    help="libFuzzer -timeout per input (default 30)")
+    ap.add_argument("--max-len", type=int, default=None,
+                    help="libFuzzer -max_len; default is the largest seed")
+    ap.add_argument("--extra-flags", default="",
+                    help='extra libFuzzer flags, e.g. "-entropic=1 -len_control=0"')
+    ap.add_argument("--chunk-seconds", type=int, default=600,
+                    help="chunk length before a worker restart (default 600)")
     ap.add_argument("--dict", default=str(ROOT / "libheif" / "fuzzing" / "data" / "dictionary.txt"))
     args = ap.parse_args()
     run_dir = ROOT / "results" / args.run
@@ -380,7 +406,10 @@ def main():
         for part in args.alloc.split(","):
             name, n = part.split("=")
             alloc.append((name.strip(), int(n)))
-    c = Campaign(run_dir, args.seconds, args.checkpoint, args.dict, alloc)
+    c = Campaign(run_dir, args.seconds, args.checkpoint, args.dict, alloc,
+                 rss_limit=args.rss_limit, timeout=args.unit_timeout,
+                 max_len=args.max_len, extra_flags=args.extra_flags,
+                 chunk_seconds=args.chunk_seconds)
     c.run()
 
 
