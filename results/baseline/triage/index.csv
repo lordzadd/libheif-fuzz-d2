@@ -1,0 +1,15 @@
+fuzzer,artifact,sha1,bytes,exit,kind,signature,minimized_bytes,minimize_stable,seconds,path
+file_fuzzer,slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b,08daef6ff22d8eec484a321e6e3b4f3c069a896b,11645,0,,,,,0.33,/repo/results/baseline/triage/file_fuzzer/08daef6ff22d8eec484a321e6e3b4f3c069a896b
+file_fuzzer,slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b,08daef6ff22d8eec484a321e6e3b4f3c069a896b,11645,0,,,,,0.3,/repo/results/baseline/triage/file_fuzzer/08daef6ff22d8eec484a321e6e3b4f3c069a896b
+file_fuzzer,slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b,08daef6ff22d8eec484a321e6e3b4f3c069a896b,11645,0,,,,,0.3,/repo/results/baseline/triage/file_fuzzer/08daef6ff22d8eec484a321e6e3b4f3c069a896b
+sequence_fuzzer,oom-da39a3ee5e6b4b0d3255bfef95601890afd80709,da39a3ee5e6b4b0d3255bfef95601890afd80709,0,0,,,,,0.11,/repo/results/baseline/triage/sequence_fuzzer/da39a3ee5e6b4b0d3255bfef95601890afd80709
+sequence_fuzzer,oom-da39a3ee5e6b4b0d3255bfef95601890afd80709,da39a3ee5e6b4b0d3255bfef95601890afd80709,0,0,,,,,0.1,/repo/results/baseline/triage/sequence_fuzzer/da39a3ee5e6b4b0d3255bfef95601890afd80709
+box_fuzzer,oom-ff62a0b9563e05a3a5f39b23e1924ce53da0ad77,ff62a0b9563e05a3a5f39b23e1924ce53da0ad77,232,0,slow,slow|7.2s,,,7.25,/repo/results/baseline/triage/box_fuzzer/ff62a0b9563e05a3a5f39b23e1924ce53da0ad77
+box_fuzzer,oom-ff62a0b9563e05a3a5f39b23e1924ce53da0ad77,ff62a0b9563e05a3a5f39b23e1924ce53da0ad77,232,0,slow,slow|7.2s,,,7.21,/repo/results/baseline/triage/box_fuzzer/ff62a0b9563e05a3a5f39b23e1924ce53da0ad77
+file_fuzzer,slow-unit-fff7a712450ed1304ac1d290c63c6f04992b458b,fff7a712450ed1304ac1d290c63c6f04992b458b,12834,0,slow,slow|6.2s,,,6.22,/repo/results/baseline/triage/file_fuzzer/fff7a712450ed1304ac1d290c63c6f04992b458b
+file_fuzzer,slow-unit-fff7a712450ed1304ac1d290c63c6f04992b458b,fff7a712450ed1304ac1d290c63c6f04992b458b,12834,0,slow,slow|5.8s,,,5.82,/repo/results/baseline/triage/file_fuzzer/fff7a712450ed1304ac1d290c63c6f04992b458b
+file_fuzzer,slow-unit-fff7a712450ed1304ac1d290c63c6f04992b458b,fff7a712450ed1304ac1d290c63c6f04992b458b,12834,0,slow,slow|5.8s,,,5.77,/repo/results/baseline/triage/file_fuzzer/fff7a712450ed1304ac1d290c63c6f04992b458b
+box_fuzzer,oom-744b064a49dc6299861634514661060131a7b61a,744b064a49dc6299861634514661060131a7b61a,221,0,slow,slow|4.6s,,,4.64,/repo/results/baseline/triage/box_fuzzer/744b064a49dc6299861634514661060131a7b61a
+box_fuzzer,oom-744b064a49dc6299861634514661060131a7b61a,744b064a49dc6299861634514661060131a7b61a,221,0,slow,slow|4.6s,,,4.62,/repo/results/baseline/triage/box_fuzzer/744b064a49dc6299861634514661060131a7b61a
+box_fuzzer,oom-ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e,ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e,223,71,abort,abort|ERROR: libFuzzer: out-of-memory,,,9.76,/repo/results/baseline/triage/box_fuzzer/ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e
+box_fuzzer,oom-ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e,ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e,223,71,abort,abort|ERROR: libFuzzer: out-of-memory,,,9.68,/repo/results/baseline/triage/box_fuzzer/ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e

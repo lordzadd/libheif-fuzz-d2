@@ -1,0 +1,12 @@
+{
+  "fuzzer": "box_fuzzer",
+  "artifact": "oom-744b064a49dc6299861634514661060131a7b61a",
+  "sha1": "744b064a49dc6299861634514661060131a7b61a",
+  "bytes": 221,
+  "exit": 0,
+  "signature": "slow|4.6s",
+  "kind": "slow",
+  "frames": [],
+  "seconds": 4.62,
+  "path": "/repo/results/baseline/triage/box_fuzzer/744b064a49dc6299861634514661060131a7b61a"
+}

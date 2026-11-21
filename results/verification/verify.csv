@@ -1,0 +1,45 @@
+input,fuzzer,build,bytes,exit,signature
+49608d53a10a2a91fb7f226b588123ac3c36470e,box_fuzzer,baseline,8,1,"/repo/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null"
+49608d53a10a2a91fb7f226b588123ac3c36470e,box_fuzzer,fixed,8,0,
+bd0c452dae2b4971047a90c797f4e1998d42bf9b,api_fuzzer,baseline,308,1,"/repo/libheif/libheif/api/libheif/heif_items.cc:170:23: runtime error: null pointer passed as argument 2, which is declared to never be null"
+bd0c452dae2b4971047a90c797f4e1998d42bf9b,api_fuzzer,fixed,308,0,
+46f9ff835b8901f1(0),box_fuzzer,baseline,837,1,runtime error
+46f9ff835b8901f1(0),box_fuzzer,fixed,837,0,
+e3166e577d397bec(1),box_fuzzer,baseline,1786,1,runtime error
+e3166e577d397bec(1),box_fuzzer,fixed,1786,0,
+c1f10c182616cef5(2),sequence_fuzzer,baseline,1539,1,runtime error
+c1f10c182616cef5(2),sequence_fuzzer,fixed,1539,0,
+5ec689caabb8e07d(3),sequence_fuzzer,baseline,608,1,runtime error
+5ec689caabb8e07d(3),sequence_fuzzer,fixed,608,0,
+9d9c26b3477fabed(4),sequence_fuzzer,baseline,1087,1,runtime error
+9d9c26b3477fabed(4),sequence_fuzzer,fixed,1087,0,
+9aaa89ceca7dc6d2(5),sequence_fuzzer,baseline,1840,1,runtime error
+9aaa89ceca7dc6d2(5),sequence_fuzzer,fixed,1840,0,
+231d1d1806f61bc2(6),sequence_fuzzer,baseline,1323,1,runtime error
+231d1d1806f61bc2(6),sequence_fuzzer,fixed,1323,0,
+954345b1e9d814bb(7),sequence_fuzzer,baseline,2014,1,runtime error
+954345b1e9d814bb(7),sequence_fuzzer,fixed,2014,0,
+7670fa85783fcb2e(8),box_fuzzer,baseline,1731,1,runtime error
+7670fa85783fcb2e(8),box_fuzzer,fixed,1731,0,
+72915e953aed6c03(9),box_fuzzer,baseline,422,1,runtime error
+72915e953aed6c03(9),box_fuzzer,fixed,422,0,
+ee00e26aba7cc84c(10),box_fuzzer,baseline,1894,1,runtime error
+ee00e26aba7cc84c(10),box_fuzzer,fixed,1894,0,
+bfda27f087aca5d1(11),box_fuzzer,baseline,109,1,runtime error
+bfda27f087aca5d1(11),box_fuzzer,fixed,109,0,
+729c0b838a9ac216(12),api_fuzzer,baseline,5371,1,runtime error
+729c0b838a9ac216(12),api_fuzzer,fixed,5371,0,
+2443a49ed760d558(13),file_fuzzer,baseline,1319,1,runtime error
+2443a49ed760d558(13),file_fuzzer,fixed,1319,0,
+e6ed573010c79196(14),box_fuzzer,baseline,865,1,runtime error
+e6ed573010c79196(14),box_fuzzer,fixed,865,0,
+18df87cac2f6d63d(15),box_fuzzer,baseline,1553,1,runtime error
+18df87cac2f6d63d(15),box_fuzzer,fixed,1553,0,
+f8f75a94b8b4f4c7(16),tile_fuzzer,baseline,821,1,runtime error
+f8f75a94b8b4f4c7(16),tile_fuzzer,fixed,821,0,
+120e451b13b1a815(17),sequence_fuzzer,baseline,730,1,runtime error
+120e451b13b1a815(17),sequence_fuzzer,fixed,730,0,
+a3c3be0d3f50014a(18),sequence_fuzzer,baseline,7233,1,runtime error
+a3c3be0d3f50014a(18),sequence_fuzzer,fixed,7233,0,
+bd8a45c86853097a(19),box_fuzzer,baseline,1518,1,runtime error
+bd8a45c86853097a(19),box_fuzzer,fixed,1518,0,

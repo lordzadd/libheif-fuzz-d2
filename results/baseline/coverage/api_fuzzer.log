@@ -1,0 +1,42 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 223427360
+INFO: Loaded 1 modules   (47044 inline 8-bit counters): 47044 [0x555555d99de0, 0x555555da55a4), 
+INFO: Loaded 1 PC tables (47044 PCs): 47044 [0x555555da55a8,0x555555e5d1e8), 
+INFO:    46143 files found in /repo/results/baseline/corpus_final/api_fuzzer/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 16389 bytes
+INFO: seed corpus: files: 46143 min: 1b max: 16389b total: 69499150b rss: 58Mb
+#2	pulse  ft: 2 exec/s: 0 rss: 58Mb
+#4	pulse  cov: 2 ft: 2 corp: 1/1b exec/s: 0 rss: 58Mb
+#8	pulse  cov: 2 ft: 2 corp: 1/1b exec/s: 1 rss: 58Mb
+#16	pulse  cov: 348 ft: 361 corp: 3/25b exec/s: 2 rss: 58Mb
+#32	pulse  cov: 378 ft: 453 corp: 6/121b exec/s: 4 rss: 58Mb
+#64	pulse  cov: 401 ft: 468 corp: 8/185b exec/s: 9 rss: 58Mb
+#128	pulse  cov: 431 ft: 535 corp: 9/217b exec/s: 18 rss: 58Mb
+#256	pulse  cov: 470 ft: 591 corp: 12/313b exec/s: 36 rss: 58Mb
+#512	pulse  cov: 474 ft: 613 corp: 14/385b exec/s: 73 rss: 58Mb
+#1024	pulse  cov: 737 ft: 982 corp: 30/1147b exec/s: 146 rss: 58Mb
+#2048	pulse  cov: 959 ft: 1302 corp: 49/2223b exec/s: 292 rss: 61Mb
+#4096	pulse  cov: 3515 ft: 5628 corp: 102/7464b exec/s: 585 rss: 66Mb
+#8192	pulse  cov: 4906 ft: 9566 corp: 349/61Kb exec/s: 910 rss: 69Mb
+#16384	pulse  cov: 7585 ft: 16914 corp: 930/254Kb exec/s: 1260 rss: 79Mb
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+#32768	pulse  cov: 8438 ft: 22238 corp: 1380/521Kb exec/s: 1820 rss: 82Mb
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+#46144	INITED cov: 9106 ft: 29258 corp: 1948/2659Kb exec/s: 1709 rss: 82Mb
+#46144	DONE   cov: 9106 ft: 29258 corp: 1948/2659Kb lim: 15012 exec/s: 1709 rss: 82Mb
+Done 46144 runs in 27 second(s)

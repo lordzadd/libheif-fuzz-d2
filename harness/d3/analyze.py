@@ -21,7 +21,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 COV_RE = re.compile(r"cov: (\d+) ft: (\d+) corp: (\d+)/(\d+)")
 EXECS_RE = re.compile(r"^#(\d+)")
 S_LOG = re.compile(r"^\[\s*([0-9.]+)\] (.*)$")

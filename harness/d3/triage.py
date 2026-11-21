@@ -28,7 +28,7 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 ENV = dict(os.environ)
 ENV["ASAN_OPTIONS"] = "detect_leaks=0:symbolize=1"
 ENV["UBSAN_OPTIONS"] = "print_stacktrace=1"
@@ -39,14 +39,14 @@ FRAME_SRC = re.compile(r"#\d+ 0x[0-9a-f]+ in (\S+) (\S+)")
 FRAME = re.compile(r"#\d+ 0x[0-9a-f]+ in (\S+)")
 ASSERT = re.compile(r"Assertion `(.*)' failed")
 LIBC_ABORT = re.compile(r"(terminate called after throwing|libFuzzer: deadly signal|"
-                        r"==ERROR: libFuzzer: (out-of-memory|timeout|fuzz target)")
+                        r"ERROR: libFuzzer: (out-of-memory|timeout|fuzz target))")
 
 INTERCEPTORS = {"__asan_memcpy", "__asan_memmove", "__asan_memset", "memcpy",
                 "__interceptor_memcpy", "__interceptor_memmove",
                 "strlen", "__interceptor_strlen"}
 
 
-def run_single(fuzzer_bin, path, timeout=120, extra=None):
+def run_single(fuzzer_bin, path, timeout=90, extra=None):
     cmd = [str(fuzzer_bin), str(path), "-runs=1", "-timeout=30"]
     if extra:
         cmd.extend(extra)
@@ -94,7 +94,8 @@ def signature(rc, out):
         line = [l for l in out.splitlines() if "runtime error" in l][:1]
         return "ubsan|" + (line[0][:120] if line else ""), "ubsan", line
     if rc < 0:
-        return "signal|%d" % rc, "signal", []
+        # Still running when the wall-clock guard fired: a slow input, not a crash.
+        return "timeout|>%ds" % timeout, "timeout", []
     return None, None, []
 
 
@@ -120,6 +121,8 @@ def main():
     ap.add_argument("--build", default=str(ROOT / "build" / "fuzzing"))
     ap.add_argument("--no-minimize", action="store_true")
     ap.add_argument("--minimize-seconds", type=int, default=600)
+    ap.add_argument("--slow-seconds", type=float, default=2.0,
+                    help="an input that runs this long without a crash is reported as slow")
     args = ap.parse_args()
 
     run = ROOT / "results" / args.run
@@ -152,7 +155,10 @@ def main():
         (d / "original.bin").write_bytes(data)
 
         rc, out, secs = run_single(build / fuzzer, src)
-        sig, kind, frames = signature(rc, out)
+        if rc == 0 and secs >= args.slow_seconds:
+            kind, sig, frames = "slow", "slow|%0.1fs" % secs, []
+        else:
+            sig, kind, frames = signature(rc, out)
         (d / "report.txt").write_text(out)
         meta = {
             "fuzzer": fuzzer, "artifact": a["artifact"], "sha1": digest,

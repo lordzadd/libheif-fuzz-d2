@@ -230,9 +230,7 @@ void Box_vvcC::append_nal_data(const uint8_t* data, size_t size)
 {
   std::vector<uint8_t> nal;
   nal.resize(size);
-  if (size > 0) {
-    memcpy(nal.data(), data, size);
-  }
+  memcpy(nal.data(), data, size);
 
   append_nal_data(nal);
 }

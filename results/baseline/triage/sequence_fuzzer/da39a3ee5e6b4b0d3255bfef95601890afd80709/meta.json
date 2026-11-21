@@ -1,0 +1,12 @@
+{
+  "fuzzer": "sequence_fuzzer",
+  "artifact": "oom-da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "bytes": 0,
+  "exit": 0,
+  "signature": null,
+  "kind": null,
+  "frames": [],
+  "seconds": 0.1,
+  "path": "/repo/results/baseline/triage/sequence_fuzzer/da39a3ee5e6b4b0d3255bfef95601890afd80709"
+}

@@ -1,0 +1,55 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 619093331
+INFO: Loaded 1 modules   (70118 inline 8-bit counters): 70118 [0x555555f4c660, 0x555555f5d846), 
+INFO: Loaded 1 PC tables (70118 PCs): 70118 [0x555555f5d848,0x55555606f6a8), 
+/repo/build/fuzzing/box_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /repo/results/baseline/crashes/box_fuzzer/oom-ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e
+==1775== ERROR: libFuzzer: out-of-memory (used: 2060Mb; limit: 2048Mb)
+   To change the out-of-memory limit use -rss_limit_mb=<N>
+
+Live Heap Allocations: 2120730177 bytes in 136 chunks; quarantined: 13102 bytes in 16 chunks; 29571 other chunks; total chunks: 29723; showing top 95% (at most 8 unique contexts)
+1048126464 byte(s) (49%) in 1 allocation(s)
+    #0 0x555555889721 in operator new(unsigned long) (/repo/build/fuzzing/box_fuzzer+0x335721) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #1 0x555555cb8c82 in std::__new_allocator<float>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/new_allocator.h:151:27
+    #2 0x555555cb8c82 in std::allocator<float>::allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/allocator.h:198:32
+    #3 0x555555cb8c82 in std::allocator_traits<std::allocator<float>>::allocate(std::allocator<float>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/alloc_traits.h:482:20
+    #4 0x555555cb8c82 in std::_Vector_base<float, std::allocator<float>>::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:381:20
+    #5 0x555555cb8c82 in std::vector<float, std::allocator<float>>::_M_default_append(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc:663:34
+    #6 0x555555cb0752 in std::vector<float, std::allocator<float>>::resize(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:1016:4
+    #7 0x555555cb0752 in Box_snuc::parse(BitstreamRange&, heif_security_limits const*) /repo/libheif/libheif/codecs/uncompressed/unc_boxes.cc:1365:19
+    #8 0x5555558a8fc5 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) /repo/libheif/libheif/box.cc:1009:14
+    #9 0x5555558ec75a in Box::read_children(BitstreamRange&, unsigned int, heif_security_limits const*) /repo/libheif/libheif/box.cc:1159:19
+    #10 0x5555558f444d in Box_meta::parse(BitstreamRange&, heif_security_limits const*) /repo/libheif/libheif/box.cc:1492:10
+    #11 0x5555558a8fc5 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) /repo/libheif/libheif/box.cc:1009:14
+    #12 0x55555588c05c in LLVMFuzzerTestOneInput /repo/libheif/fuzzing/box_fuzzer.cc:42:19
+    #13 0x555555796ff4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/repo/build/fuzzing/box_fuzzer+0x242ff4) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #14 0x555555780126 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) (/repo/build/fuzzing/box_fuzzer+0x22c126) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #15 0x555555785bda in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/repo/build/fuzzing/box_fuzzer+0x231bda) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #16 0x5555557b0396 in main (/repo/build/fuzzing/box_fuzzer+0x25c396) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #17 0x7ffffdbc91c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #18 0x7ffffdbc928a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #19 0x55555577acf4 in _start (/repo/build/fuzzing/box_fuzzer+0x226cf4) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+
+1048126464 byte(s) (49%) in 1 allocation(s)
+    #0 0x555555889721 in operator new(unsigned long) (/repo/build/fuzzing/box_fuzzer+0x335721) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #1 0x555555cb8c82 in std::__new_allocator<float>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/new_allocator.h:151:27
+    #2 0x555555cb8c82 in std::allocator<float>::allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/allocator.h:198:32
+    #3 0x555555cb8c82 in std::allocator_traits<std::allocator<float>>::allocate(std::allocator<float>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/alloc_traits.h:482:20
+    #4 0x555555cb8c82 in std::_Vector_base<float, std::allocator<float>>::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:381:20
+    #5 0x555555cb8c82 in std::vector<float, std::allocator<float>>::_M_default_append(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc:663:34
+    #6 0x555555cb093c in std::vector<float, std::allocator<float>>::resize(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h:1016:4
+    #7 0x555555cb093c in Box_snuc::parse(BitstreamRange&, heif_security_limits const*) /repo/libheif/libheif/codecs/uncompressed/unc_boxes.cc:1370:21
+    #8 0x5555558a8fc5 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) /repo/libheif/libheif/box.cc:1009:14
+    #9 0x5555558ec75a in Box::read_children(BitstreamRange&, unsigned int, heif_security_limits const*) /repo/libheif/libheif/box.cc:1159:19
+    #10 0x5555558f444d in Box_meta::parse(BitstreamRange&, heif_security_limits const*) /repo/libheif/libheif/box.cc:1492:10
+    #11 0x5555558a8fc5 in Box::read(BitstreamRange&, std::shared_ptr<Box>*, heif_security_limits const*) /repo/libheif/libheif/box.cc:1009:14
+    #12 0x55555588c05c in LLVMFuzzerTestOneInput /repo/libheif/fuzzing/box_fuzzer.cc:42:19
+    #13 0x555555796ff4 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/repo/build/fuzzing/box_fuzzer+0x242ff4) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #14 0x555555780126 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) (/repo/build/fuzzing/box_fuzzer+0x22c126) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #15 0x555555785bda in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/repo/build/fuzzing/box_fuzzer+0x231bda) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #16 0x5555557b0396 in main (/repo/build/fuzzing/box_fuzzer+0x25c396) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+    #17 0x7ffffdbc91c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #18 0x7ffffdbc928a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #19 0x55555577acf4 in _start (/repo/build/fuzzing/box_fuzzer+0x226cf4) (BuildId: 7504707a1ab004e05de3fe12434e95698973216d)
+
+SUMMARY: libFuzzer: out-of-memory

@@ -1,0 +1,11 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 319955095
+INFO: Loaded 1 modules   (71623 inline 8-bit counters): 71623 [0x555555f796c0, 0x555555f8ae87), 
+INFO: Loaded 1 PC tables (71623 PCs): 71623 [0x555555f8ae88,0x5555560a2af8), 
+/repo/build/fuzzing/file_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /repo/results/baseline/crashes/file_fuzzer/slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b
+Executed /repo/results/baseline/crashes/file_fuzzer/slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b in 216 ms
+***
+*** NOTE: fuzzing was not performed, you have only
+***       executed the target code on a fixed set of inputs.
+***

@@ -29,7 +29,7 @@ import threading
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "build" / "fuzzing"
 SEED = ROOT / "corpora" / "seed"
 

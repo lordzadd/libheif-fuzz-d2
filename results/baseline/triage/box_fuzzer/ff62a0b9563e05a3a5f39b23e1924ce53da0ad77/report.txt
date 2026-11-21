@@ -1,0 +1,11 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3789654490
+INFO: Loaded 1 modules   (70118 inline 8-bit counters): 70118 [0x555555f4c660, 0x555555f5d846), 
+INFO: Loaded 1 PC tables (70118 PCs): 70118 [0x555555f5d848,0x55555606f6a8), 
+/repo/build/fuzzing/box_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /repo/results/baseline/crashes/box_fuzzer/oom-ff62a0b9563e05a3a5f39b23e1924ce53da0ad77
+Executed /repo/results/baseline/crashes/box_fuzzer/oom-ff62a0b9563e05a3a5f39b23e1924ce53da0ad77 in 7133 ms
+***
+*** NOTE: fuzzing was not performed, you have only
+***       executed the target code on a fixed set of inputs.
+***

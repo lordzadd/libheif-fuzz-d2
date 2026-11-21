@@ -1,0 +1,25 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3354442446
+INFO: Loaded 1 modules   (44454 inline 8-bit counters): 44454 [0x555555d3a4f0, 0x555555d45296), 
+INFO: Loaded 1 PC tables (44454 PCs): 44454 [0x555555d45298,0x555555df2cf8), 
+INFO:    35577 files found in /repo/results/baseline/corpus_final/sequence_fuzzer/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 16389 bytes
+INFO: seed corpus: files: 35577 min: 1b max: 16389b total: 39355915b rss: 57Mb
+#2	pulse  ft: 196 exec/s: 0 rss: 57Mb
+#4	pulse  cov: 195 ft: 196 corp: 1/1b exec/s: 0 rss: 57Mb
+#8	pulse  cov: 195 ft: 196 corp: 1/1b exec/s: 1 rss: 57Mb
+#16	pulse  cov: 225 ft: 251 corp: 3/65b exec/s: 2 rss: 57Mb
+#32	pulse  cov: 229 ft: 265 corp: 4/97b exec/s: 5 rss: 57Mb
+#64	pulse  cov: 229 ft: 265 corp: 4/97b exec/s: 10 rss: 57Mb
+#128	pulse  cov: 279 ft: 361 corp: 6/161b exec/s: 21 rss: 57Mb
+#256	pulse  cov: 289 ft: 391 corp: 9/258b exec/s: 42 rss: 57Mb
+#512	pulse  cov: 289 ft: 391 corp: 9/258b exec/s: 85 rss: 57Mb
+#1024	pulse  cov: 640 ft: 875 corp: 31/1313b exec/s: 170 rss: 58Mb
+#2048	pulse  cov: 886 ft: 1255 corp: 59/2910b exec/s: 341 rss: 58Mb
+#4096	pulse  cov: 2304 ft: 3368 corp: 136/10111b exec/s: 585 rss: 59Mb
+#8192	pulse  cov: 3749 ft: 7315 corp: 383/70Kb exec/s: 1024 rss: 61Mb
+#16384	pulse  cov: 4807 ft: 10284 corp: 745/197Kb exec/s: 1638 rss: 61Mb
+#32768	pulse  cov: 7127 ft: 17834 corp: 1342/1047Kb exec/s: 1560 rss: 221Mb
+#35578	INITED cov: 7198 ft: 19010 corp: 1479/1797Kb exec/s: 1482 rss: 221Mb
+#35578	DONE   cov: 7198 ft: 19010 corp: 1479/1797Kb lim: 9382 exec/s: 1482 rss: 221Mb
+Done 35578 runs in 24 second(s)

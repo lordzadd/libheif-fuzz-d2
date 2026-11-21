@@ -1,0 +1,7 @@
+label,kind,fuzzer,input,units,exit,cov,ft,signature,seconds,artifacts
+seedcorpus,corpus,api_fuzzer,api_fuzzer,87,0,6219,13120,,1.18,
+seedcorpus,corpus,box_fuzzer,box_fuzzer,181,0,2417,5213,,0.95,
+seedcorpus,corpus,color_conversion_fuzzer,color_conversion_fuzzer,4,0,201,210,,0.34,
+seedcorpus,corpus,file_fuzzer,file_fuzzer,81,0,6278,11262,,1.45,
+seedcorpus,corpus,sequence_fuzzer,sequence_fuzzer,37,0,4648,7745,,0.82,
+seedcorpus,corpus,tile_fuzzer,tile_fuzzer,88,0,6194,12974,,1.85,

@@ -1,0 +1,12 @@
+{
+  "fuzzer": "file_fuzzer",
+  "artifact": "slow-unit-08daef6ff22d8eec484a321e6e3b4f3c069a896b",
+  "sha1": "08daef6ff22d8eec484a321e6e3b4f3c069a896b",
+  "bytes": 11645,
+  "exit": 0,
+  "signature": null,
+  "kind": null,
+  "frames": [],
+  "seconds": 0.3,
+  "path": "/repo/results/baseline/triage/file_fuzzer/08daef6ff22d8eec484a321e6e3b4f3c069a896b"
+}

@@ -23,7 +23,7 @@ import subprocess
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 ENV = dict(os.environ)
 ENV["ASAN_OPTIONS"] = "detect_leaks=0:symbolize=1"
 ENV["UBSAN_OPTIONS"] = "print_stacktrace=1"

@@ -1,0 +1,72 @@
+{
+  "run": "baseline",
+  "started_unix": 1795246030,
+  "requested_seconds": 7200,
+  "wall_seconds": 7366.1,
+  "workers": 12,
+  "worker_allocation": {
+    "file_fuzzer": 3,
+    "api_fuzzer": 3,
+    "box_fuzzer": 2,
+    "tile_fuzzer": 1,
+    "sequence_fuzzer": 2,
+    "color_conversion_fuzzer": 1
+  },
+  "cpu_seconds": 40664.2,
+  "cpu_hours": 11.296,
+  "wall_seconds_times_workers": 88393.2,
+  "crashes": 14,
+  "build": "/repo/build/fuzzing",
+  "asan_options": "detect_leaks=0:abort_on_error=0:symbolize=1",
+  "dict": "/repo/libheif/fuzzing/data/dictionary.txt",
+  "fuzzers": {
+    "file_fuzzer": {
+      "workers": 3,
+      "chunks": 36,
+      "execs_from_logs": 1898301,
+      "final_corpus_units": 22174,
+      "final_corpus_bytes": 44895868,
+      "crashes": 6
+    },
+    "api_fuzzer": {
+      "workers": 3,
+      "chunks": 36,
+      "execs_from_logs": 11270649,
+      "final_corpus_units": 46143,
+      "final_corpus_bytes": 69499150,
+      "crashes": 0
+    },
+    "box_fuzzer": {
+      "workers": 2,
+      "chunks": 25,
+      "execs_from_logs": 13999177,
+      "final_corpus_units": 39205,
+      "final_corpus_bytes": 4847967,
+      "crashes": 6
+    },
+    "tile_fuzzer": {
+      "workers": 1,
+      "chunks": 12,
+      "execs_from_logs": 2824963,
+      "final_corpus_units": 19662,
+      "final_corpus_bytes": 29659811,
+      "crashes": 0
+    },
+    "sequence_fuzzer": {
+      "workers": 2,
+      "chunks": 25,
+      "execs_from_logs": 11025842,
+      "final_corpus_units": 35577,
+      "final_corpus_bytes": 39355915,
+      "crashes": 2
+    },
+    "color_conversion_fuzzer": {
+      "workers": 1,
+      "chunks": 12,
+      "execs_from_logs": 47154395,
+      "final_corpus_units": 2146,
+      "final_corpus_bytes": 2805533,
+      "crashes": 0
+    }
+  }
+}

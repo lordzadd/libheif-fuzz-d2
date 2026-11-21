@@ -1,0 +1,14 @@
+{
+  "fuzzer": "box_fuzzer",
+  "artifact": "oom-ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e",
+  "sha1": "ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e",
+  "bytes": 223,
+  "exit": 71,
+  "signature": "abort|ERROR: libFuzzer: out-of-memory",
+  "kind": "abort",
+  "frames": [
+    "ERROR: libFuzzer: out-of-memory"
+  ],
+  "seconds": 9.68,
+  "path": "/repo/results/baseline/triage/box_fuzzer/ac91a9180c2cd1fccbea2502ae04e00cd9ff6e3e"
+}

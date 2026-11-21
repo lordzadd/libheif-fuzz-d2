@@ -1,0 +1,7 @@
+# Repeat measurement of the tile_fuzzer corpus replay, 21 Nov 2026.
+# The first replay run (results/replay/baseline.csv) reported cov 9078 for the
+# baseline build; this repeat with -timeout=60 reports 9184, so the earlier value
+# was a per-unit timeout effect in that run, not a code difference.
+build          cov    ft     corpus units
+build          9184   28823  19662
+build-patched  9185   28823  19662

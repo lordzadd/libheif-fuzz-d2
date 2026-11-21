@@ -1,0 +1,12 @@
+{
+  "fuzzer": "box_fuzzer",
+  "artifact": "oom-ff62a0b9563e05a3a5f39b23e1924ce53da0ad77",
+  "sha1": "ff62a0b9563e05a3a5f39b23e1924ce53da0ad77",
+  "bytes": 232,
+  "exit": 0,
+  "signature": "slow|7.2s",
+  "kind": "slow",
+  "frames": [],
+  "seconds": 7.21,
+  "path": "/repo/results/baseline/triage/box_fuzzer/ff62a0b9563e05a3a5f39b23e1924ce53da0ad77"
+}
