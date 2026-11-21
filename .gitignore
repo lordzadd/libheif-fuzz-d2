@@ -4,6 +4,7 @@ build-fixed/
 build-arm64/
 build-cov/
 build-patched/
+build-baseline/
 corpora/
 results/
 *.o
