@@ -1,0 +1,12 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 777415404
+INFO: Loaded 1 modules   (89255 inline 8-bit counters): 89255 [0x61c0656ed1a8, 0x61c065702e4f), 
+INFO: Loaded 1 PC tables (89255 PCs): 89255 [0x61c065702e50,0x61c06585f8c0), 
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build-fixed/fuzzing/box_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/box_fuzzer/crash-d602172e86804fe8c6412690e1d74d76f7798389
+Executed /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/box_fuzzer/crash-d602172e86804fe8c6412690e1d74d76f7798389 in 121 ms
+***
+*** NOTE: fuzzing was not performed, you have only
+***       executed the target code on a fixed set of inputs.
+***

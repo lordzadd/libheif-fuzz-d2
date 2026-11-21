@@ -1,0 +1,10 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 256244837
+INFO: Loaded 1 modules   (115489 inline 8-bit counters): 115489 [0x59fdd543e4c8, 0x59fdd545a7e9), 
+INFO: Loaded 1 PC tables (115489 PCs): 115489 [0x59fdd545a7f0,0x59fdd561da00), 
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/api_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/artifacts/api_fuzzer/crash-791bf53f8dcef4026ccbd01a5337a81831a2c2f0
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10 

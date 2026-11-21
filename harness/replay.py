@@ -1,144 +1,201 @@
 #!/usr/bin/env python3
-"""Replay a fixed input set against a fixed build (used for before/after).
+"""D3 Track B: replay crashing inputs and the final corpus against a build.
 
-Two kinds of replay:
-  corpus  a saved corpus directory is executed once per unit in a single
-          process (`-runs=0`), which yields the union edge count for that
-          corpus. A crash during the replay is recorded.
-  crash   one input file is executed once (`-runs=1`) and the sanitizer
-          signature is recorded.
+The harness, inputs, settings and success criteria are identical across builds;
+only the build under test changes (D3_BUILD_DIR).
 
-The command line, environment and input files are identical for the baseline
-build and the patched build; only --build and --label change.
+    D3_CAMPAIGN_DIR=results/d3/baseline-<stamp> D3_LABEL=baseline \
+        python3 harness/replay.py
+    D3_CAMPAIGN_DIR=results/d3/baseline-<stamp> D3_LABEL=fixed \
+        D3_BUILD_DIR=build-fixed python3 harness/replay.py
 
-Output: results/replay/<label>.csv with one row per replay case.
+Outputs (under the campaign dir / replay / <label>):
+    replay_crashes.csv   one row per (unique crash, fuzzer that found it)
+    replay_corpus.csv    one row per fuzzer for the full final corpus
+    summary.json         aggregated before/after numbers
 """
 
-import argparse
 import csv
+import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ENV = dict(os.environ)
-ENV["ASAN_OPTIONS"] = "detect_leaks=0:symbolize=1"
-ENV["UBSAN_OPTIONS"] = "print_stacktrace=1"
-
-ASAN_ERR = re.compile(r"ERROR: AddressSanitizer: ([a-z0-9\-]+)", re.I)
-COV_RE = re.compile(r"cov: (\d+) ft: (\d+)")
-FRAME_SRC = re.compile(r"#\d+ 0x[0-9a-f]+ in (\S+) (\S+)")
-
-
-def sig_of(out):
-    m = ASAN_ERR.search(out)
-    if not m:
-        if "Assertion" in out:
-            return "assert|" + out.split("Assertion")[1][:80]
-        return ""
-    frames = []
-    for line in out.splitlines():
-        fm = FRAME_SRC.search(line)
-        if fm:
-            frames.append("%s %s" % (fm.group(1), fm.group(2)))
-        if len(frames) == 3:
-            break
-    return "%s|%s" % (m.group(1).lower(), " <- ".join(frames))
+FUZZERS = (
+    "api_fuzzer", "box_fuzzer", "color_conversion_fuzzer", "encoder_fuzzer",
+    "file_fuzzer", "sequence_fuzzer", "tile_fuzzer",
+)
+UBSAN_OPTIONS = "print_stacktrace=0:halt_on_error=1:print_summary=1"
+ASAN_OPTIONS = "symbolize=1"
 
 
-def run_cmd(cmd, timeout):
-    t0 = time.time()
+def env_int(name, default):
     try:
-        p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout,
-                           env=ENV)
-        out = (p.stdout or "") + (p.stderr or "")
-        return p.returncode, out, round(time.time() - t0, 2)
-    except subprocess.TimeoutExpired as e:
-        out = ((e.stdout or "") + (e.stderr or "")) if isinstance(e.stdout, str) else ""
-        return -1, out, round(time.time() - t0, 2)
+        return int(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+
+
+def run(cmd, timeout, env_extra=None):
+    env = os.environ.copy()
+    env.update(env_extra or {})
+    started = time.monotonic()
+    try:
+        proc = subprocess.run(
+            cmd, capture_output=True, text=True, errors="replace",
+            timeout=timeout, cwd=ROOT, env=env,
+        )
+        rc, text = proc.returncode, (proc.stdout or "") + "\n" + (proc.stderr or "")
+    except subprocess.TimeoutExpired as error:
+        out, err = error.stdout or b"", error.stderr or b""
+        text = (out if isinstance(out, str) else out.decode("utf-8", "replace"))
+        text += "\n" + (err if isinstance(err, str) else err.decode("utf-8", "replace"))
+        rc = None
+    return rc, text, round(time.monotonic() - started, 2)
+
+
+def signature(text):
+    m = re.search(r"runtime error: (.+)", text)
+    if m:
+        return "UBSan: " + m.group(1).strip()
+    m = re.search(r"ERROR: (AddressSanitizer|LeakSanitizer): (.+)", text)
+    if m:
+        return m.group(1) + ": " + m.group(2).strip()
+    return "" if "ERROR:" not in text and "runtime error:" not in text else "other"
+
+
+def unique_artifacts(art_root):
+    by_hash = {}
+    for fuzzer_dir in sorted(art_root.iterdir()):
+        if not fuzzer_dir.is_dir():
+            continue
+        for path in sorted(fuzzer_dir.iterdir()):
+            if not path.is_file() or not path.name.startswith(("crash-", "oom-", "timeout-")):
+                continue
+            digest = hashlib.sha1(path.read_bytes()).hexdigest()
+            by_hash.setdefault(digest, []).append((fuzzer_dir.name, path))
+    return by_hash
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--run", default="baseline")
-    ap.add_argument("--build", required=True, help="build/fuzzing directory to test")
-    ap.add_argument("--label", required=True, help="baseline or patched")
-    ap.add_argument("--corpus-root",
-                    default=None,
-                    help="defaults to results/<run>/corpus_final")
-    ap.add_argument("--triage-csv", default=None,
-                    help="defaults to results/<run>/triage/uniq.csv")
-    ap.add_argument("--only", default=None,
-                    help="comma-separated fuzzer names to replay")
-    args = ap.parse_args()
+    campaign = os.environ.get("D3_CAMPAIGN_DIR")
+    if not campaign:
+        print("error: set D3_CAMPAIGN_DIR", file=sys.stderr)
+        return 2
+    campaign = (ROOT / campaign).resolve() if not Path(campaign).is_absolute() else Path(campaign)
+    build_dir = os.environ.get("D3_BUILD_DIR", "build")
+    label = os.environ.get("D3_LABEL", "baseline")
+    timeout = env_int("D3_REPLAY_TIMEOUT", 180)
+    forks = env_int("D3_REPLAY_FORKS", 2)
 
-    run = ROOT / "results" / args.run
-    build = Path(args.build)
-    corpus_root = Path(args.corpus_root) if args.corpus_root else run / "corpus_final"
-    triage_csv = Path(args.triage_csv) if args.triage_csv else run / "triage" / "uniq.csv"
-    only = set(args.only.split(",")) if args.only else None
+    fuzz_root = (ROOT / build_dir / "fuzzing").resolve()
+    missing = [n for n in FUZZERS if not (fuzz_root / n).is_file()]
+    if missing:
+        print("error: missing fuzzers in %s: %s" % (fuzz_root, ", ".join(missing)), file=sys.stderr)
+        return 2
 
-    out_dir = ROOT / "results" / "replay"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    rows = []
+    out = campaign / "replay" / label
+    out.mkdir(parents=True, exist_ok=True)
+    logs = out / "logs"
+    logs.mkdir(exist_ok=True)
 
-    for corpus in sorted(p for p in corpus_root.iterdir() if p.is_dir()):
-        fuzzer = corpus.name
-        if only and fuzzer not in only:
-            continue
-        units = sorted(p for p in corpus.iterdir() if p.is_file())
-        adir = out_dir / "_artifacts" / args.label / fuzzer
-        adir.mkdir(parents=True, exist_ok=True)
-        cmd = [str(build / fuzzer), str(corpus), "-runs=0", "-timeout=30",
-               "-rss_limit_mb=2048", "-artifact_prefix=%s/" % adir]
-        rc, out, secs = run_cmd(cmd, timeout=max(600, len(units) // 5))
-        cov = ft = 0
-        for line in out.splitlines():
-            m = COV_RE.search(line)
-            if m:
-                cov, ft = int(m.group(1)), int(m.group(2))
-        new_artifacts = [p.name for p in adir.iterdir()] if adir.exists() else []
-        rows.append({"label": args.label, "kind": "corpus", "fuzzer": fuzzer,
-                     "input": corpus.name, "units": len(units), "exit": rc,
-                     "cov": cov, "ft": ft, "signature": sig_of(out),
-                     "seconds": secs,
-                     "artifacts": ";".join(sorted(new_artifacts))})
-        print("corpus %-24s units=%-6d exit=%-3d cov=%-6d ft=%-7d %.1fs %s"
-              % (fuzzer, len(units), rc, cov, ft, secs, sig_of(out)[:40]))
+    # --- 1. Exact replay of every unique crashing input, in every target that found it.
+    crash_rows = []
+    by_hash = unique_artifacts(campaign / "artifacts")
+    for digest, entries in sorted(by_hash.items()):
+        for fuzzer, path in sorted(entries):
+            rc, text, elapsed = run(
+                [str(fuzz_root / fuzzer), "-runs=1", str(path)], timeout,
+                {"UBSAN_OPTIONS": UBSAN_OPTIONS, "ASAN_OPTIONS": ASAN_OPTIONS},
+            )
+            (logs / (digest + "-" + fuzzer + ".log")).write_text(text, errors="replace")
+            crash_rows.append({
+                "sha1": digest, "fuzzer": fuzzer,
+                "input": str(path.relative_to(ROOT)),
+                "exit_code": rc, "crashed": rc not in (0, None),
+                "sanitizer_signature": signature(text),
+                "elapsed_s": elapsed,
+                "log": str((logs / (digest + "-" + fuzzer + ".log")).relative_to(ROOT)),
+            })
+            print("crash %s %-24s exit=%s %s" %
+                  (digest[:10], fuzzer, rc, signature(text)[:60]), flush=True)
 
-    if triage_csv.exists():
-        with open(triage_csv) as fh:
-            for t in csv.DictReader(fh):
-                fuzzer = t["fuzzer"]
-                if only and fuzzer not in only:
-                    continue
-                for variant in ("original.bin", "minimized"):
-                    p = Path(t["path"]) / variant
-                    if not p.exists() or p.stat().st_size == 0:
-                        continue
-                    rc, out, secs = run_cmd([str(build / fuzzer), str(p), "-runs=1",
-                                         "-timeout=30"], timeout=300)
-                    rows.append({"label": args.label, "kind": "crash",
-                                 "fuzzer": fuzzer,
-                                 "input": str(p.relative_to(ROOT)),
-                                 "units": 1, "exit": rc, "cov": "", "ft": "",
-                                 "signature": sig_of(out), "seconds": secs,
-                                 "artifacts": ""})
-                    print("crash  %-24s %-40s exit=%-3d %s"
-                          % (fuzzer, p.name, rc, sig_of(out)[:60]))
-
-    out_csv = out_dir / (args.label + ".csv")
-    with open(out_csv, "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=["label", "kind", "fuzzer", "input",
-                                           "units", "exit", "cov", "ft",
-                                           "signature", "seconds", "artifacts"])
+    with (out / "replay_crashes.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(crash_rows[0]) if crash_rows else ["sha1"])
         w.writeheader()
-        w.writerows(rows)
-    print("\nwrote", out_csv)
+        w.writerows(crash_rows)
+
+    # --- 2. Full final-corpus replay (fork + ignore_crashes so the baseline
+    # can replay every corpus unit, including the two crash units libFuzzer
+    # retained in each corpus).
+    corpus_rows = []
+    for fuzzer in FUZZERS:
+        src = campaign / "corpora" / fuzzer
+        clean = out / ("corpus_" + fuzzer)
+        if clean.exists():
+            shutil.rmtree(clean)
+        clean.mkdir(parents=True)
+        kept = 0
+        for p in sorted(src.rglob("*")):
+            if p.is_file():
+                shutil.copy2(p, clean / p.name)
+                kept += 1
+        art = out / ("art_" + fuzzer)
+        art.mkdir(exist_ok=True)
+        cmd = [
+            str(fuzz_root / fuzzer), str(clean),
+            "-fork=" + str(forks), "-runs=0", "-ignore_crashes=1",
+            "-print_final_stats=1", "-artifact_prefix=" + str(art) + "/",
+        ]
+        rc, text, elapsed = run(cmd, timeout,
+                                {"UBSAN_OPTIONS": UBSAN_OPTIONS, "ASAN_OPTIONS": ASAN_OPTIONS})
+        (logs / (fuzzer + ".corpus.log")).write_text(text, errors="replace")
+        cov = [int(x) for x in re.findall(r"cov:\s*(\d+)", text)]
+        execs = re.findall(r"stat::number_of_executed_units:\s*(\d+)", text)
+        crashes = sum(
+            1 for p in art.iterdir()
+            if p.is_file() and p.name.startswith(("crash-", "oom-", "timeout-"))
+        )
+        corpus_rows.append({
+            "fuzzer": fuzzer, "corpus_files": kept, "exit_code": rc,
+            "execs": int(execs[-1]) if execs else "",
+            "max_cov_edges": max(cov) if cov else "",
+            "new_crash_artifacts": crashes,
+            "elapsed_s": elapsed,
+            "log": str((logs / (fuzzer + ".corpus.log")).relative_to(ROOT)),
+        })
+        print("corpus %-25s files=%d crashes=%d cov=%s" %
+              (fuzzer, kept, crashes, corpus_rows[-1]["max_cov_edges"]), flush=True)
+
+    with (out / "replay_corpus.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(corpus_rows[0]))
+        w.writeheader()
+        w.writerows(corpus_rows)
+
+    summary = {
+        "label": label,
+        "build_dir": build_dir,
+        "campaign": str(campaign.relative_to(ROOT)),
+        "crash_inputs_replayed": len({r["sha1"] for r in crash_rows}),
+        "crash_replays": len(crash_rows),
+        "crash_replays_that_crashed": sum(1 for r in crash_rows if r["crashed"]),
+        "unique_signatures": sorted({r["sanitizer_signature"] for r in crash_rows
+                                     if r["sanitizer_signature"]}),
+        "corpus_new_crash_artifacts": sum(r["new_crash_artifacts"] for r in corpus_rows),
+        "corpus_execs": sum(r["execs"] for r in corpus_rows if isinstance(r["execs"], int)),
+        "crash_csv": str((out / "replay_crashes.csv").relative_to(ROOT)),
+        "corpus_csv": str((out / "replay_corpus.csv").relative_to(ROOT)),
+    }
+    (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    print(json.dumps(summary, indent=2))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

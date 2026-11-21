@@ -16,7 +16,7 @@ docker run --rm --platform linux/amd64 -u "$UID_GID" -e HOME=/tmp \
     set -e
     BUILD_DIR=/repo/build-cov \
     FUZZING_COMPILE_OPTIONS='-fsanitize=fuzzer -fprofile-instr-generate -fcoverage-mapping -g -O1' \
-      ./scripts/build.sh >/dev/null
+      ./scripts/build_d3.sh >/dev/null
     mkdir -p /repo/results/$RUN/coverage
     cd /repo/results/$RUN/coverage
     rm -f *.profraw *.profdata

@@ -1,0 +1,18 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1567773656
+INFO: Loaded 1 modules   (108832 inline 8-bit counters): 108832 [0x5db1eb16beb8, 0x5db1eb1867d8), 
+INFO: Loaded 1 PC tables (108832 PCs): 108832 [0x5db1eb1867d8,0x5db1eb32f9d8), 
+INFO:      133 files found in /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/corpora/box_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24871 bytes
+INFO: seed corpus: files: 133 min: 16b max: 24871b total: 372064b rss: 43Mb
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null
+/usr/include/string.h:44:28: note: nonnull attribute specified here
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10 
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/artifacts/box_fuzzer/'; Test unit written to /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/artifacts/box_fuzzer/crash-88678aa53dadb4e53a046e55669f9252e8581271
+stat::number_of_executed_units: 8
+stat::average_exec_per_sec:     0
+stat::new_units_added:          0
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              45

@@ -1,2 +1,1 @@
-# No Python third-party dependencies; uses the standard library only.
-# System dependencies: clang, cmake, make, and libheif's codec libraries.
+# No third-party Python dependencies; harness/run.py uses only the standard library.

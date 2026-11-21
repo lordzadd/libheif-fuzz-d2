@@ -14,8 +14,8 @@ UID_GID="$(id -u):$(id -g)"
 
 docker run --rm --platform linux/amd64 -u "$UID_GID" -e HOME=/tmp \
   -v "$ROOT":/repo -w /repo libheif-fuzz:1.23.4 \
-  bash -lc "./scripts/build.sh && python3 harness/prepare_corpus.py"
+  bash -lc "./scripts/build_d3.sh && python3 harness/d3/prepare_corpus.py"
 
 docker run --rm --platform linux/amd64 -u "$UID_GID" -e HOME=/tmp \
   -v "$ROOT":/repo -w /repo libheif-fuzz:1.23.4 \
-  bash -lc "python3 harness/campaign.py --seconds $SECONDS_TO_RUN --run $RUN --checkpoint 900"
+  bash -lc "python3 harness/d3/campaign.py --seconds $SECONDS_TO_RUN --run $RUN --checkpoint 900"

@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""D2 harness for the libheif fuzzing campaign.
+"""Build and run the pinned libheif fuzz targets with fixed input counts."""
 
-Builds libheif (if needed), runs every fuzzer for a short time, and writes
-one row per fuzzer with crashes found and execution counts.
-"""
-
+import argparse
 import csv
+import datetime as dt
 import json
 import os
 import re
@@ -18,116 +16,156 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "build"
 FUZZ_DIR = BUILD / "fuzzing"
-RESULTS = ROOT / "results"
 CORPUS_SRC = ROOT / "libheif" / "fuzzing" / "data" / "corpus"
-
-
-def run_build():
-    script = ROOT / "scripts" / "build.sh"
-    print("Building libheif fuzzers...", flush=True)
-    subprocess.run([str(script)], check=True, cwd=ROOT)
+FUZZER_NAMES = (
+    "api_fuzzer", "box_fuzzer", "color_conversion_fuzzer", "encoder_fuzzer",
+    "file_fuzzer", "sequence_fuzzer", "tile_fuzzer",
+)
 
 
 def ensure_build():
-    fuzzers = sorted(FUZZ_DIR.glob("*_fuzzer")) if FUZZ_DIR.exists() else []
-    if not fuzzers:
-        run_build()
-    fuzzers = sorted(FUZZ_DIR.glob("*_fuzzer"))
-    if not fuzzers:
-        raise RuntimeError("No fuzzers built in " + str(FUZZ_DIR))
-    return fuzzers
+    print("Building all pinned libheif fuzz targets...", flush=True)
+    subprocess.run([str(ROOT / "scripts" / "build.sh")], check=True, cwd=ROOT)
+    missing = [name for name in FUZZER_NAMES if not (FUZZ_DIR / name).is_file()]
+    if missing:
+        raise RuntimeError("Build did not produce expected fuzzers: " + ", ".join(missing))
+    return [FUZZ_DIR / name for name in FUZZER_NAMES]
+
+
+def parse_stat(text, key):
+    match = re.search(r"stat::" + re.escape(key) + r":\s*(\d+)", text)
+    if match:
+        return int(match.group(1))
+    match = re.search(re.escape(key) + r"[:=]\s*(\d+)", text)
+    return int(match.group(1)) if match else None
 
 
 def seed_corpus(dest):
     dest.mkdir(parents=True, exist_ok=True)
-    if CORPUS_SRC.exists():
-        for p in CORPUS_SRC.iterdir():
-            if p.is_file():
-                target = dest / p.name
-                if not target.exists():
-                    shutil.copy2(p, target)
+    if not CORPUS_SRC.is_dir():
+        return 0
+    count = 0
+    for source in CORPUS_SRC.rglob("*"):
+        if source.is_file():
+            target = dest / source.relative_to(CORPUS_SRC)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+            count += 1
+    return count
 
 
-def parse_stat(text, key):
-    m = re.search(r"stat::" + re.escape(key) + r":\s*(\d+)", text)
-    if m:
-        return int(m.group(1))
-    m = re.search(re.escape(key) + r"[:=]\s*(\d+)", text)
-    return int(m.group(1)) if m else 0
+def decode_output(value):
+    if value is None:
+        return ""
+    return value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value
 
 
-def run_one(fuzzer):
+def run_one(fuzzer, corpus_root, output_dir, runs, timeout_s):
     name = fuzzer.name
-    corpus = ROOT / "corpora" / name
-    crash_dir = RESULTS / "crashes" / name
+    corpus = corpus_root / name
+    artifacts = output_dir / "artifacts" / name
+    logs = output_dir / "logs"
     corpus.mkdir(parents=True, exist_ok=True)
-    crash_dir.mkdir(parents=True, exist_ok=True)
-    seed_corpus(corpus)
-
-    cmd = [
-        str(fuzzer),
-        str(corpus),
-        "-max_total_time=5",
-        "-print_final_stats=1",
-        "-artifact_prefix=" + str(crash_dir) + "/",
+    artifacts.mkdir(parents=True, exist_ok=True)
+    seed_count = seed_corpus(corpus)
+    logs.mkdir(parents=True, exist_ok=True)
+    command = [
+        str(fuzzer), str(corpus), "-runs=" + str(runs), "-print_final_stats=1",
+        "-artifact_prefix=" + str(artifacts) + "/",
     ]
-    print(f"Running {name} for 5s...", flush=True)
-    start = time.time()
+    print("Running " + name + ": requested " + str(runs) + " executions", flush=True)
+    started = time.monotonic()
+    timed_out = False
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        proc = subprocess.run(
+            command, capture_output=True, text=True, errors="replace",
+            timeout=timeout_s, cwd=ROOT,
+        )
         rc = proc.returncode
-        out = (proc.stdout or "") + "\n" + (proc.stderr or "")
-    except subprocess.TimeoutExpired as e:
-        rc = -1
-        out = (e.stdout or "") + "\n" + (e.stderr or "")
-    elapsed = round(time.time() - start, 2)
+        output = (proc.stdout or "") + "\n" + (proc.stderr or "")
+    except subprocess.TimeoutExpired as error:
+        timed_out = True
+        rc = None
+        output = decode_output(error.stdout) + "\n" + decode_output(error.stderr)
+    elapsed = round(time.monotonic() - started, 2)
+    (logs / (name + ".log")).write_text(output, errors="replace")
 
-    crashes = len(list(crash_dir.glob("crash-*"))) + len(list(crash_dir.glob("oom-*"))) + len(list(crash_dir.glob("timeout-*")))
-    execs = parse_stat(out, "number_of_executed_units")
-    edges = parse_stat(out, "number_of_new_units_added") or parse_stat(out, "edges_found")
-    # fallback for execs
-    if execs == 0:
-        m = re.search(r"(\d+)\s+execs", out)
-        if m:
-            execs = int(m.group(1))
-
+    execs = parse_stat(output, "number_of_executed_units")
+    if execs is None:
+        match = re.search(r"(\d+)\s+execs", output)
+        execs = int(match.group(1)) if match else None
+    crashes = sum(
+        1 for path in artifacts.iterdir()
+        if path.is_file() and path.name.startswith(("crash-", "oom-", "timeout-"))
+    )
+    reasons = []
+    if timed_out:
+        reasons.append("timeout")
+    if rc not in (0, None):
+        reasons.append("nonzero_exit")
+    if execs is None:
+        reasons.append("missing_execution_stat")
+    if crashes:
+        reasons.append("crash_artifact")
     return {
-        "fuzzer": name,
-        "exit_code": rc,
-        "elapsed_s": elapsed,
-        "crashes_found": crashes,
-        "execs": execs,
-        "edges": edges,
+        "fuzzer": name, "requested_runs": runs, "seed_files": seed_count,
+        "execs": execs, "crashes_found": crashes, "exit_code": rc,
+        "timed_out": timed_out, "elapsed_s": elapsed,
+        "failure_reasons": ";".join(reasons),
     }
 
 
 def main():
-    RESULTS.mkdir(parents=True, exist_ok=True)
+    try:
+        runs = int(os.environ.get("FUZZ_RUNS", "1000"))
+        timeout_s = int(os.environ.get("FUZZ_TIMEOUT_SECONDS", "300"))
+        if runs < 1 or timeout_s < 1:
+            raise ValueError("FUZZ_RUNS and FUZZ_TIMEOUT_SECONDS must be positive integers")
+    except ValueError as error:
+        print(json.dumps({"error": str(error)}, indent=2))
+        return 2
+
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    output_dir = ROOT / "results" / stamp
+    suffix = 1
+    while output_dir.exists():
+        output_dir = ROOT / "results" / (stamp + "-" + str(suffix))
+        suffix += 1
+    corpus_root = output_dir / "corpora"
+    output_dir.mkdir(parents=True)
+
     try:
         fuzzers = ensure_build()
-    except Exception as e:
-        print(json.dumps({"error": str(e)}, indent=2))
-        sys.exit(1)
+    except Exception as error:
+        summary = {
+            "fuzzers_run": 0, "total_executed_inputs": 0, "total_crashes": 0,
+            "failed_fuzzers": ["build"], "error": str(error),
+            "output_dir": str(output_dir.relative_to(ROOT)),
+        }
+        (output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+        print(json.dumps(summary, indent=2))
+        return 1
 
-    rows = []
-    for f in fuzzers:
-        rows.append(run_one(f))
-
-    out_csv = RESULTS / "fuzz_results.csv"
-    with open(out_csv, "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
-        w.writeheader()
-        w.writerows(rows)
-
-    total_crashes = sum(r["crashes_found"] for r in rows)
+    rows = [run_one(fuzzer, corpus_root, output_dir, runs, timeout_s) for fuzzer in fuzzers]
+    csv_path = output_dir / "fuzz_results.csv"
+    with csv_path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    total_inputs = sum(row["execs"] or 0 for row in rows)
+    total_crashes = sum(row["crashes_found"] for row in rows)
+    failed = [row["fuzzer"] for row in rows if row["failure_reasons"]]
     summary = {
-        "fuzzers_run": len(rows),
-        "total_crashes": total_crashes,
-        "crash_rate": round(total_crashes / len(rows), 4) if rows else 0.0,
-        "output": str(out_csv),
+        "fuzzers_run": len(rows), "requested_runs_per_fuzzer": runs,
+        "total_executed_inputs": total_inputs, "total_crashes": total_crashes,
+        "crash_rate_per_executed_input": round(total_crashes / total_inputs, 8) if total_inputs else 0.0,
+        "failed_fuzzers": failed, "output_dir": str(output_dir.relative_to(ROOT)),
+        "csv": str(csv_path.relative_to(ROOT)),
     }
+    (output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

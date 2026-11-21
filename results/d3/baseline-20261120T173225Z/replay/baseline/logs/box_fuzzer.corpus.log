@@ -1,0 +1,11 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2722866672
+INFO: Loaded 1 modules   (108832 inline 8-bit counters): 108832 [0x5f1712291eb8, 0x5f17122ac7d8), 
+INFO: Loaded 1 PC tables (108832 PCs): 108832 [0x5f17122ac7d8,0x5f17124559d8), 
+INFO: -fork=2: fuzzing in separate process(s)
+INFO: -fork=2: 660 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork441895.dir
+#62: cov: 14638 ft: 14638 corp: 660 exec/s: 0 oom/timeout/crash: 0/0/0 time: 2s job: 1 dft_time: 0
+/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/libheif/libheif/bitstream.cc:115:10: runtime error: null pointer passed as argument 1, which is declared to never be null
+INFO: fuzzed for 62 iterations, wrapping up soon
+INFO: exiting: 1 time: 2s

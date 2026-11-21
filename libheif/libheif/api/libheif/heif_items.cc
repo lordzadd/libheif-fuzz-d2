@@ -167,7 +167,10 @@ heif_error heif_item_get_item_data(const heif_context* ctx,
 
   if (out_data) {
     *out_data = new uint8_t[dataResult->size()];
-    memcpy(*out_data, dataResult->data(), dataResult->size());
+    // An empty item has a null data() pointer; memcpy would receive a null src.
+    if (dataResult->size() > 0) {
+      memcpy(*out_data, dataResult->data(), dataResult->size());
+    }
   }
 
   return heif_error_success;

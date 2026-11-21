@@ -1,0 +1,19 @@
+{
+  "campaign": "results/d3/baseline-20261120T173225Z",
+  "unique_crash_inputs": 219,
+  "distinct_root_cause_classes": 2,
+  "classes": [
+    "C1: zero-length read into empty vector (bitstream.cc:115)",
+    "C2: zero-length item-data copy from empty vector (heif_items.cc:170)"
+  ],
+  "exploitability": [
+    "Not exploitable. memcpy(..., 0) reads and writes no bytes: no OOB access, no attacker-controlled dereference, no type confusion. ASan reports no invalid memory access. Only the harness's -fno-sanitize-recover UBSan configuration aborts, i.e. a denial of service of the fuzzing process; a production build treats the call as a no-op (release replay).",
+    "Not exploitable. size == 0 means no bytes are copied; no OOB read/write occurs and ASan reports no invalid access. The only effect is the UBSan abort in this strict harness; a production build performs no copy."
+  ],
+  "root_causes": [
+    "StreamReader_memory::read() calls memcpy(data, &m_data[m_position], size) at bitstream.cc:115 with data == nullptr and size == 0. Box_av1C::parse() (codecs/avif_boxes.cc:77-80) sizes an empty vector with resize(0) and passes m_config_OBUs.data() to BitstreamRange::read(); data() may legally be nullptr for an empty vector. Wrong assumption: a container's data() is always a valid non-null memcpy destination, even for a zero-byte read.",
+    "heif_get_item_data() at api/libheif/heif_items.cc:170 calls memcpy(*out_data, dataResult->data(), dataResult->size()) when an item exists but carries zero bytes. dataResult->data() is nullptr for the empty result vector, so memcpy's src (argument 2, declared nonnull) is null with size 0. Wrong assumption: an empty item's data pointer is always non-null."
+  ],
+  "crashes_csv": "results/d3/baseline-20261120T173225Z/analysis/crashes.csv",
+  "groups_csv": "results/d3/baseline-20261120T173225Z/analysis/groups.csv"
+}

@@ -1,0 +1,5 @@
+D3 Track B synthetic-data canary
+run: baseline-20261120T173225Z
+token: D3-SYNTHETIC-CANARY-libheif-08075aeb-NOT-USER-DATA
+All inputs in this directory are either upstream synthetic test fixtures
+from libheif/fuzzing/data/corpus or libFuzzer mutations of them.

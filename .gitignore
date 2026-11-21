@@ -1,10 +1,13 @@
 build/
+build-release/
+build-fixed/
+build-arm64/
+build-cov/
+build-patched/
 corpora/
 results/
 *.o
 *.a
 .DS_Store
 __pycache__/
-EOFbuild-arm64/
-build-cov/
-build-patched/
+.vscode/

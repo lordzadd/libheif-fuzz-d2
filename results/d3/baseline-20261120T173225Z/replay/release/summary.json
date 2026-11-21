@@ -1,0 +1,13 @@
+{
+  "label": "release",
+  "build_dir": "build-release",
+  "campaign": "results/d3/baseline-20261120T173225Z",
+  "crash_inputs_replayed": 219,
+  "crash_replays": 226,
+  "crash_replays_that_crashed": 0,
+  "unique_signatures": [],
+  "corpus_new_crash_artifacts": 0,
+  "corpus_execs": 0,
+  "crash_csv": "results/d3/baseline-20261120T173225Z/replay/release/replay_crashes.csv",
+  "corpus_csv": "results/d3/baseline-20261120T173225Z/replay/release/replay_corpus.csv"
+}

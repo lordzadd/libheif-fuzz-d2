@@ -1,0 +1,16 @@
+{
+  "fuzzers_run": 7,
+  "requested_runs_per_fuzzer": 1000,
+  "total_executed_inputs": 2031,
+  "total_crashes": 5,
+  "crash_rate_per_executed_input": 0.00246184,
+  "failed_fuzzers": [
+    "api_fuzzer",
+    "box_fuzzer",
+    "file_fuzzer",
+    "sequence_fuzzer",
+    "tile_fuzzer"
+  ],
+  "output_dir": "results/20261026T223104Z",
+  "csv": "results/20261026T223104Z/fuzz_results.csv"
+}

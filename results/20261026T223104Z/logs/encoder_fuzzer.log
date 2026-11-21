@@ -1,0 +1,61 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2723198139
+INFO: Loaded 1 modules   (109834 inline 8-bit counters): 109834 [0x64fc57ef7180, 0x64fc57f11e8a), 
+INFO: Loaded 1 PC tables (109834 PCs): 109834 [0x64fc57f11e90,0x64fc580bef30), 
+INFO:      133 files found in /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/20261026T223104Z/corpora/encoder_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24871 bytes
+INFO: seed corpus: files: 133 min: 16b max: 24871b total: 372064b rss: 44Mb
+#134	INITED cov: 235 ft: 238 corp: 2/6636b exec/s: 0 rss: 48Mb
+#137	REDUCE cov: 235 ft: 238 corp: 2/3571b lim: 6620 exec/s: 0 rss: 48Mb L: 3555/3555 MS: 3 ChangeBit-CopyPart-EraseBytes-
+#166	REDUCE cov: 235 ft: 238 corp: 2/1825b lim: 6620 exec/s: 0 rss: 49Mb L: 1809/1809 MS: 4 CopyPart-ChangeBit-ChangeByte-EraseBytes-
+	NEW_FUNC[1/2]: 0x64fc5799bd30 in heif_encoder_descriptor const*& std::vector<heif_encoder_descriptor const*, std::allocator<heif_encoder_descriptor const*>>::emplace_back<heif_encoder_descriptor const*>(heif_encoder_descriptor const*&&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/encoder_fuzzer+0xb15d30) (BuildId: 1f83f195d8836d7b716a80d7176c0b76e1d8df5c)
+	NEW_FUNC[2/2]: 0x64fc5799bf40 in void std::vector<heif_encoder_descriptor const*, std::allocator<heif_encoder_descriptor const*>>::_M_realloc_append<heif_encoder_descriptor const*>(heif_encoder_descriptor const*&&) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/encoder_fuzzer+0xb15f40) (BuildId: 1f83f195d8836d7b716a80d7176c0b76e1d8df5c)
+#188	NEW    cov: 250 ft: 254 corp: 3/1901b lim: 6620 exec/s: 0 rss: 49Mb L: 76/1809 MS: 2 InsertRepeatedBytes-InsertRepeatedBytes-
+#192	REDUCE cov: 250 ft: 254 corp: 3/1326b lim: 6620 exec/s: 0 rss: 49Mb L: 1234/1234 MS: 4 ChangeBit-ChangeASCIIInt-ChangeASCIIInt-EraseBytes-
+#209	REDUCE cov: 250 ft: 254 corp: 3/805b lim: 6620 exec/s: 0 rss: 49Mb L: 713/713 MS: 2 ChangeByte-EraseBytes-
+#218	NEW    cov: 251 ft: 255 corp: 4/821b lim: 6620 exec/s: 0 rss: 49Mb L: 16/713 MS: 4 ChangeBinInt-ChangeBinInt-ChangeByte-ShuffleBytes-
+#224	REDUCE cov: 251 ft: 255 corp: 4/820b lim: 6620 exec/s: 0 rss: 49Mb L: 15/713 MS: 1 EraseBytes-
+#265	REDUCE cov: 251 ft: 255 corp: 4/799b lim: 6620 exec/s: 0 rss: 49Mb L: 692/692 MS: 1 EraseBytes-
+#302	REDUCE cov: 251 ft: 255 corp: 4/798b lim: 6620 exec/s: 0 rss: 50Mb L: 691/691 MS: 2 InsertRepeatedBytes-EraseBytes-
+#316	REDUCE cov: 251 ft: 255 corp: 4/794b lim: 6620 exec/s: 0 rss: 50Mb L: 11/691 MS: 4 CopyPart-ChangeByte-ChangeBit-EraseBytes-
+#371	REDUCE cov: 251 ft: 255 corp: 4/689b lim: 6620 exec/s: 0 rss: 50Mb L: 586/586 MS: 5 InsertRepeatedBytes-InsertRepeatedBytes-ChangeBinInt-InsertByte-EraseBytes-
+#379	REDUCE cov: 251 ft: 255 corp: 4/652b lim: 6620 exec/s: 0 rss: 50Mb L: 39/586 MS: 3 CrossOver-ChangeByte-EraseBytes-
+#395	REDUCE cov: 251 ft: 255 corp: 4/650b lim: 6620 exec/s: 0 rss: 50Mb L: 9/586 MS: 1 EraseBytes-
+#413	REDUCE cov: 251 ft: 255 corp: 4/647b lim: 6620 exec/s: 0 rss: 50Mb L: 36/586 MS: 3 InsertByte-InsertByte-EraseBytes-
+#424	REDUCE cov: 251 ft: 255 corp: 4/408b lim: 6620 exec/s: 0 rss: 50Mb L: 347/347 MS: 1 EraseBytes-
+#428	REDUCE cov: 251 ft: 255 corp: 4/396b lim: 6620 exec/s: 0 rss: 50Mb L: 24/347 MS: 4 CopyPart-ChangeBinInt-ChangeByte-EraseBytes-
+#470	REDUCE cov: 251 ft: 255 corp: 4/393b lim: 6620 exec/s: 0 rss: 50Mb L: 6/347 MS: 2 CopyPart-EraseBytes-
+#517	REDUCE cov: 251 ft: 255 corp: 4/387b lim: 6620 exec/s: 0 rss: 51Mb L: 10/347 MS: 2 ChangeByte-EraseBytes-
+#535	REDUCE cov: 251 ft: 255 corp: 4/270b lim: 6620 exec/s: 0 rss: 51Mb L: 230/230 MS: 3 ChangeBinInt-ChangeByte-EraseBytes-
+#540	REDUCE cov: 251 ft: 255 corp: 4/267b lim: 6620 exec/s: 0 rss: 51Mb L: 21/230 MS: 5 ChangeBit-InsertByte-CopyPart-EraseBytes-EraseBytes-
+#549	REDUCE cov: 251 ft: 255 corp: 4/266b lim: 6620 exec/s: 0 rss: 51Mb L: 20/230 MS: 4 ShuffleBytes-ChangeBit-CrossOver-EraseBytes-
+#566	REDUCE cov: 251 ft: 255 corp: 4/265b lim: 6620 exec/s: 0 rss: 51Mb L: 5/230 MS: 2 CopyPart-EraseBytes-
+#582	REDUCE cov: 251 ft: 255 corp: 4/187b lim: 6620 exec/s: 0 rss: 51Mb L: 152/152 MS: 1 EraseBytes-
+#603	REDUCE cov: 251 ft: 255 corp: 4/182b lim: 6620 exec/s: 0 rss: 51Mb L: 5/152 MS: 1 EraseBytes-
+#607	REDUCE cov: 251 ft: 255 corp: 4/145b lim: 6620 exec/s: 0 rss: 51Mb L: 115/115 MS: 4 InsertByte-ChangeByte-CopyPart-EraseBytes-
+#613	REDUCE cov: 251 ft: 255 corp: 4/141b lim: 6620 exec/s: 0 rss: 51Mb L: 16/115 MS: 1 EraseBytes-
+#616	REDUCE cov: 251 ft: 255 corp: 4/133b lim: 6620 exec/s: 0 rss: 51Mb L: 8/115 MS: 3 ChangeBinInt-CopyPart-EraseBytes-
+#638	REDUCE cov: 251 ft: 255 corp: 4/113b lim: 6620 exec/s: 0 rss: 51Mb L: 95/95 MS: 2 InsertRepeatedBytes-EraseBytes-
+#657	REDUCE cov: 251 ft: 255 corp: 4/109b lim: 6620 exec/s: 0 rss: 51Mb L: 4/95 MS: 4 ShuffleBytes-ShuffleBytes-ShuffleBytes-EraseBytes-
+#733	REDUCE cov: 251 ft: 255 corp: 4/108b lim: 6620 exec/s: 0 rss: 52Mb L: 4/95 MS: 1 EraseBytes-
+#735	REDUCE cov: 251 ft: 255 corp: 4/107b lim: 6620 exec/s: 0 rss: 52Mb L: 3/95 MS: 2 ShuffleBytes-EraseBytes-
+#751	REDUCE cov: 251 ft: 255 corp: 4/106b lim: 6620 exec/s: 0 rss: 52Mb L: 3/95 MS: 1 EraseBytes-
+#763	REDUCE cov: 252 ft: 256 corp: 5/107b lim: 6620 exec/s: 0 rss: 52Mb L: 1/95 MS: 2 EraseBytes-EraseBytes-
+#824	REDUCE cov: 252 ft: 256 corp: 5/106b lim: 6620 exec/s: 0 rss: 52Mb L: 2/95 MS: 1 EraseBytes-
+	NEW_FUNC[1/13]: 0x64fc574e54e8 in create_image(unsigned char const*, unsigned long, heif_image**) encoder_fuzzer.cc
+	NEW_FUNC[2/13]: 0x64fc574ec748 in heif_image_release (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/encoder_fuzzer+0x666748) (BuildId: 1f83f195d8836d7b716a80d7176c0b76e1d8df5c)
+#913	NEW    cov: 281 ft: 285 corp: 6/108b lim: 6620 exec/s: 0 rss: 52Mb L: 2/95 MS: 4 ChangeBit-CopyPart-EraseBytes-InsertByte-
+	NEW_FUNC[1/395]: 0x64fc574e5cc8 in writer_write(heif_context*, void const*, unsigned long, void*) encoder_fuzzer.cc
+	NEW_FUNC[2/395]: 0x64fc574e5e70 in MemoryWriter::write(void const*, unsigned long) (/mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/build/fuzzing/encoder_fuzzer+0x65fe70) (BuildId: 1f83f195d8836d7b716a80d7176c0b76e1d8df5c)
+#966	NEW    cov: 2535 ft: 2578 corp: 7/112b lim: 6620 exec/s: 0 rss: 56Mb L: 4/95 MS: 3 ChangeBit-InsertByte-CopyPart-
+#967	REDUCE cov: 2537 ft: 2581 corp: 8/117b lim: 6620 exec/s: 0 rss: 56Mb L: 5/95 MS: 1 ChangeBinInt-
+#973	NEW    cov: 2574 ft: 2655 corp: 9/121b lim: 6620 exec/s: 0 rss: 56Mb L: 4/95 MS: 1 CrossOver-
+#983	REDUCE cov: 2574 ft: 2655 corp: 9/109b lim: 6620 exec/s: 0 rss: 56Mb L: 83/83 MS: 5 InsertByte-ChangeByte-CrossOver-ChangeBinInt-EraseBytes-
+#1000	DONE   cov: 2574 ft: 2655 corp: 9/109b lim: 6620 exec/s: 0 rss: 56Mb
+Done 1000 runs in 0 second(s)
+stat::number_of_executed_units: 1000
+stat::average_exec_per_sec:     0
+stat::new_units_added:          39
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              56

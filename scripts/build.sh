@@ -3,34 +3,18 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/libheif"
-# BUILD_DIR lets the D3 before/after comparison build the patched tree next to
-# the baseline tree (build/ and build-patched/).
 BUILD="${BUILD_DIR:-$ROOT/build}"
-
-# Pick an SDK that links on this host. Linux ignores this block.
-if [ "$(uname -s)" = "Darwin" ] && [ -z "${SDKROOT:-}" ]; then
-  for sdk in \
-    /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk \
-    /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk \
-    /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk; do
-    if [ -d "$sdk" ]; then export SDKROOT="$sdk"; break; fi
-  done
-fi
 
 supports_fuzzer() {
   local cxx="$1"
   local tmp
   tmp="$(mktemp -d)"
-  cat > "$tmp/t.cc" <<'CC'
+  cat > "$tmp/probe.cc" <<'CC'
 #include <cstddef>
 #include <cstdint>
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t*, size_t) { return 0; }
 CC
-  local sysroot_flag=""
-  if [ "$(uname -s)" = "Darwin" ] && [ -n "${SDKROOT:-}" ]; then
-    sysroot_flag="-isysroot $SDKROOT"
-  fi
-  if $cxx $sysroot_flag -x c++ -fsanitize=fuzzer "$tmp/t.cc" -o "$tmp/t" >/dev/null 2>&1; then
+  if "$cxx" -x c++ -fsanitize=fuzzer "$tmp/probe.cc" -o "$tmp/probe" >/dev/null 2>&1; then
     rm -rf "$tmp"
     return 0
   fi
@@ -38,68 +22,58 @@ CC
   return 1
 }
 
-if [ -z "${CXX:-}" ]; then
-  candidates=()
-  if [ "$(uname -s)" = "Darwin" ]; then
-    candidates+=(
-      /opt/homebrew/opt/llvm/bin/clang++
-      /usr/local/opt/llvm/bin/clang++
-      /Library/Developer/Toolchains/swift-6.2.4-RELEASE.xctoolchain/usr/bin/clang++
-      /Library/Developer/Toolchains/swift-6.2-RELEASE.xctoolchain/usr/bin/clang++
-      /usr/bin/clang++
-    )
-  else
-    candidates+=(
-      clang++
-      clang++-19
-      clang++-18
-      clang++-17
-      clang++-16
-      clang++-15
-    )
-  fi
-  for c in "${candidates[@]}"; do
-    if command -v "$c" >/dev/null 2>&1 && supports_fuzzer "$c"; then
-      export CXX="$c"
+if [[ -z "${CXX:-}" ]]; then
+  for candidate in clang++ clang++-19 clang++-18 clang++-17 clang++-16 clang++-15; do
+    if command -v "$candidate" >/dev/null 2>&1 && supports_fuzzer "$candidate"; then
+      export CXX="$candidate"
       break
     fi
   done
 fi
-
-if [ -z "${CXX:-}" ]; then
-  echo "error: no C++ compiler with libFuzzer support found." >&2
-  echo "Set CXX to a clang++ that provides -fsanitize=fuzzer." >&2
+if [[ -z "${CXX:-}" ]]; then
+  echo "error: no C++ compiler with libFuzzer found; set CXX to a compatible clang++." >&2
   exit 1
 fi
-
-if [ -z "${CC:-}" ]; then
+if [[ -z "${CC:-}" ]]; then
   export CC="${CXX%++}"
-  if ! command -v "$CC" >/dev/null 2>&1; then
-    export CC="$CXX"
-  fi
 fi
+command -v "$CC" >/dev/null 2>&1 || {
+  echo "error: C compiler '$CC' was not found; set CC to the matching clang." >&2
+  exit 1
+}
 
-# ASan is the halt condition for the campaign. It detects the memory-safety
-# property D1 declares: out-of-bounds read/write, use-after-free, heap overflow.
-# UBSan recover mode was evaluated in D2 (shift,integer) but fires on defined
-# unsigned arithmetic and on a null-memcpy with length 0 in bitstream.cc, which
-# is not memory corruption. Fuzzers therefore abort only on ASan reports.
-FUZZING_COMPILE_OPTIONS="${FUZZING_COMPILE_OPTIONS:--fsanitize=fuzzer,address -g -fno-omit-frame-pointer}"
+FUZZING_COMPILE_OPTIONS="${FUZZING_COMPILE_OPTIONS:--fsanitize=fuzzer,address,undefined,shift,integer -fno-sanitize-recover=undefined,shift,integer}"
 FUZZING_LINKER_OPTIONS="${FUZZING_LINKER_OPTIONS:-}"
 
 cmake -S "$SRC" -B "$BUILD" \
-  ${SDKROOT:+-DCMAKE_OSX_SYSROOT="$SDKROOT"} \
   -DWITH_FUZZERS=ON \
-  -DWITH_UNCOMPRESSED_CODEC=ON \
   -DBUILD_TESTING=OFF \
   -DWITH_EXAMPLES=OFF \
   -DWITH_GDK_PIXBUF=OFF \
   -DBUILD_SHARED_LIBS=OFF \
-  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DWITH_X265=OFF \
+  -DWITH_DAV1D=OFF \
+  -DWITH_AOM_DECODER=OFF \
+  -DWITH_AOM_ENCODER=OFF \
+  -DWITH_RAV1E=OFF \
+  -DWITH_JPEG_DECODER=OFF \
+  -DWITH_JPEG_ENCODER=OFF \
+  -DWITH_OpenJPEG_DECODER=OFF \
+  -DWITH_OpenJPEG_ENCODER=OFF \
+  -DWITH_UNCOMPRESSED_CODEC=ON \
+  -DWITH_HEADER_COMPRESSION=OFF \
+  -DCMAKE_BUILD_TYPE=Release \
   -DFUZZING_C_COMPILER="$CC" \
   -DFUZZING_CXX_COMPILER="$CXX" \
   -DFUZZING_COMPILE_OPTIONS="$FUZZING_COMPILE_OPTIONS" \
   -DFUZZING_LINKER_OPTIONS="$FUZZING_LINKER_OPTIONS"
 
-cmake --build "$BUILD" -j"$(nproc 2>/dev/null || sysctl -n hw.ncpu)"
+if command -v nproc >/dev/null 2>&1; then
+  jobs="$(nproc)"
+elif command -v sysctl >/dev/null 2>&1; then
+  jobs="$(sysctl -n hw.ncpu)"
+else
+  jobs=2
+fi
+cmake --build "$BUILD" --parallel "$jobs"
 echo "Build complete: $BUILD"

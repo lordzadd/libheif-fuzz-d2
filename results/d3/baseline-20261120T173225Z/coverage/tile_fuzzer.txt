@@ -1,0 +1,402 @@
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1612827017
+INFO: Loaded 1 modules   (113650 inline 8-bit counters): 113650 [0x57f47eae7e40, 0x57f47eb03a32), 
+INFO: Loaded 1 PC tables (113650 PCs): 113650 [0x57f47eb03a38,0x57f47ecbf958), 
+INFO:     1396 files found in /mnt/j/Khoa_folder/fall_26/cpts_428/libheif-fuzz-d2/results/d3/baseline-20261120T173225Z/coverage/clean_corpus_tile_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24871 bytes
+INFO: seed corpus: files: 1396 min: 1b max: 24871b total: 3976960b rss: 47Mb
+#1398	INITED cov: 10724 ft: 28147 corp: 739/1817Kb exec/s: 699 rss: 363Mb
+#1398	DONE   cov: 10724 ft: 28147 corp: 739/1817Kb lim: 16389 exec/s: 699 rss: 363Mb
+Done 1398 runs in 2 second(s)
+COVERAGE:
+COVERED_FUNC: hits: 308 edges: 10/16 TestTileAPI(heif_image_handle const*, int) tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+  UNCOVERED_PC: tile_fuzzer.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_init.cc init.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/45 is_jpeg(unsigned char const*, int) heif_brands.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/19 is_png(unsigned char const*, int) heif_brands.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/17 get_effective_cmpd(heif_image_handle const*) heif_image_handle.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/10 heif_file_writer_write(heif_context*, void const*, unsigned long, void*) heif_context.cc:0
+COVERED_FUNC: hits: 71 edges: 9/23 ImageItem::populate_component_descriptions()::$_0::operator()(heif_channel, unsigned short, int, unsigned int, unsigned int) const image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+COVERED_FUNC: hits: 9 edges: 7/116 (anonymous namespace)::check_miaf_derivation_constraints(ImageItem const*, int, bool, std::set<unsigned long, std::less<unsigned long>, std::allocator<unsigned long>>&) image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+COVERED_FUNC: hits: 303 edges: 12/35 std::vector<(anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame, std::allocator<(anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame>>::push_back((anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame&&) image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+COVERED_FUNC: hits: 303 edges: 23/62 (anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::$_0::operator()(ImageItem const*) const image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/5 (anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame::~Frame() image_item.cc:0
+COVERED_FUNC: hits: 303 edges: 5/14 std::vector<(anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame, std::allocator<(anonymous namespace)::check_decode_reference_cycles(ImageItem const*)::Frame>>::~vector() image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+  UNCOVERED_PC: image_item.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/11 wait_for_jobs(std::deque<std::future<Error>, std::allocator<std::future<Error>>>*) grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/9 std::deque<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data, std::allocator<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data>>::~deque() grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/13 progress_and_return_ok(heif_decoding_options const&, int&) grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/6 std::_Deque_base<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data, std::allocator<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data>>::_M_destroy_nodes(ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data**, ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data**) grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/13 std::operator+(std::_Deque_iterator<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data, ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data&, ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data*> const&, long) grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/4 void std::__copy_move<false, false, std::random_access_iterator_tag>::__assign_one<ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data*, ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data*>(ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data**, ImageItem_Grid::decode_full_grid_image(heif_decoding_options const&, DecodeTraversalState const&) const::tile_data**) grid.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/10 readvec(std::vector<unsigned char, std::allocator<unsigned char>> const&, int&, int) overlay.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/11 readvec_signed(std::vector<unsigned char, std::allocator<unsigned char>> const&, int&, int) overlay.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/23 ImageItem_Overlay::populate_component_descriptions()::$_0::operator()(heif_channel, unsigned short) const overlay.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/9 readvec(std::vector<unsigned char, std::allocator<unsigned char>> const&, unsigned long&, int) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/42 std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>::size_type std::erase_if<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>, ImageItem_Tiled::initialize_decoder()::$_0>(std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>&, ImageItem_Tiled::initialize_decoder()::$_0) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/42 std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>::size_type std::erase_if<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>, ImageItem_Tiled::initialize_decoder()::$_1>(std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>&, ImageItem_Tiled::initialize_decoder()::$_1) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/21 bool __gnu_cxx::__ops::_Iter_pred<std::reference_wrapper<ImageItem_Tiled::initialize_decoder()::$_0>>::operator()<__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>>(__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/21 bool __gnu_cxx::__ops::_Iter_pred<std::reference_wrapper<ImageItem_Tiled::initialize_decoder()::$_1>>::operator()<__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>>(__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/16 bool __gnu_cxx::__ops::_Iter_pred<ImageItem_Tiled::add_image_tile(unsigned int, unsigned int, std::shared_ptr<HeifPixelImage> const&, heif_encoder*)::$_0>::operator()<__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>>(__gnu_cxx::__normal_iterator<std::shared_ptr<Box>*, std::vector<std::shared_ptr<Box>, std::allocator<std::shared_ptr<Box>>>>) tiled.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_colorconversion.cc colorconversion.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/18 (anonymous namespace)::replicate_sample_bits(unsigned int, int, int) alpha.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/43 _ZZNK29Op_bayer_bilinear_to_RGB24_3218convert_colorspaceERKSt10shared_ptrIK14HeifPixelImageERK10ColorStateS8_RK29heif_color_conversion_optionsRK33heif_color_conversion_options_extPK20heif_security_limitsENK3$_0clItEEDaPKT_PSK_mm bayer_bilinear.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/89 _ZZNK29Op_bayer_bilinear_to_RGB24_3218convert_colorspaceERKSt10shared_ptrIK14HeifPixelImageERK10ColorStateS8_RK29heif_color_conversion_optionsRK33heif_color_conversion_options_extPK20heif_security_limitsENK3$_0clIhEEDaPKT_PSK_mm bayer_bilinear.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_unc_boxes.cc unc_boxes.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/29 validate_component_indices(std::vector<unsigned int, std::allocator<unsigned int>> const&, unsigned long, char const*) unc_codec.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/4 std::vector<unc_decoder_block_pixel_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo, std::allocator<unc_decoder_block_pixel_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo>>::~vector() unc_decoder_block_pixel_interleave.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/4 std::vector<unc_decoder_bytealign_component_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo, std::allocator<unc_decoder_bytealign_component_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo>>::~vector() unc_decoder_bytealign_component_interleave.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/4 std::vector<unc_decoder_block_component_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo, std::allocator<unc_decoder_block_component_interleave::decode_tile(std::vector<unsigned char, std::allocator<unsigned char>> const&, std::shared_ptr<HeifPixelImage>&, unsigned int, unsigned int)::ComponentInfo>>::~vector() unc_decoder_block_component_interleave.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/8 incompatible_image_error() unc_encoder.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/34 get_signed_fixed_point_shift(double) box.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/26 mul(std::array<double, 9ul> const&, std::array<double, 9ul> const&) box.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/30 __gnu_cxx::__normal_iterator<Box_ipma::PropertyAssociation*, std::vector<Box_ipma::PropertyAssociation, std::allocator<Box_ipma::PropertyAssociation>>> std::__stable_partition_adaptive<__gnu_cxx::__normal_iterator<Box_ipma::PropertyAssociation*, std::vector<Box_ipma::PropertyAssociation, std::allocator<Box_ipma::PropertyAssociation>>>, Box_ipma::PropertyAssociation*, __gnu_cxx::__ops::_Iter_pred<Box_ipma::sort_properties(std::shared_ptr<Box_ipco> const&)::$_0>, long>(__gnu_cxx::__normal_iterator<Box_ipma::PropertyAssociation*, std::vector<Box_ipma::PropertyAssociation, std::allocator<Box_ipma::PropertyAssociation>>>, __gnu_cxx::__normal_iterator<Box_ipma::PropertyAssociation*, std::vector<Box_ipma::PropertyAssociation, std::allocator<Box_ipma::PropertyAssociation>>>, __gnu_cxx::__ops::_Iter_pred<Box_ipma::sort_properties(std::shared_ptr<Box_ipco> const&)::$_0>, long, Box_ipma::PropertyAssociation*, long) box.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/9 Box_ipma::sort_properties(std::shared_ptr<Box_ipco> const&)::$_0::operator()(Box_ipma::PropertyAssociation const&) const box.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/13 _GLOBAL__sub_I_error.cc error.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/43 copy_security_limits(heif_security_limits*, heif_security_limits const*) context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/5 HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry::~pymd_entry() context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/14 std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>::~vector() context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/65 void std::__introsort_loop<__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, long, __gnu_cxx::__ops::_Iter_comp_iter<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::$_0>>(__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned in context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/51 void std::__adjust_heap<__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, long, HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, __gnu_cxx::__ops::_Iter_comp_iter<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::$_0>>(__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> co context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/11 void std::iter_swap<__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>>(__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned i context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/24 void std::__insertion_sort<__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__ops::_Iter_comp_iter<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::$_0>>(__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std context.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/16 void std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__ops::_Val_comp_iter<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::$_0>>(__gnu_cxx::__normal_iterator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry*, std::vector<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry, std::allocator<HeifContext::add_pyramid_group(std::vector<unsigned int, std::allocator<unsigned int>> const&)::pymd_entry>>>, __gnu_cxx::__ops::_Val_comp_iter<HeifContext::add_pyramid_group(std::vector<unsig context.cc:0
+COVERED_FUNC: hits: 144 edges: 10/76 map_channel_to_component_type(heif_channel, heif_chroma) pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+  UNCOVERED_PC: pixelimage.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/6 remove_duplicates(std::vector<unsigned int, std::allocator<unsigned int>>&) image_description.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_plugin_registry.cc plugin_registry.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_security_limits.cc security_limits.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 _GLOBAL__sub_I_heif_color.cc heif_color.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/4 std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>::~vector() heif_decoding.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/60 void std::__introsort_loop<__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, long, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>>(__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, long, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>) heif_decoding.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/39 void std::__adjust_heap<__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, long, heif_get_decoder_descriptors::decoder_with_priority, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>>(__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, long, long, heif_get_decoder_descriptors::decoder_with_priority, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>) heif_decoding.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/27 void std::__insertion_sort<__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>>(__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__ops::_Iter_comp_iter<heif_get_decoder_descriptors::$_0>) heif_decoding.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/9 void std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__ops::_Val_comp_iter<heif_get_decoder_descriptors::$_0>>(__gnu_cxx::__normal_iterator<heif_get_decoder_descriptors::decoder_with_priority*, std::vector<heif_get_decoder_descriptors::decoder_with_priority, std::allocator<heif_get_decoder_descriptors::decoder_with_priority>>>, __gnu_cxx::__ops::_Val_comp_iter<heif_get_decoder_descriptors::$_0>) heif_decoding.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/6 read_depth_rep_info_element(BitReader&) hevc_boxes.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/7 bool __gnu_cxx::__ops::_Iter_pred<Track_Visual::initialize_after_parsing(HeifContext*, std::vector<std::shared_ptr<Track>, std::allocator<std::shared_ptr<Track>>> const&)::$_0>::operator()<__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int>>>>(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int>>>) track_visual.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 mask_plugin_name() encoder_mask.cc:0
+COVERED_FUNC: hits: 1 edges: 2/4 mask_init_plugin() encoder_mask.cc:0
+  UNCOVERED_PC: encoder_mask.cc:0
+  UNCOVERED_PC: encoder_mask.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 mask_cleanup_plugin() encoder_mask.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 uncompressed_plugin_name() encoder_uncompressed.cc:0
+COVERED_FUNC: hits: 1 edges: 2/4 uncompressed_init_plugin() encoder_uncompressed.cc:0
+  UNCOVERED_PC: encoder_uncompressed.cc:0
+  UNCOVERED_PC: encoder_uncompressed.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 uncompressed_cleanup_plugin() encoder_uncompressed.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/1 uncompressed_plugin_name() decoder_uncompressed.cc:0
+COVERED_FUNC: hits: 37 edges: 2/4 uncompressed_does_support_format(heif_compression_format) decoder_uncompressed.cc:0
+  UNCOVERED_PC: decoder_uncompressed.cc:0
+  UNCOVERED_PC: decoder_uncompressed.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/65 write_cclv_to_bits(BitWriter&, Box_cclv const&) mini.cc:0
+COVERED_FUNC: hits: 1 edges: 8/53 parse_codec_config_box(std::vector<unsigned char, std::allocator<unsigned char>> const&, unsigned int, std::shared_ptr<Box>*) mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+  UNCOVERED_PC: mini.cc:0
+UNCOVERED_FUNC: hits: 0 edges: 0/22 extract_codec_config_bytes(std::shared_ptr<Box> const&) mini.cc:0

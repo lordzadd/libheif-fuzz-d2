@@ -1,0 +1,8 @@
+fuzzer,requested_runs,seed_files,execs,crashes_found,exit_code,timed_out,elapsed_s,failure_reasons
+api_fuzzer,1000,133,6,1,1,False,0.05,nonzero_exit;crash_artifact
+box_fuzzer,1000,133,8,1,1,False,0.04,nonzero_exit;crash_artifact
+color_conversion_fuzzer,1000,133,1000,0,0,False,0.79,
+encoder_fuzzer,1000,133,1000,0,0,False,0.67,
+file_fuzzer,1000,133,6,1,1,False,0.03,nonzero_exit;crash_artifact
+sequence_fuzzer,1000,133,5,1,1,False,0.03,nonzero_exit;crash_artifact
+tile_fuzzer,1000,133,6,1,1,False,0.04,nonzero_exit;crash_artifact

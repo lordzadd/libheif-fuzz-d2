@@ -1,0 +1,38 @@
+{
+  "label": "baseline",
+  "timestamp_utc": "20261120T173225Z",
+  "target_commit": "08075aebcc0d9bf7d35f900c36114b1b6e90ed7d",
+  "rounds": 5,
+  "round_seconds": 30,
+  "fork_workers_per_target": 2,
+  "max_parallel_targets": 3,
+  "nominal_cores_busy": 6,
+  "fuzzers": [
+    "api_fuzzer",
+    "box_fuzzer",
+    "color_conversion_fuzzer",
+    "encoder_fuzzer",
+    "file_fuzzer",
+    "sequence_fuzzer",
+    "tile_fuzzer"
+  ],
+  "versions": {
+    "clang": "clang version 21.0.0 (https://github.com/swiftlang/llvm-project.git fb5f84d903a3b4e7aea15cd5666598a46f56c833)",
+    "cmake": "cmake version 3.30.5",
+    "python": "3.12.3",
+    "kernel": "Linux 7.2.6-76070206-generic",
+    "cpu_count_logical": 6
+  },
+  "corpus_source": "libheif/fuzzing/data/corpus",
+  "sanitizers": "address,undefined,shift,integer with -fno-sanitize-recover",
+  "output_dir": "results/d3/baseline-20261120T173225Z",
+  "seed_counts": {
+    "api_fuzzer": 133,
+    "box_fuzzer": 133,
+    "color_conversion_fuzzer": 133,
+    "encoder_fuzzer": 133,
+    "file_fuzzer": 133,
+    "sequence_fuzzer": 133,
+    "tile_fuzzer": 133
+  }
+}
