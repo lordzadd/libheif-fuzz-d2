@@ -1,0 +1,10 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 4051629871
+INFO: Loaded 1 modules   (44330 inline 8-bit counters): 44330 [0x555efe82eaf8, 0x555efe839822), 
+INFO: Loaded 1 PC tables (44330 PCs): 44330 [0x555efe839828,0x555efe8e6ac8), 
+INFO:     2146 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/bfinal/color_conversion_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24871 bytes
+INFO: seed corpus: files: 2146 min: 1b max: 24871b total: 2805533b rss: 32Mb
+#2147	INITED cov: 1603 ft: 4595 corp: 430/93Kb exec/s: 0 rss: 35Mb
+#2147	DONE   cov: 1603 ft: 4595 corp: 430/93Kb lim: 6356 exec/s: 0 rss: 35Mb
+Done 2147 runs in 0 second(s)

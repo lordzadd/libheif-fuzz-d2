@@ -1,0 +1,10 @@
+fuzzer,set,inputs,cov,ft,inited_units
+file_fuzzer,B,22174,9157,23957,1456
+file_fuzzer,gen,700,6684,17128,437
+file_fuzzer,B+gen,22874,10727,31070,1704
+api_fuzzer,B,46143,9972,29643,2105
+api_fuzzer,gen,700,6709,22101,483
+api_fuzzer,B+gen,46843,11312,36957,2380
+tile_fuzzer,B,19662,9185,28823,1695
+tile_fuzzer,gen,700,6492,22139,491
+tile_fuzzer,B+gen,20362,10633,36771,2005

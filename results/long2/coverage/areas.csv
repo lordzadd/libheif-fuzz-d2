@@ -1,0 +1,13 @@
+area,covered,lines,percent
+box.cc (ISOBMFF box parser),2290,3615,63.3
+color-conversion/,2423,3396,71.3
+codecs/uncompressed/,2495,3823,65.3
+image-items/,1796,3216,55.8
+sequences/,1516,3478,43.6
+"codecs/ (HEVC, AV1, JPEG, VVC)",1459,3830,38.1
+mini.cc (mini-box format),948,1705,55.6
+context.cc,731,1495,48.9
+api/libheif/,877,4373,20.1
+region.cc,220,441,49.9
+compression*.cc,85,220,38.6
+brands.cc,0,103,0.0

@@ -1,0 +1,12 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3344792313
+INFO: Loaded 1 modules   (44212 inline 8-bit counters): 44212 [0x55a6d048b670, 0x55a6d0496324), 
+INFO: Loaded 1 PC tables (44212 PCs): 44212 [0x55a6d0496328,0x55a6d0542e68), 
+INFO:    39205 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/bfinal/box_fuzzer
+INFO:    17045 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/cfinal/box_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 24930 bytes
+INFO: seed corpus: files: 56250 min: 1b max: 24930b total: 8471564b rss: 46Mb
+#32768	pulse  cov: 4573 ft: 8487 corp: 950/26Kb exec/s: 1820 rss: 269Mb
+#56251	INITED cov: 5681 ft: 18652 corp: 2047/419Kb exec/s: 1607 rss: 269Mb
+#56251	DONE   cov: 5681 ft: 18652 corp: 2047/419Kb lim: 12331 exec/s: 1607 rss: 269Mb
+Done 56251 runs in 35 second(s)

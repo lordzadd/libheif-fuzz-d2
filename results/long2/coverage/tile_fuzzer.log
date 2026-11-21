@@ -1,0 +1,19 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2778675711
+INFO: Loaded 1 modules   (46211 inline 8-bit counters): 46211 [0x5610c593d380, 0x5610c5948803), 
+INFO: Loaded 1 PC tables (46211 PCs): 46211 [0x5610c5948808,0x5610c59fd038), 
+INFO:    19662 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/bfinal/tile_fuzzer
+INFO:    26702 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/cfinal/tile_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 56099 bytes
+INFO: seed corpus: files: 46364 min: 1b max: 56099b total: 64611029b rss: 46Mb
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+SPS error: transform hierarchy depth (intra) > CTB size - min TB size
+#16384	pulse  cov: 8371 ft: 22633 corp: 1107/297Kb exec/s: 4096 rss: 206Mb
+#32768	pulse  cov: 10412 ft: 38528 corp: 2495/1079Kb exec/s: 2730 rss: 206Mb
+#46365	INITED cov: 10819 ft: 46956 corp: 3507/4048Kb exec/s: 1783 rss: 206Mb
+#46365	DONE   cov: 10819 ft: 46956 corp: 3507/4048Kb lim: 49856 exec/s: 1783 rss: 206Mb
+Done 46365 runs in 26 second(s)

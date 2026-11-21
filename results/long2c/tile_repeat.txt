@@ -1,0 +1,6 @@
+# tile_fuzzer, Campaign C final corpus (26702 units), replayed alone on an idle machine with -runs=0.
+# The parallel replay in results/replay/long2-patched.csv read 11802 because two replays shared the cores.
+baseline build (d3-baseline source) timeout=30: INITED cov: 11907 ft: 48478
+baseline build (d3-baseline source) timeout=60: INITED cov: 11907 ft: 48478
+patched build (d3-final source) timeout=30: INITED cov: 11908 ft: 48478
+patched build (d3-final source) timeout=60: INITED cov: 11908 ft: 48478

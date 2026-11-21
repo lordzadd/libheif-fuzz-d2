@@ -1,0 +1,6 @@
+label,kind,fuzzer,input,units,exit,cov,ft,signature,seconds,artifacts
+long2-baseline,corpus,api_fuzzer,api_fuzzer,28887,0,12652,45390,,12.98,
+long2-baseline,corpus,box_fuzzer,box_fuzzer,17045,0,6417,20254,,23.49,
+long2-baseline,corpus,file_fuzzer,file_fuzzer,23369,0,11570,38161,,153.66,
+long2-baseline,corpus,sequence_fuzzer,sequence_fuzzer,15548,0,8357,21487,,22.76,
+long2-baseline,corpus,tile_fuzzer,tile_fuzzer,26702,0,11907,48478,,51.06,

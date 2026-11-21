@@ -1,0 +1,32 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 179514542
+INFO: Loaded 1 modules   (47044 inline 8-bit counters): 47044 [0x55be0000ade0, 0x55be000165a4), 
+INFO: Loaded 1 PC tables (47044 PCs): 47044 [0x55be000165a8,0x55be000ce1e8), 
+INFO:    46143 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/bfinal/api_fuzzer
+INFO:    28887 files found in /tmp/claude-0/-home-user-libheif-fuzz-d2/11501dcb-787b-53d5-9abe-5ede93f59c34/scratchpad/cfinal/api_fuzzer
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 65536 bytes
+INFO: seed corpus: files: 75030 min: 1b max: 65536b total: 107572442b rss: 51Mb
+#32768	pulse  cov: 9845 ft: 26072 corp: 1599/459Kb exec/s: 16384 rss: 114Mb
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+#65536	pulse  cov: 11311 ft: 40455 corp: 3455/2048Kb exec/s: 9362 rss: 114Mb
+#75031	INITED cov: 11419 ft: 43365 corp: 3798/4009Kb exec/s: 6821 rss: 114Mb
+#75031	DONE   cov: 11419 ft: 43365 corp: 3798/4009Kb lim: 34062 exec/s: 6821 rss: 114Mb
+Done 75031 runs in 11 second(s)
