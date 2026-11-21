@@ -235,9 +235,10 @@ class Campaign:
         while not self.stop.is_set():
             for fuzzer in fuzzers:
                 if self.stop.is_set():
-                    # Do not wait for the fuzzer's own time budget: a cloud
-                    # runner that sent SIGTERM has a short grace period.
-                    proc.kill()
+                    # Shutdown requested. There is no live process to kill
+                    # here: each checkpoint is a finished subprocess.run().
+                    # (An earlier version called proc.kill() on the
+                    # CompletedProcess, which raised and killed this thread.)
                     break
                 corpus = self.corpus_root / fuzzer
                 files = sorted(p for p in corpus.iterdir() if p.is_file()) if corpus.exists() else []
