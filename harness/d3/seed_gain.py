@@ -10,7 +10,7 @@ the `INITED cov: N ft: M` line, which is the union coverage of the set:
 
 The gain of B+gen over B is coverage that 11.3 CPU-hours of mutation from the
 carved seeds had not reached. Same flags as the campaign checkpoints
-(campaign.py coverage_checkpoints): no value profile, -timeout=30.
+(campaign.py coverage_checkpoints): no value profile; -timeout=60 (see replay()).
 
   python3 harness/d3/seed_gain.py --out results/long2a/seed_gain.csv
 """
@@ -32,7 +32,9 @@ ENV = dict(os.environ, ASAN_OPTIONS="detect_leaks=0:symbolize=0")
 
 
 def replay(fuzzer, dirs):
-    cmd = [str(BUILD / fuzzer), "-runs=0", "-timeout=30", "-rss_limit_mb=2048",
+    # -timeout=60: with 30 s, tile_fuzzer loses ~100 edges on a loaded machine
+    # (results/replay/tile_repeat.txt); run on an idle machine for final numbers.
+    cmd = [str(BUILD / fuzzer), "-runs=0", "-timeout=60", "-rss_limit_mb=2048",
            "-max_len=65536"] + [str(d) for d in dirs]
     p = subprocess.run(cmd, capture_output=True, text=True, env=ENV, timeout=7200)
     m = None
@@ -49,7 +51,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--targets", default="file_fuzzer,api_fuzzer,tile_fuzzer")
     ap.add_argument("--out", default=str(ROOT / "results" / "long2a" / "seed_gain.csv"))
+    ap.add_argument("--manifest", action="append",
+                    help="gen_seed_manifest.csv selecting which gen-* seeds form the "
+                         "'gen' set (repeatable); default: every gen-* file")
     args = ap.parse_args()
+    wanted = None
+    if args.manifest:
+        wanted = set()
+        for m in args.manifest:
+            with open(m) as fh:
+                wanted |= {r["sha1"] for r in csv.DictReader(fh)}
     rows = []
     tmp = Path(tempfile.mkdtemp(prefix="seedgain-"))
     try:
@@ -58,10 +69,15 @@ def main():
             with tarfile.open(tb) as tf:
                 tf.extractall(tmp, filter="data")
             bdir = tmp / t
+            # Campaign B's tarballs were made on macOS and carry one AppleDouble
+            # '._<name>' metadata file per unit. They are not fuzz inputs.
+            for junk in bdir.glob("._*"):
+                junk.unlink()
             gdir = tmp / (t + "-gen")
             gdir.mkdir()
             for p in (ROOT / "corpora" / "seed" / t).glob("gen-*"):
-                shutil.copy2(p, gdir / p.name)
+                if wanted is None or p.name[4:] in wanted:
+                    shutil.copy2(p, gdir / p.name)
             for label, dirs in (("B", [bdir]), ("gen", [gdir]), ("B+gen", [bdir, gdir])):
                 r = replay(t, dirs)
                 row = {"fuzzer": t, "set": label,

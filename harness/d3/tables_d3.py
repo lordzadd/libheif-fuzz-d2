@@ -12,7 +12,7 @@ Sources:
   results/replay/*.csv                          before/after replay
   results/long2*/campaign_summary.json          campaign C phases
   results/long2*/coverage_checkpoints.csv       campaign C coverage
-  results/long2a/seed_gain.csv                  coverage added by generated seeds
+  results/long2*/seed_gain.csv                  coverage added by generated seeds
 """
 
 import csv
@@ -170,19 +170,19 @@ def campaign_c():
                  "interrupted"], rows)
     cov = table(["phase", "target", "first t (s)", "first cov", "last t (s)", "last cov",
                  "last ft", "corpus units"], cov_rows) if cov_rows else ""
-    gain_rows = read_csv(ROOT / "results" / "long2a" / "seed_gain.csv")
-    gain = ""
-    if gain_rows:
+    # One seed_gain.csv per phase that introduced a seed batch: long2a measures
+    # its own 400 seeds, long2b the cumulative 700 (both batches).
+    g = []
+    for sg in sorted((ROOT / "results").glob("long2*/seed_gain.csv")):
         by = {}
-        for r in gain_rows:
+        for r in read_csv(sg):
             by.setdefault(r["fuzzer"], {})[r["set"]] = r
-        g = []
         for f, v in sorted(by.items()):
             bcov, gcov, bg = (int(v[k]["cov"]) for k in ("B", "gen", "B+gen"))
-            g.append([f, v["B"]["inputs"], bcov, v["gen"]["inputs"], gcov, bg,
-                      "+%d (+%.1f%%)" % (bg - bcov, 100.0 * (bg - bcov) / bcov)])
-        gain = table(["target", "B inputs", "B cov", "gen inputs", "gen cov",
-                      "B+gen cov", "gain over B"], g)
+            g.append([sg.parent.name, f, v["B"]["inputs"], bcov, v["gen"]["inputs"], gcov,
+                      bg, "+%d (+%.1f%%)" % (bg - bcov, 100.0 * (bg - bcov) / bcov)])
+    gain = table(["seed set of", "target", "B inputs", "B cov", "gen inputs", "gen cov",
+                  "B+gen cov", "gain over B"], g) if g else ""
     return head, tab, cov, gain
 
 

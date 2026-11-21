@@ -1,0 +1,51 @@
+{
+  "run": "long2b",
+  "started_unix": 1795263364,
+  "requested_seconds": 5400,
+  "interrupted": false,
+  "wall_seconds": 5407.5,
+  "workers": 3,
+  "worker_allocation": {
+    "file_fuzzer": 1,
+    "api_fuzzer": 1,
+    "sequence_fuzzer": 1
+  },
+  "cpu_seconds": 16236.3,
+  "cpu_hours": 4.51,
+  "wall_seconds_times_workers": 16222.6,
+  "crashes": 0,
+  "build": "/home/user/libheif-fuzz-d2/build/fuzzing",
+  "asan_options": "detect_leaks=0:abort_on_error=0:symbolize=1",
+  "rss_limit_mb": 1200,
+  "unit_timeout_s": 30,
+  "max_len": 65536,
+  "extra_flags": "",
+  "chunk_seconds": 900,
+  "dict": "/home/user/libheif-fuzz-d2/libheif/fuzzing/data/dictionary.txt",
+  "fuzzers": {
+    "file_fuzzer": {
+      "workers": 1,
+      "chunks": 6,
+      "execs_from_logs": 2156138,
+      "final_corpus_units": 19744,
+      "final_corpus_bytes": 32661143,
+      "crashes": 0
+    },
+    "api_fuzzer": {
+      "workers": 1,
+      "chunks": 6,
+      "execs_from_logs": 27040665,
+      "final_corpus_units": 28887,
+      "final_corpus_bytes": 38073292,
+      "crashes": 0
+    },
+    "sequence_fuzzer": {
+      "workers": 1,
+      "chunks": 6,
+      "execs_from_logs": 17482874,
+      "final_corpus_units": 15548,
+      "final_corpus_bytes": 15907555,
+      "crashes": 0
+    }
+  }
+}
