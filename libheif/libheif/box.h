@@ -1040,6 +1040,12 @@ public:
   // (zero size, or a size that exceeds the int32_t coordinate range).
   Result<Crop> get_crop(uint32_t image_width, uint32_t image_height) const;
 
+  // The crop that is actually applied to an image of this size: get_crop() clipped to the
+  // image area. Error if nothing of the image remains. Both the decoder (which crops) and the
+  // image handle (which reports the cropped size) must use this, so that the decoded image
+  // always has the size that the handle reports (D3 M3).
+  Result<Crop> get_clipped_crop(uint32_t image_width, uint32_t image_height) const;
+
   double left(int image_width) const;
   double top(int image_height) const;
 

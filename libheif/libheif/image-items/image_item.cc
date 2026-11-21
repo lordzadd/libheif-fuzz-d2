@@ -1245,7 +1245,8 @@ Result<std::shared_ptr<HeifPixelImage>> ImageItem::decode_image(const heif_decod
           uint32_t img_width = img->get_width();
           uint32_t img_height = img->get_height();
 
-          auto clapCrop = clap->get_crop(img_width, img_height);
+          // Same clipped crop that HeifContext used for the size of the image handle (D3 M3).
+          auto clapCrop = clap->get_clipped_crop(img_width, img_height);
           if (!clapCrop) {
             return clapCrop.error();
           }
@@ -1254,18 +1255,6 @@ Result<std::shared_ptr<HeifPixelImage>> ImageItem::decode_image(const heif_decod
           int right = clapCrop->right;
           int top = clapCrop->top;
           int bottom = clapCrop->bottom;
-
-          if (left < 0) { left = 0; }
-          if (top < 0) { top = 0; }
-
-          if ((uint32_t) right >= img_width) { right = img_width - 1; }
-          if ((uint32_t) bottom >= img_height) { bottom = img_height - 1; }
-
-          if (left > right ||
-              top > bottom) {
-            return Error(heif_error_Invalid_input,
-                         heif_suberror_Invalid_clean_aperture);
-          }
 
           auto cropResult = img->crop(left, right, top, bottom, m_heif_context->get_security_limits());
           if (!cropResult) {
@@ -1282,6 +1271,22 @@ Result<std::shared_ptr<HeifPixelImage>> ImageItem::decode_image(const heif_decod
                      heif_suberror_Unspecified,
                      "Image scaling (iscl) transformative property is not yet supported");
       }
+    }
+
+    // --- the decoded image must have the size that the image handle reports (D3 M3)
+    //
+    // Applications size their buffers and row loops from heif_image_handle_get_width() and
+    // _height(). An image that is smaller than the handle makes such an application read
+    // past the end of the planes, the size analogue of the bit-depth case of
+    // GHSA-vv35-6hxg-95x8. The size of the handle is computed from the same transformations
+    // in HeifContext::interpret_heif_file_images(), so a difference is an inconsistency in
+    // libheif or the file and is refused instead of being handed out.
+
+    if (!decode_tile_only && get_width() != 0 && get_height() != 0 &&
+        (img->get_width() != get_width() || img->get_height() != get_height())) {
+      return Error(heif_error_Invalid_input,
+                   heif_suberror_Invalid_image_size,
+                   "Decoded image does not have the size of the image handle.");
     }
   }
 

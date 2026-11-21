@@ -803,6 +803,19 @@ Error HeifContext::interpret_heif_file_images()
                   "Clean aperture (clap) reduces image to zero size"};
         }
 
+        // The decoder clips the clean aperture to the image (ImageItem::decode_image()). A
+        // window that extends past the image therefore decodes to fewer columns or rows than
+        // the declared clap size. Report the clipped size, so that the handle and the decoded
+        // image agree (D3 M3). Without an image size (no 'ispe') there is nothing to clip to.
+        if (image->get_width() != 0 && image->get_height() != 0) {
+          auto clipped = clap->get_clipped_crop(image->get_width(), image->get_height());
+          if (!clipped) {
+            return clipped.error();
+          }
+          clap_width = clipped->right - clipped->left + 1;
+          clap_height = clipped->bottom - clipped->top + 1;
+        }
+
         image->set_resolution(static_cast<uint32_t>(clap_width),
                               static_cast<uint32_t>(clap_height));
 

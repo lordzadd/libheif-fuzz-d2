@@ -211,6 +211,19 @@ Op_flatten_alpha_plane<Pixel>::convert_colorspace(const std::shared_ptr<const He
     }
   }
 
+  // D3 M4: every plane is read below through the single sample type 'Pixel'. A plane that
+  // is stored with another sample width (e.g. an 8-bit blue plane next to 16-bit R, G and
+  // alpha planes of an 'unci' image) would be read with the wrong stride and past its end.
+  // Refuse such an image here, where the reads happen.
+  for (heif_channel channel : {heif_channel_R, heif_channel_G, heif_channel_B, heif_channel_Alpha}) {
+    if (!input->has_channel(channel) ||
+        input->get_storage_bits_per_pixel(channel) != 8 * sizeof(Pixel)) {
+      return Error(heif_error_Unsupported_feature,
+                   heif_suberror_Unsupported_color_conversion,
+                   "Alpha composition needs R, G, B and alpha planes with the same sample width");
+    }
+  }
+
   uint32_t width = input->get_width();
   uint32_t height = input->get_height();
 

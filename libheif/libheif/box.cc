@@ -3930,6 +3930,29 @@ Result<Box_clap::Crop> Box_clap::get_crop(uint32_t image_width, uint32_t image_h
   return crop;
 }
 
+Result<Box_clap::Crop> Box_clap::get_clipped_crop(uint32_t image_width, uint32_t image_height) const
+{
+  auto cropResult = get_crop(image_width, image_height);
+  if (!cropResult) {
+    return cropResult.error();
+  }
+
+  Crop crop = *cropResult;
+  if (crop.left < 0) { crop.left = 0; }
+  if (crop.top < 0) { crop.top = 0; }
+  if (crop.right >= 0 && (uint32_t) crop.right >= image_width) { crop.right = (int) (image_width - 1); }
+  if (crop.bottom >= 0 && (uint32_t) crop.bottom >= image_height) { crop.bottom = (int) (image_height - 1); }
+
+  if (crop.left > crop.right || crop.top > crop.bottom) {
+    return Error(heif_error_Invalid_input,
+                 heif_suberror_Invalid_clean_aperture,
+                 "Clean aperture (clap) lies outside of the image");
+  }
+
+  return crop;
+}
+
+
 int Box_clap::get_width_rounded() const
 {
   return m_clean_aperture_width.round();
