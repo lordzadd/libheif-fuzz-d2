@@ -1,0 +1,52 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1808668089
+INFO: Loaded 1 modules   (75122 inline 8-bit counters): 75122 [0x55720d3408c8, 0x55720d352e3a), 
+INFO: Loaded 1 PC tables (75122 PCs): 75122 [0x55720d352e40,0x55720d478560), 
+MERGE-OUTER: 92373 files, 0 in the initial corpus, 0 processed earlier
+MERGE-OUTER: attempt 1
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2249005504
+INFO: Loaded 1 modules   (75122 inline 8-bit counters): 75122 [0x557c656bc8c8, 0x557c656cee3a), 
+INFO: Loaded 1 PC tables (75122 PCs): 75122 [0x557c656cee40,0x557c657f4560), 
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge1736.txt'
+MERGE-INNER: 92373 total files; 0 processed earlier; will process 92373 files now
+#1	pulse  cov: 2 ft: 2 exec/s: 0 rss: 66Mb
+#2	pulse  cov: 2 ft: 2 exec/s: 0 rss: 66Mb
+#4	pulse  cov: 2 ft: 2 exec/s: 0 rss: 66Mb
+#8	pulse  cov: 2 ft: 2 exec/s: 0 rss: 66Mb
+#16	pulse  cov: 338 ft: 339 exec/s: 0 rss: 68Mb
+#32	pulse  cov: 381 ft: 407 exec/s: 0 rss: 69Mb
+#64	pulse  cov: 381 ft: 407 exec/s: 0 rss: 70Mb
+#128	pulse  cov: 478 ft: 534 exec/s: 0 rss: 72Mb
+#256	pulse  cov: 505 ft: 569 exec/s: 0 rss: 75Mb
+#512	pulse  cov: 511 ft: 590 exec/s: 0 rss: 81Mb
+#1024	pulse  cov: 784 ft: 945 exec/s: 0 rss: 92Mb
+#2048	pulse  cov: 1061 ft: 1326 exec/s: 0 rss: 112Mb
+#4096	pulse  cov: 3650 ft: 5455 exec/s: 0 rss: 172Mb
+#8192	pulse  cov: 3986 ft: 6675 exec/s: 8192 rss: 279Mb
+#16384	pulse  cov: 3986 ft: 6675 exec/s: 8192 rss: 407Mb
+#32768	pulse  cov: 3986 ft: 6675 exec/s: 6553 rss: 437Mb
+#65536	pulse  cov: 8393 ft: 17108 exec/s: 4096 rss: 519Mb
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+SPS error: CB alignment
+#92373	DONE   cov: 9972 ft: 29643 exec/s: 1885 rss: 682Mb
+MERGE-OUTER: successful in 1 attempt(s)
+MERGE-OUTER: the control file has 17042418 bytes
+MERGE-OUTER: consumed 7Mb (246Mb rss) to parse the control file
+MERGE-OUTER: 2113 new files with 29643 new features added; 9972 new coverage edges
+EXIT 0

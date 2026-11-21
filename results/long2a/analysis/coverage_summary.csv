@@ -1,0 +1,4 @@
+fuzzer,workers,max_worker_cov,max_worker_ft,execs,final_corpus_units,final_corpus_bytes,crashes,last_event_s
+api_fuzzer,1,11946,64943,31187226,21446,27356595,0,5400.78
+file_fuzzer,1,10798,53048,1838389,13928,22773351,0,5404.09
+tile_fuzzer,1,11321,66014,13100219,20275,26367146,0,5400.22
