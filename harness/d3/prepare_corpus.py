@@ -105,6 +105,10 @@ def merge_minimise(fuzzer, corpus_dir):
     shutil.rmtree(empty, ignore_errors=True)
     kept.mkdir(parents=True)
     empty.mkdir(parents=True)
+    # -merge=1 breaks ties between equal-coverage units by input order, which
+    # depends on the filesystem. The resulting seed set is therefore committed
+    # under corpora/seed/ so every campaign starts from the same files; this
+    # step only rebuilds it.
     cmd = [str(BUILD / fuzzer), str(kept), str(corpus_dir),
            "-merge=1", "-runs=0", "-timeout=30", "-rss_limit_mb=2048"]
     env = dict(os.environ)
@@ -129,6 +133,8 @@ def main():
                     help="skip libFuzzer -merge=1 minimisation")
     ap.add_argument("--merge-only", action="store_true",
                     help="only re-run -merge=1 on existing seed corpora")
+    ap.add_argument("--reuse", action="store_true",
+                    help="keep the committed seed sets in corpora/seed if present")
     args = ap.parse_args()
 
     upstream = sorted(p for p in (DATA / "corpus").iterdir() if p.is_file())
@@ -137,6 +143,13 @@ def main():
     rows = []
     for fuzzer in FUZZERS:
         dest = OUT / fuzzer
+        if args.reuse and dest.exists() and any(dest.iterdir()):
+            files = sorted(p for p in dest.iterdir() if p.is_file())
+            for p in files:
+                rows.append({"fuzzer": fuzzer, "sha1": p.name,
+                             "bytes": p.stat().st_size})
+            print("%-24s seeds=%4d (committed)" % (fuzzer, len(files)))
+            continue
         shutil.rmtree(dest, ignore_errors=True)
         dest.mkdir(parents=True)
         TMP.mkdir(parents=True, exist_ok=True)
