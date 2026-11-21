@@ -139,9 +139,11 @@ heif_error heif_image_handle_get_raw_color_profile(const heif_image_handle* hand
 
   auto raw_profile = handle->image->get_color_profile_icc();
   if (raw_profile) {
-    memcpy(out_data,
-           raw_profile->get_data().data(),
-           raw_profile->get_data().size());
+    if (!raw_profile->get_data().empty()) {
+      memcpy(out_data,
+             raw_profile->get_data().data(),
+             raw_profile->get_data().size());
+    }
   }
   else {
     Error err(heif_error_Color_profile_does_not_exist,
@@ -347,9 +349,11 @@ heif_error heif_image_get_raw_color_profile(const heif_image* image,
 
   auto raw_profile = image->image->get_color_profile_icc();
   if (raw_profile) {
-    memcpy(out_data,
-           raw_profile->get_data().data(),
-           raw_profile->get_data().size());
+    if (!raw_profile->get_data().empty()) {
+      memcpy(out_data,
+             raw_profile->get_data().data(),
+             raw_profile->get_data().size());
+    }
   }
   else {
     Error err(heif_error_Color_profile_does_not_exist,

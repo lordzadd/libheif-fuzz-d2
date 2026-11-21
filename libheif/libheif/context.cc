@@ -1903,7 +1903,9 @@ Error HeifContext::add_exif_metadata(const std::shared_ptr<ImageItem>& master_im
   data_array[1] = (uint8_t) ((offset >> 16) & 0xFF);
   data_array[2] = (uint8_t) ((offset >> 8) & 0xFF);
   data_array[3] = (uint8_t) ((offset) & 0xFF);
-  memcpy(data_array.data() + 4, data, size);
+  if (size > 0) {
+    memcpy(data_array.data() + 4, data, size);
+  }
 
 
   return add_generic_metadata(master_image,
@@ -1983,7 +1985,9 @@ Error HeifContext::add_generic_metadata(const std::shared_ptr<ImageItem>& master
     // uncompressed data, plain copy
 
     data_array.resize(size);
-    memcpy(data_array.data(), data, size);
+    if (size > 0) {
+      memcpy(data_array.data(), data, size);
+    }
   }
 
   // copy the data into the file, store the pointer to it in an iloc box entry

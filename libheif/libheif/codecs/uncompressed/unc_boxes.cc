@@ -1035,6 +1035,17 @@ Error Box_cpat::parse(BitstreamRange& range, const heif_security_limits* limits)
   }
 
   size_t num_pixels = size_t{m_pattern.pattern_width} * m_pattern.pattern_height;
+
+  // A pixel entry is one uint32 index plus one float gain (8 bytes). A header
+  // that declares more pixels than the box payload can carry must be rejected
+  // before the vector is sized from it: otherwise a ~40-byte box can request
+  // gigabytes and the fill loop keeps reading zeros after the range ends.
+  if (range.get_remaining_bytes() / 8 < num_pixels) {
+    return {heif_error_Invalid_input,
+            heif_suberror_Invalid_parameter_value,
+            "Bayer pattern data exceeds the box payload."};
+  }
+
   m_pattern.pixels.resize(num_pixels);
 
   for (size_t i = 0; i < num_pixels; i++) {
@@ -1124,6 +1135,14 @@ Error Box_splz::parse(BitstreamRange& range, const heif_security_limits* limits)
   }
 
   size_t num_pixels = size_t{m_pattern.pattern_width} * m_pattern.pattern_height;
+
+  // One float angle per pixel; same bound as the Bayer pattern above.
+  if (range.get_remaining_bytes() / sizeof(float) < num_pixels) {
+    return {heif_error_Invalid_input,
+            heif_suberror_Invalid_parameter_value,
+            "Polarization pattern data exceeds the box payload."};
+  }
+
   m_pattern.polarization_angles.resize(num_pixels);
 
   for (size_t i = 0; i < num_pixels; i++) {
@@ -1355,6 +1374,16 @@ Error Box_snuc::parse(BitstreamRange& range, const heif_security_limits* limits)
     return {heif_error_Invalid_input,
             heif_suberror_Security_limit_exceeded,
             "snuc image dimensions exceed security limit."};
+  }
+
+  // Two float arrays (gain and offset, 8 bytes per pixel) must be present in
+  // the payload. Without this check a 37-byte 'snuc' box that declares
+  // 25344x10339 pixels makes the parser allocate 2 x 1 GB and then read
+  // 524 million floats past the end of a 9-byte payload.
+  if (range.get_remaining_bytes() / (2 * sizeof(float)) < num_pixels) {
+    return {heif_error_Invalid_input,
+            heif_suberror_Invalid_parameter_value,
+            "Non-uniformity correction data exceeds the box payload."};
   }
 
   Error err = m_memory_handle.alloc(num_pixels, 2 * sizeof(float), limits, "snuc box");

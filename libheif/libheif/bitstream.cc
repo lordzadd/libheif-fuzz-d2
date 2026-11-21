@@ -79,7 +79,10 @@ StreamReader_memory::StreamReader_memory(const uint8_t* data, size_t size, bool 
 {
   if (copy) {
     m_owned_data = new uint8_t[m_length];
-    memcpy(m_owned_data, data, size);
+    // A zero-length memcpy with a null source is undefined behaviour.
+    if (size > 0) {
+      memcpy(m_owned_data, data, size);
+    }
 
     m_data = m_owned_data;
   }
@@ -107,6 +110,12 @@ StreamReader::grow_status StreamReader_memory::wait_for_file_size(uint64_t targe
 
 bool StreamReader_memory::read(void* data, size_t size)
 {
+  // std::vector::data() may be nullptr for an empty vector. Passing that as the
+  // destination of a zero-length memcpy violates memcpy's nonnull contract.
+  if (size == 0) {
+    return true;
+  }
+
   uint64_t end_pos = m_position + size;
   if (end_pos > m_length) {
     return false;
@@ -473,6 +482,12 @@ std::string BitstreamRange::read_string_until_eof()
 
 bool BitstreamRange::read(uint8_t* data, size_t n)
 {
+  // Choke point for every box parser's buffer read. A zero-byte read is a
+  // successful no-op and must not reach memcpy with a null data() pointer.
+  if (n == 0) {
+    return true;
+  }
+
   if (!prepare_read(n)) {
     return false;
   }
@@ -1047,6 +1062,10 @@ void StreamWriter::write_fixed_string(std::string s, size_t len)
 
 void StreamWriter::write(const std::vector<uint8_t>& vec)
 {
+  if (vec.empty()) {
+    return;
+  }
+
   size_t required_size = m_position + vec.size();
 
   if (required_size > m_data.size()) {
@@ -1060,13 +1079,16 @@ void StreamWriter::write(const std::vector<uint8_t>& vec)
 
 void StreamWriter::write(const StreamWriter& writer)
 {
-  size_t required_size = m_position + writer.get_data().size();
+  const auto& data = writer.get_data();
+  if (data.empty()) {
+    return;
+  }
+
+  size_t required_size = m_position + data.size();
 
   if (required_size > m_data.size()) {
     m_data.resize(required_size);
   }
-
-  const auto& data = writer.get_data();
 
   memcpy(m_data.data() + m_position, data.data(), data.size());
 
